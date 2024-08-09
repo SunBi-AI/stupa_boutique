@@ -1,0 +1,70 @@
+.datepicker-container {
+  background-color: #fff;
+  direction: ltr;
+  font-size: 12px;
+  left: 0;
+  line-height: 30px;
+  position: fixed;
+  -webkit-tap-highlight-color: transparent;
+  top: 0;
+  touch-action: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+  width: 210px;
+  z-index: -1;
+}
+.datepicker-dropdown {
+  border: 1px solid #ccc;
+  box-shadow: 0 3px 6px #ccc;
+  box-sizing: content-box;
+  position: absolute;
+  z-index: 1;
+}
+.datepicker-inline {
+  position: static;
+}
+.datepicker-top-left,
+.datepicker-top-right {
+  border-top-color: #39f;
+}
+.datepicker-bottom-left,
+.datepicker-bottom-right {
+  border-bottom-color: #39f;
+}
+.datepicker-panel {
+  padding: 0;
+  cursor: pointer;
+  float: left;
+  height: 30px;
+  list-style: none;
+  margin: 0;
+  text-align: center;
+  width: 30px;
+}
+&.picked,
+&.picked:hover {
+  color: #39f;
+}
+&.disabled,
+&.disabled:hover {
+  background-color: #fff;
+  color: #ccc;
+  cursor: default;
+}
+&[data-view="month next"],
+&[data-view="month prev"],
+&[data-view="year next"],
+&[data-view="year prev"],
+&[data-view="years next"],
+&[data-view="next"] {
+  font-size: 18px;
+}
+&[data-view="month current"],
+&[data-view="year current"],
+&[data-view="years current"] {
+  width: 150px;
+}
+&[data-view="months"] {
+  line-height: 52.5px;
+  width: 52.5px;
+}

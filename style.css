@@ -1,0 +1,236 @@
+@tailwind base;
+@tailwind components;
+
+/* .nav-item {
+  cursor-pointer 
+  py-4 px-0 
+  hover:border-b-2
+  font-medium;
+} */
+
+@tailwind utilities;
+
+:root {
+  --color-primary: #582707;
+  --font-main: "Roboto", sans-serif;
+  /* --font-secondary: */
+  --color-secondary: #ffb20f;
+  --text-main: rgb(36, 36, 36);
+  --text-secondary: rgb(92, 92, 92);
+  --text-dim: rgb(196, 196, 196);
+  --text-white: white;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body,
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: var(--font-main);
+  letter-spacing: 0.025rem;
+  line-height: 1.4;
+}
+
+/****************************************
+  TYPESCALE FROM https://varnabas.com/
+****************************************/
+h1 {
+  font-size: 2.8rem !important;
+  font-weight: 600;
+}
+h2 {
+  font-size: 2.4rem !important;
+  font-weight: 600;
+}
+h3 {
+  font-size: 1.42rem !important;
+  font-weight: 600;
+}
+h4 {
+  font-size: 1.2rem !important;
+  font-weight: 500;
+}
+h5 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+h6 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1em;
+}
+
+.btn_main {
+  background: var(--color-secondary);
+  border-radius: 100px;
+  padding: 12px 24px;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 0.025rem;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.btn_main:hover {
+  opacity: 0.8;
+}
+
+.section__padding {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+/*************************************
+    HERO SECTION HOMEPAGE
+*************************************/
+.hero__section {
+  background-image: url("./assets/img/hero_image.jpg  ");
+  background-position: center center;
+}
+
+.icons__grp__welcome ul li {
+  width: 20%;
+}
+
+header {
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+header.scrolled {
+  background: var(--color-secondary);
+  padding: 0.5rem 0;
+}
+
+.nav_links ul li a {
+  font-size: 1.2rem;
+  padding: 20px 0;
+}
+
+.nav_links ul li a:hover {
+  border-bottom: 3px solid white;
+}
+
+/* header.scrolled */
+
+/*****************************************
+  BOOKING / RESERVATION SECTION
+*****************************************/
+.booking__form label ion-icon {
+  color: var(--color-secondary);
+  font-size: 20px;
+}
+
+/*************************************
+  SWIPER JS FOR HOMEPAGE ROOMS SECTION
+**************************************/
+.swiper {
+  width: 100%;
+  height: 300px;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 450px;
+}
+
+.swiper__relative .swiper-wrapper {
+  /* position: static; */
+}
+
+.section__rooms__home .swiper-button-prev,
+.section__rooms__home .swiper-button-next {
+  top: 60%;
+  font-size: 20px;
+}
+
+/* Position the buttons */
+.custom_buttons_prev,
+.custom_button_next {
+  position: absolute;
+  top: 40%;
+  width: 50px;
+  height: 50px;
+  margin-top: -20px;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid rgb(230, 230, 230);
+  transition: all 0.3s ease;
+  /* Semi-transparent background */
+}
+
+.custom_buttons_prev:hover,
+.custom_button_next:hover {
+  border: 1px solid rgb(202, 202, 202);
+  transition: all 0.3s ease;
+}
+
+.section__rooms__home .swiper-button-prev::after,
+.section__rooms__home .swiper-button-next::after {
+  font-size: 20px;
+  content: "";
+}
+
+.section__rooms__home .swiper-button-prev {
+  left: -70px;
+  /* background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%234c71ae'%2F%3E%3C%2Fsvg%3E") !important; */
+}
+
+.section__rooms__home .swiper-button-prev ion-icon {
+  transform: rotate(180deg);
+}
+
+.section__rooms__home .swiper-button-prev ion-icon,
+.section__rooms__home .swiper-button-next ion-icon {
+  color: #ffb30ffc;
+  font-size: 20px;
+  /* background: rgb(245, 85, 85); */
+  border-radius: 1px solid black;
+  border-radius: 50%;
+
+  /* padding: 10px; */
+}
+
+.section__rooms__home .swiper-button-next {
+  right: -70px;
+}
+
+/****************************************************
+  FOOTER COMMON STYLES
+****************************************************/
+.footer__links__block li a:hover {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+/****************************************************
+  INQUIRY SECTION CONTENT
+****************************************************/
+.inquiry__section {
+  min-height: 40vh;
+  background-image: url("/assets/img/panoramic.jpg");
+  background-position: center center;
+}
+
+.inquiry__section {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-image: url("/assets/img/panoramic.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
