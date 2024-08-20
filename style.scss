@@ -15,7 +15,7 @@
   --font-main: "Roboto", sans-serif;
   // --font-main: "Figree", sans-serif;
   --color-secondary: #ffb20f;
-  --text-main: rgb(36, 36, 36);
+  --text-main: rgb(53, 53, 53);
   --text-secondary: rgb(92, 92, 92);
   --text-dim: rgb(196, 196, 196);
   --text-dimmer: rgb(221, 221, 221);
@@ -33,41 +33,49 @@ html {
   // font-family: "Figtree", sans-serif;
 
   font-size: 16px;
+  font-weight: 300;
   color: var(--text-main);
   letter-spacing: 0.025rem;
   line-height: 1.4;
 }
+
+//breakpoint variable
+$breakpoing-mobile: 768px;
 
 /****************************************
   TYPESCALE FROM https://varnabas.com/
 ****************************************/
 h1 {
   font-size: 2.8rem !important;
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 h2 {
   font-size: 2.4rem !important;
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 h3 {
   font-size: 1.42rem !important;
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 h4 {
   font-size: 1.2rem !important;
-  font-weight: 500;
+  font-weight: 500 !important;
 }
 h5 {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 500 !important;
 }
 h6 {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 500 !important;
 }
 
 p {
   font-size: 1em;
+}
+
+b {
+  font-weight: 700;
 }
 
 .btn_main {
@@ -91,6 +99,13 @@ p {
   padding-bottom: 60px;
 }
 
+.separator {
+  width: 100%;
+  height: 1px;
+  background: var(--text-dimmer);
+  margin: 30px 0;
+}
+
 /****************************************** 
     NAVIBATION BAR
 *******************************************/
@@ -98,8 +113,6 @@ p {
   .nav__logo {
     width: 100%;
   }
-
-
 }
 
 .search__top__ {
@@ -160,7 +173,12 @@ header.scrolled {
   border-bottom: 3px solid white;
 }
 
+section > p {
+  font-weight: 400;
+}
 /* header.scrolled */
+
+
 
 /*****************************************
   BOOKING / RESERVATION SECTION
@@ -225,9 +243,14 @@ header.scrolled {
   content: "";
 }
 
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: " ";
+}
+
 .section__rooms__home .swiper-button-prev {
   left: -70px;
-  /* background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%234c71ae'%2F%3E%3C%2Fsvg%3E") !important; */
+  
 }
 
 .section__rooms__home .swiper-button-prev ion-icon {
@@ -247,6 +270,14 @@ header.scrolled {
 
 .section__rooms__home .swiper-button-next {
   right: -70px;
+}
+
+.rooms__slider {
+  .room__single {
+    p {
+      font-weight: 400;;
+    }
+  }
 }
 
 /****************************************************
@@ -290,7 +321,12 @@ footer {
 ************************************************/
 .form__group__wrapper {
   display: flex;
-  flex-direction: rows;
+  flex-direction: row;
+  font-weight: 400; 
+
+  @media screen and (max-width: $breakpoing-mobile) {
+    flex-direction: column;
+  }
 }
 
 .booking__form {
@@ -304,6 +340,10 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @media screen and (max-width: $breakpoing-mobile) {
+    flex-direction: column;
+  }
 }
 
 
@@ -313,10 +353,18 @@ form.homepage__booking {
 
 form.homepage__booking .form__group__wrapper {
   width: 75%;
+
+  @media screen and (max-width: $breakpoing-mobile) {
+    width: 100%;
+  }
 }
 
 form.homepage__booking .form__group__wrapper button {
   width: 25%;
+
+  @media screen and (max-width: $breakpoing-mobile) {
+    width: 100%;
+  }
 }
 
 .input-group.caln {
@@ -333,6 +381,10 @@ form.homepage__booking .form__group__wrapper button {
   height: 100%;
   width: 1px;
   background: var(--text-dimmer);
+
+  @media screen and (max-width: $breakpoing-mobile) {
+    display: none;
+  }
 }
 
 
@@ -348,6 +400,10 @@ form.homepage__booking .form__group__wrapper button {
 
 .booking__form .input-group.grp__2 {
   width: 15%;
+
+  @media screen and (max-width: $breakpoing-mobile) {
+    width: calc(80% / 3);
+  }
 }
 
 .booking__form .input-group.grp__2 label {
@@ -363,6 +419,10 @@ form.homepage__booking .form__group__wrapper button {
 
 .booking__form .input-group.caln {
 width:calc(65% /2);
+
+  @media screen and (max-width: $breakpoing-mobile) {
+    width: 45%;
+  }
 }
 
 .booking__form .input-group ion-icon {
@@ -590,4 +650,291 @@ width:calc(65% /2);
 ************************************************/
 .image__section__top {
   background-image: url('/assets/img/panoramic.jpg');
+}
+
+.about__content {
+  .wrapper {
+    gap: 60px;
+  }
+  ul  {
+    li {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+.brochure__download {
+  background-image: url('/assets/img/stupa_bro.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  a {
+    background: #ffb30f80;
+    transition: all 0.2s ease-in-out;
+
+
+    &:hover {
+        // border: 5px solid #A7242860;
+        transition: all 0.2s ease-in-out;
+    background: #ffb30f;
+    }
+  }
+
+}
+
+.text__content {
+  u {
+    font-weight: 500;
+  }
+}
+
+/************************************
+  CONTACT PAGE
+************************************/
+.form__section__left {
+  padding: 45px;
+  // border: 1px solid var(--text-dimmer);
+  background: #ffb30f20;
+  border: 1px solid #ffb20f54;
+
+}
+.contact__page__form {
+  input,textarea {
+    border: 1px solid var(--text-dim);
+    min-height: 30px;;
+    padding: 10px;
+    margin-bottom: 30px; 
+    // max-width: 80%;
+    &:active, &:focus, &:focus-visible {
+      border: 1px transparent rgba(0, 0, 0, 0);
+      // border: 1px solid var(--color-secondary);
+      outline: 1px solid var(--color-secondary);
+    }
+  }
+  label {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+  }
+
+  input {
+
+  }
+
+  textarea {
+    min-height: 100px;
+  }
+}
+
+
+/***************************************
+  ROOM SINGLE
+***************************************/
+.page__room__single {
+  .image__section__top {
+    background-image: url('/assets/img/room3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.content__room {
+  ul {
+    list-style: disc;
+    margin-left: 0.9rem;
+  }
+}
+
+.room__description {
+  video {
+    // border: 10px solid #FF0000;
+  }
+}
+
+
+footer {
+  // background-image: url('/assets/img/pattern__.png');
+  font-weight: 400;
+}
+
+
+
+/**********************************************
+  RESPONSIVE 
+**********************************************/
+.nav_links.mobile__nav__links {
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .nav_links.mobile__nav__links {
+    position: absolute;
+  } 
+}
+
+
+header.scrolled {
+  nav {
+    .nav_links.mobile__nav__links {
+      background-color: var(--color-secondary);
+
+    }
+  }
+}
+
+header.scrolled .nav_links.mobile__nav__links {
+  top: 70px;
+}
+.nav_links.mobile__nav__links {
+
+  @media screen and (max-width: 768px) {
+    position: absolute; 
+    z-index: 0;
+    top: 80px;
+    left: -100%;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+  }
+
+  &.active {
+    left: 0;
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
+
+  background-color: #00000027;
+  height: 100vh;
+  width: 50%;
+  max-width: 100%;
+  ul {
+    flex-direction: column;
+    margin-top: 3rem; 
+
+    li {
+      margin-left: 2.5rem;
+      margin-bottom: 1rem;
+
+      a:hover {
+       border: none;
+      }
+    }
+  }
+  
+} 
+
+
+
+
+/****************************************
+    ROOMS SINGLE
+****************************************/
+.room__description {
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 400 !important;
+  }
+}
+
+.photo_feature_slider__single__room {
+
+
+  .room_single_slider {
+    img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    ion-icon {
+      color: var(--text-white);
+      font-size: 2rem;
+    }
+  }
+
+}
+
+.content__room__booking__form {
+  .input-group.caln::after {
+    display: none;
+  }
+
+  .input-group.caln {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  ion-icon {
+    color: var(--color-secondary);
+    margin-top: 3px;
+    margin-right: 5px;
+    font-size: 1.2rem;
+  }
+
+  .form__group__wrapper {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .input-group.grp__2 {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 2rem;
+    width: 45%;
+
+    input {
+      max-width: 150px;
+       &::-webkit-outer-spin-button,
+       &::-webkit-inner-spin-button {
+         -webkit-appearance: none;
+         margin: 0;
+       }
+       
+
+    }
+
+    .value-control {
+      width: 30px;
+      height: 30px;
+      margin: 0 8px;
+      background: transparent;
+      border: var(--border);
+      border-radius: var(--border-radius);
+      color: #3b3b3b;
+      cursor: pointer;
+      font-size: var(--font-size);
+      background: #3b3b3b10;
+    }
+
+    .value-control:hover {
+      background: #eee;
+    }
+
+    .value-control:active {
+      background: #ddd;
+    }
+
+    .value-control:focus,
+    .value-input:focus {
+      outline: 2px solid #3e67fd;
+      outline-offset: 1px
+    }
+
+    .value-input {
+      margin: 0;
+      height: var(--control-size);
+      width: 80px;
+      border: var(--border);
+      border-radius: var(--border-radius);
+      padding: 2px 8px;
+      text-align: center;
+      font-size: var(--font-size);
+    }
+
+    .value-input:hover {
+      border-color: #777;
+    }
+  }
 }

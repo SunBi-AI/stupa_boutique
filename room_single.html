@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- <link
@@ -18,12 +18,12 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
-    />
+    /> -->
     <link rel="stylesheet" href="/assets/css/reset.css" />
-    <link rel="stylesheet" href="/assets/css/datepicker.css" />
+    <!-- <link rel="stylesheet" href="/assets/css/datepicker.css" /> -->
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -32,19 +32,26 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <title>STUPA</title>
+    <style>
+
+    </style>
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
   </head>
   <body>
     <!-- HEADER SECTION WITH NAVIGATION COMMON -->
     <header
-      class="py-4 bg-black bg-opacity-10 w-100 fixed top-0 left-0 right-0 z-[99]"
+      class="py-4 bg-black bg-opacity-10 max-w-[100vw] w-100 fixed top-0 left-0 right-0 z-[99]"
       id="navigation__main"
     >
       <nav
-        class="main__navigation__bar flex justify-between items-center container mx-auto"
+        class="main__navigation__bar flex justify-between items-center container mx-auto relative"
       >
-        <div class="d-block w-[130px]">
+        <div class="w[60px] max-sm:block hidden p-3 hamburger cursor-pointer ml-2" onclick=setLayout()>
+          <ion-icon name="menu-outline" class="text-white text-4xl"></ion-icon>
+        </div>
+
+        <div class="d-block max-[767px]:w-[100px] w-[130px] cursor-pointer">
           <a href="/index.html" class="inline-block nav__logo">
-          
             <svg
               version="1.1"
               id="Layer_1"
@@ -1913,13 +1920,20 @@
             </a>
         </div>
 
-        <div class="nav_links">
-          <ul class="flex justify-between font-normal space-x-10">
+        <div class="nav_links nav__link__prime mobile__nav__links" id="">
+          <ul class="flex justify-between font-normal max-w-[767px]:space-x-[2rem] space-x-10">
             <li class="text-white">
               <a
-                href="#"
+                href="/index.html"
                 class="cursor-pointer px-0 hover:border-b-2 font-medium"
                 >Home</a
+              >
+            </li>
+            <li class="text-white">
+              <a
+                href="about.html"
+                class="cursor-pointer px-0 hover:border-b-2 font-medium"
+                >About</a
               >
             </li>
             <li class="text-white">
@@ -1929,18 +1943,12 @@
                 >Room & Suites</a
               >
             </li>
+           
             <li class="text-white">
               <a
-                href=""
+                href="contact.html"
                 class="cursor-pointer px-0 hover:border-b-2 font-medium"
-                >Dining</a
-              >
-            </li>
-            <li class="text-white">
-              <a
-                href=""
-                class="cursor-pointer px-0 hover:border-b-2 font-medium"
-                >Conferencing</a
+                >Contact</a
               >
             </li>
             <li class="text-white">
@@ -1953,7 +1961,7 @@
           </ul>
         </div>
 
-        <div class="search_top">
+        <div class="search_top mr-2">
           <form action="" class="search__top__">
             <input type="text" placeholder="" name="" class="search__btn__top  hide" aria-placeholder="search...">
             <button type="submit" class="Btn__search__top"><ion-icon
@@ -1967,217 +1975,307 @@
     </header>
     <!-- HEADER SECTION WITH NAVIGATION COMMON -->
 
-    <main class="">
-        <div class="image__section__top relative w-[100%] h-[600px] flex justify-center items-center">
-            <div class="overlay absolute z-0 h-[100%] w-[100%] bg-gray-900/30 top-0 left-0"></div>
-             <h1 class="text-white text-center font-bold relative">About Us</h1>
+
+    <main class="page__room__single">
+        <div class="image__section__top relative w-[100%] h-[700px] flex justify-center items-center">
+            <!-- <div class="overlay absolute z-0 h-[100%] w-[100%] bg-gray-900/30 top-0 left-0"></div> -->
+             <h1 class="text-white text-center font-bold relative">Executive Suite</h1>
         </div>
     </main>
 
-    <section class="about__content py-16">
+    <section class="room__description py-20">
         <div class="wrapper w-[80%] mx-auto flex">
-
-            <div class="text__content w-[40%] ">
-                <h2 class="mb-2 font-medium">About Stupa Boutique Hotel</h2>
-                <p>Nestled in the heart of Nepal, Stupa Boutique Hotel offers a serene escape where tradition meets modern luxury. Our hotel, inspired by the architectural marvels of ancient stupas, reflects the rich cultural heritage of Nepal while providing all the comforts of a contemporary boutique hotel.</p>
-
+            <div class="content__room w-[45%]">
+                <h2>Executive Suite</h2>
+                <p>Twin Bed, Mountain View</p>
                 <br>
+                <p><b>Maximum Capacity</b> 2 Adult(s) 1Children</p> 
+                <div class="photo_feature_slider__single__room">
+                    <div class="swiper h-auto feature__slider room_single_slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img src="/assets/img/room1.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="/assets/img/room2.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="/assets/img/room3.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="video__container w-[100%] h-[100%] ml-auto">
+                            <video src="/assets/video/STUPA_TEST.mp4" controls></video>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"><ion-icon name="arrow-forward"></ion-icon></div>
+                    <div class="swiper-button-prev"><ion-icon name="arrow-back"></ion-icon></div>
+                    </div>
+                </div>
 
-   
+                <h3 class="mb-1 mt-4">Facilitites</h3>
                 <ul>
-                    <h3 class="mb-2 font-medium">
-                Why Choose Stupa Boutique Hotel?
-                </h3>
-                    <li>
-                        <b>Prime Location:</b> Located just minutes away from some of Nepal’s most iconic landmarks, including the majestic Swayambhunath Stupa (Monkey Temple) and the vibrant streets of Thamel, our hotel offers easy access to the best that Kathmandu has to offer.
-                    </li>
-
-                    <li>
-                        <b>Cultural Immersion:</b> Our hotel’s design and ambiance pay homage to Nepal’s spiritual and architectural heritage. Each room is adorned with traditional Nepali art and decor, offering an authentic cultural experience.
-
-                    </li>
-                    <li>
-                        <b>Luxurious Comfort:</b> With well-appointed rooms and suites that blend elegance with modern amenities, you’ll find the perfect retreat after a day of exploring the city. Enjoy complimentary Wi-Fi, flat-screen TVs, and plush bedding for a restful stay.
-                    </li>
-                    <li>
-                        <b>Exquisite Dining:</b> Savor the flavors of Nepal at our in-house restaurant, where our chefs prepare traditional Nepali dishes using the freshest local ingredients. Whether you’re enjoying a hearty breakfast or a romantic dinner, our culinary offerings will delight your palate.
-                    </li>
-                    <li> <b> Wellness and Relaxation:</b> Rejuvenate your body and mind at our wellness center. Indulge in a traditional Nepali massage, or practice yoga in our tranquil garden, surrounded by the peaceful sounds of nature.</li>
-                    <li> <b>Personalized Service:</b> At Stupa Boutique Hotel, we pride ourselves on offering warm and personalized service. Our dedicated staff is always on hand to assist with your needs, ensuring that your stay is as comfortable and memorable as possible.</li>
+                    <li>Multichannel color 32" Flat LCD Television </li>
+                    <li>Centralized air conditioning </li>
+                    <li>International Direct Dial (IDD) telephones at extra cost </li>
+                    <li>Mini bar at extra cost </li>
+                    <li>24 hours room service</li>
+                    <li>Bathroom Telephone</li>
+                    <li>Safe Deposit Locker </li>
+                    <li>Work Desk with Lamp </li>
                 </ul>
             </div>
 
-            <div class="grp_div">
+            <div class="content__room__booking__form w-[45%] ml-auto">
+              <form class="homepage__booking">
+                <div class="form__group__wrapper max-md:px-10">
+                    <div class="flex flex-row max-md:justify-between">
+                      <div class="input-group caln">
+                        <ion-icon name="calendar-clear-outline"></ion-icon>
+                        <label for="check-in">
+                          <p>Date of Arrival</p>
+                          
+                          <input
+                            type="text"
+                            id="check-in"
+                            autocomplete="off"
+                            class="date-picker date__input__"
+                            placeholder=""
+                          />
+                        </label>
+                      </div>
+      
+                      <div class="input-group caln">
+                        <ion-icon name="calendar-clear-outline"></ion-icon>
+                        <label for="check-out">
+                          <p>Date of Departure</p>
+                          <input
+                            type="text"
+                            id="check-out"
+                            autocomplete="off"
+                            class="date-picker"
+                            placeholder="MM/DD/YYYY"
+                          />
+                        </label>
+                      </div>
+                    </div>
+      
+                    <div class="flex flex-wrap max-md:flex-row max-md:mt-6 max-md:justify-between">
+                      <div class="input-group grp__2">
+                        <ion-icon name="bed-outline"></ion-icon>
+                        <label for="room">
+                          <p>Room</p>
+                          <!-- <input type="number" id="room" min="1"  placeholder="&#9662;"/> -->
+                           
+                          <input class="" type="number" id="room" min="1"  placeholder="1"/>
+                        </label>
+                      </div>
+        
+                      <div class="input-group grp__2">
+                        <ion-icon name="people-outline"></ion-icon>
+                        <label for="adults">
+                          <p>Adults</p>
+                          <!-- <input type="number" id="adults" min="0" placeholder="&#9662;"/> -->
+                          <button
+                            class="value-control w-[10px] px-[10px] py-[2px] rounded-2xl bg-gray-900 rounded-2xl"
+                            onclick="numberInput.stepDown()"
+                            title="Decrease value"
+                            aria-label="Decrease value">-</button>
 
-                <div class="video container w-[700px] ml-auto">
-                    <video src="/assets/video/STUPA_TEST.mp4" controls></video>
-                </div>
+                          <input
+                            class="value-input"
+                            type="number"
+                            value="1"
+                            name="numberInput"
+                            id="numberInput">
 
-                <div class="brochure__download mt-6 w-[100%] h-[200px] overflow-hidden flex">
-                    <a href="/assets/img/hotel.png" download="" class="block w-[200px] h-[100%] flex flex-col justify-center items-center ">
-                      <ion-icon name="download-outline" class="text-white text-[50px]"></ion-icon>
-                        <h3 class="text-white text-center font-bold m-4 text-[20px]">Download Brochure</h3>
-                    </a>
+                          <button
+                            class="value-control"
+                            onclick="numberInput.stepUp()"
+                            title="Increase value"
+                            aria-label="Increase value">+</button>
+
+                          <!-- <input type="number" id="adults" min="0" placeholder="2"/> -->
+                        </label>
+                      </div>
+        
+                      <div class="input-group grp__2">
+                        <ion-icon name="people-outline"></ion-icon>
+                        <label for="kids">
+                          <p>Children</p>
+                          <!-- <input type="number" id="kids" min="0" placeholder="&#9662;"/> -->
+                          <input type="number" id="kids" min="0" placeholder="0"/>
+                        </label>
+                      </div>
+                    </div>
+      
+      
+                  
                 </div>
+      
+                <div class="max-md:text-center">
+                  <button type="submit" class="btn_main max-md:mt-10  text-center">Reserve Now</button>    
+                </div>
+              </form>
             </div>
-
         </div>
     </section>
 
- <!-- COMMON FOOTER SECTION -->
- <footer class="mt-24">
-  <div class="w-[80%] mx-auto py-30">
-    <div class="grid grid-cols-2 gap-60">
-      <div class="footer__brand__information">
-        <div class="d-block">
-          <div class="svg__logo__container w-40">
-            <img src="/assets/img/Stupa_BH_Logo2.svg" alt="studpa boutique hotel">
+    <!-- COMMON FOOTER SECTION -->
+    <footer class="mt-24 relative">
+        <div class="overlay w-[100%] h-[100%] bg-white-900/40 absolute z-0 left-0 right-0 top-0"></div>
+        <div class="w-[80%] mx-auto py-30 relative">
+          <div class="grid grid-cols-2 gap-60">
+            <div class="footer__brand__information">
+              <div class="d-block">
+                <div class="svg__logo__container w-40">
+                  <img src="/assets/img/Stupa_BH_Logo2.svg" alt="studpa boutique hotel">
+                </div>
+                <!-- <img src="/assets/img/hotel.png" class="w-12" alt="" /> -->
+                <p class="tracking-wide text-gray-600 mt-4">
+                  Stupa Boutique Hotel offers a unique blend of luxury and
+                  tranquility, nestled in the heart of a picturesque setting. This
+                  charming hotel provides guests with elegantly designed rooms
+                  that feature modern amenities while maintaining a touch of
+                  traditional charm.
+                </p>
+              </div>
+            </div>
+  
+            <div class="footer__links grid grid-cols-3 gap-30 items-center">
+              <ul class="footer__links__block">
+                <li>
+                  <a
+                    href=""
+                    class="text-lg text-wide mb-4 inline-block text-gray-600"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="text-lg text-wide mb-4 inline-block text-gray-600"
+                    >Room & Suites</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="text-lg text-wide mb-4 inline-block text-gray-600"
+                    >Conferencing</a
+                  >
+                </li>
+              </ul>
+              <ul class="footer__links__block">
+                <li>
+                  <a
+                    href=""
+                    class="text-lg text-wide mb-4 inline-block text-gray-600"
+                    >Wedding</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="text-lg text-wide mb-4 inline-block text-gray-600"
+                    >Events</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href=""
+                    class="text-lg text-wide mb-4 inline-block text-gray-600"
+                    >Gallery</a
+                  >
+                </li>
+              </ul>
+              <ul>
+                <li><h6 class="font-medium text-lg mb-4">Contact</h6></li>
+                <li>
+                  <a
+                    class="text-lg text-wide mb-4 inline-block text-gray-600"
+                    href="tel:+977-023-575203"
+                    >+977-023-575203</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-lg text-wide mb-4 inline-block text-gray-600"
+                    href="tel: +977-980-2761000"
+                    >+977-980-2761000</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
-          <!-- <img src="/assets/img/hotel.png" class="w-12" alt="" /> -->
-          <p class="tracking-wide text-gray-600 mt-4">
-            Stupa Boutique Hotel offers a unique blend of luxury and
-            tranquility, nestled in the heart of a picturesque setting. This
-            charming hotel provides guests with elegantly designed rooms
-            that feature modern amenities while maintaining a touch of
-            traditional charm.
-          </p>
         </div>
-      </div>
-
-      <div class="footer__links grid grid-cols-3 gap-30 items-center">
-        <ul class="footer__links__block">
-          <li>
-            <a
-              href=""
-              class="text-lg text-wide mb-4 inline-block text-gray-600"
-              >Home</a
-            >
-          </li>
-          <li>
-            <a
-              href=""
-              class="text-lg text-wide mb-4 inline-block text-gray-600"
-              >Room & Suites</a
-            >
-          </li>
-          <li>
-            <a
-              href=""
-              class="text-lg text-wide mb-4 inline-block text-gray-600"
-              >Conferencing</a
-            >
-          </li>
-        </ul>
-        <ul class="footer__links__block">
-          <li>
-            <a
-              href=""
-              class="text-lg text-wide mb-4 inline-block text-gray-600"
-              >Wedding</a
-            >
-          </li>
-          <li>
-            <a
-              href=""
-              class="text-lg text-wide mb-4 inline-block text-gray-600"
-              >Events</a
-            >
-          </li>
-          <li>
-            <a
-              href=""
-              class="text-lg text-wide mb-4 inline-block text-gray-600"
-              >Gallery</a
-            >
-          </li>
-        </ul>
-        <ul>
-          <li><h6 class="font-medium text-lg mb-4">Contact</h6></li>
-          <li>
-            <a
-              class="text-lg text-wide mb-4 inline-block text-gray-600"
-              href="tel:+977-023-575203"
-              >+977-023-575203</a
-            >
-          </li>
-          <li>
-            <a
-              class="text-lg text-wide mb-4 inline-block text-gray-600"
-              href="tel: +977-980-2761000"
-              >+977-980-2761000</a
-            >
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <!-- FOOTER COPYRIGHT SECTION -->
-  <div
-    class="w-[80%] mx-auto py-8 flex flex-row items-center justify-between"
-  >
-    <div class="flex flex-row text-sm tracking-wide text-gray-500">
-      <span
-        >© Stupa Boutique Hotel&nbsp;&nbsp;|&nbsp;&nbsp;All Rights
-        Reserved</span
-      >
-    </div>
-
-    <div
-      class="flex flex-row items-center flex flex-row text-sm tracking-wide text-gray-500"
-    >
-      <p>connect with us</p>
-      <ul class="flex flex-row ml-2">
-        <li>
-          <a href=""
-            ><ion-icon
-              class="text-lg text-yellow-500 hover:text-yellow-400 mr-1"
-              name="logo-facebook"
-            ></ion-icon
-          ></a>
-        </li>
-        <li>
-          <a href=""
-            ><ion-icon
-              class="text-lg text-yellow-500 hover:text-yellow-400 mr-1"
-              name="logo-instagram"
-            ></ion-icon
-          ></a>
-        </li>
-        <li>
-          <a href=""
-            ><ion-icon
-              class="text-lg text-yellow-500 hover:text-yellow-400 mr-1"
-              name="logo-twitter"
-            ></ion-icon
-          ></a>
-        </li>
-      </ul>
-      <div class="flex flex-row text-sm tracking-wide text-gray-500">
-        <span class="ml-10">
-          &nbsp;Design: <a href="https://sunbi.com.np/index" target = "_blank" class="text-yellow-500">Sunbi</a></span
+  
+        <!-- FOOTER COPYRIGHT SECTION -->
+        <div
+          class="w-[80%] mx-auto py-8 flex flex-row items-center justify-between"
         >
-      </div>
-    </div>
-  </div>
-  <!-- FOOTER COPYRIGHT SECTION -->
-</footer>
-<!-- COMMON FOOTER SECTION -->
+          <div class="flex flex-row text-sm tracking-wide text-gray-500">
+            <span
+              >© Stupa Boutique Hotel&nbsp;&nbsp;|&nbsp;&nbsp;All Rights
+              Reserved</span
+            >
+          </div>
+  
+          <div
+            class="flex flex-row items-center flex flex-row text-sm tracking-wide text-gray-500"
+          >
+            <p>connect with us</p>
+            <ul class="flex flex-row ml-2">
+              <li>
+                <a href=""
+                  ><ion-icon
+                    class="text-lg text-yellow-500 hover:text-yellow-400 mr-1"
+                    name="logo-facebook"
+                  ></ion-icon
+                ></a>
+              </li>
+              <li>
+                <a href=""
+                  ><ion-icon
+                    class="text-lg text-yellow-500 hover:text-yellow-400 mr-1"
+                    name="logo-instagram"
+                  ></ion-icon
+                ></a>
+              </li>
+              <li>
+                <a href=""
+                  ><ion-icon
+                    class="text-lg text-yellow-500 hover:text-yellow-400 mr-1"
+                    name="logo-twitter"
+                  ></ion-icon
+                ></a>
+              </li>
+            </ul>
+            <div class="flex flex-row text-sm tracking-wide text-gray-500">
+              <span class="ml-10">
+                &nbsp;Design: <a href="https://sunbi.com.np/index" target = "_blank" class="text-yellow-500">Sunbi</a></span
+              >
+            </div>
+          </div>
+        </div>
+        <!-- FOOTER COPYRIGHT SECTION -->
+    </footer>
+    <!-- COMMON FOOTER SECTION -->
 
-<script
-  type="module"
-  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-></script>
-<script
-  nomodule
-  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-></script>
-<!-- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> -->
-<!-- <script src="/assets/js/datepicker.js"></script> -->
-<!-- <script src="/assets/js/datepicker.esm.js"></script> -->
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="main.js"></script>
+    <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> -->
+    <!-- <script src="/assets/js/datepicker.js"></script> -->
+    <!-- <script src="/assets/js/datepicker.esm.js"></script> -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
