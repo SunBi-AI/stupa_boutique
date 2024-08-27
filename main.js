@@ -191,6 +191,34 @@ $(document).ready(function () {
 }) 
 
 
+/********************************
+ * 
+ * MOBILE NAVIGATION
+ * 
+ ********************************/
+//get hamburger button'
+
+const hamButton = document.querySelector('.hamburger');
+  
+//get nav links class
+const navigationLinks = document.querySelector('.nav__link__prime');
+
+hamButton.addEventListener('click', () => {
+  // e.preventDefault();
+
+  if(navigationLinks.classList.contains('mobile__nav__links')) {
+    navigationLinks.classList.add('mobile__nav__links');
+  }
+
+  else  {
+    navigationLinks.classList.remove('mobile__nav__links');
+    console.log('navigation button was clicked');
+  }
+})
+
+
+
+
 /********* get today's date ********* */
 const today = new Date();
 
@@ -202,36 +230,13 @@ const formattedDate = `${month}/${day}/${year}`;
 
 console.log(formattedDate);
 
-document.querySelector('.date__input__').placeholder = formattedDate;
+if(document.querySelector('.date__input__')) {
+  document.querySelector('.date__input__').placeholder = formattedDate;
+}
 
 
 console.log(today);
 
-
-/********************************
- * 
- * MOBILE NAVIGATION
- * 
- ********************************/
-//get hamburger button'
-
-  const hamButton = document.querySelector('.hamburger');
-  
-  //get nav links class
-  const navigationLinks = document.querySelector('.nav__link__prime');
-  
-  hamButton.addEventListener('click', () => {
-    // e.preventDefault();
-  
-    if(navigationLinks.classList.contains('mobile__nav__links')) {
-      navigationLinks.classList.add('mobile__nav__links');
-    }
-  
-    else  {
-      navigationLinks.classList.remove('mobile__nav__links');
-      console.log('navigation button was clicked');
-    }
-  })
 
 
 
