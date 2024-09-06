@@ -7,10 +7,12 @@
   font-medium;
 } */
 @tailwind utilities;
+
 @font-face {
   font-family: "tittle";
   src: url("/assets/fonts/ananda-neptouch-2.regular.ttf");
 }
+
 :root {
   --color-from-logo: rgb(167, 29, 27);
   --color-primary: #582707;
@@ -37,7 +39,8 @@ html {
   color: var(--text-main);
   letter-spacing: 0.025rem;
   line-height: 1.4;
-  --s: 150px; /* control the size*/
+  --s: 150px;
+  /* control the size*/
   --c1: #ff0000;
   --c2: #fdf0c8;
 }
@@ -140,6 +143,7 @@ b {
 .main__navigation__bar .nav__logo {
   width: 100%;
 }
+
 .main__navigation__bar .hamburger ion-icon {
   color: var(--text-white);
 }
@@ -159,6 +163,7 @@ b {
   top: 0;
   left: 0;
 }
+
 .main_navigation_logo g#XMLID_29_,
 .main_navigation_logo g#XMLID_23_ {
   display: none;
@@ -167,6 +172,7 @@ b {
 .search__top__ {
   position: relative;
 }
+
 .search__top__ input {
   position: absolute;
   bottom: 10px;
@@ -177,9 +183,11 @@ b {
   color: var(--text-white);
   font-size: 1.5rem;
 }
+
 .search__top__ input.show {
   display: block;
 }
+
 .search__top__ input.hide {
   display: none;
 }
@@ -197,7 +205,7 @@ header.scrolled .hamburger ion-icon {
     HERO SECTION HOMEPAGE
 *************************************/
 .hero__section {
-  background-image: url("./assets/img/stupda_building.png");
+  background-image: url("./assets/img/5.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -216,12 +224,15 @@ header.scrolled {
   padding: 0.5rem 0;
   border-bottom: 2px solid var(--color-secondary);
 }
+
 header.scrolled .nav_links ul li a {
   color: var(--text-main);
 }
+
 header.scrolled .nav_links ul li a:hover {
   color: var(--color-secondary);
 }
+
 header.scrolled .Btn__search__top ion-icon {
   color: var(--text-main);
 }
@@ -237,7 +248,7 @@ header.scroled ul li a:hover,
   color: var(--color-secondary);
 }
 
-section > p {
+section>p {
   font-weight: 400;
 }
 
@@ -257,25 +268,30 @@ section > p {
   display: flex;
   flex-direction: row;
 }
+
 @media only screen and (max-width: 768px) {
   .section__hotel__features .feature__single__layout {
     flex-direction: column;
   }
 }
+
 .section__hotel__features .feature__single__layout:nth-child(even) {
   flex-direction: row-reverse;
 }
+
 @media only screen and (max-width: 768px) {
   .section__hotel__features .feature__single__layout:nth-child(even) {
     flex-direction: column;
   }
 }
+
 .section__hotel__features .featured__image img {
   width: 100%;
   aspect-ratio: 1/0.6;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
+
 .section__hotel__features .feautures__details {
   padding: 50px 100px;
   display: flex;
@@ -285,23 +301,28 @@ section > p {
   background-size: 14px 14px;
   background-image: repeating-linear-gradient(45deg, #efc73f 0, #efc73f 1.4px, #ffe4c1 0, #ffe4c1 50%);
 }
+
 @media only screen and (max-width: 768px) {
   .section__hotel__features .feautures__details {
     padding: 30px 0 60px 0;
   }
 }
+
 .section__hotel__features .feautures__details .feature__details__wrapper {
   max-width: 80%;
   opacity: 1;
 }
+
 .section__hotel__features .feautures__details .feature__details__wrapper p {
   margin-top: 2rem;
   font-size: 1.2rem;
   font-weight: 400;
 }
+
 .section__hotel__features .feautures__details .feature__details__wrapper button {
   margin-top: 4rem;
 }
+
 @media screen and (max-width: 768px) {
   .section__hotel__features .feautures__details .feature__details__wrapper button {
     margin-top: 2rem;
@@ -371,6 +392,7 @@ section > p {
 .section__rooms__home .swiper-button-prev {
   left: -70px;
 }
+
 @media only screen and (max-width: 768px) {
   .section__rooms__home .swiper-button-prev {
     left: -55px;
@@ -394,6 +416,7 @@ section > p {
 .section__rooms__home .swiper-button-next {
   right: -70px;
 }
+
 @media only screen and (max-width: 768px) {
   .section__rooms__home .swiper-button-next {
     right: -55px;
@@ -403,6 +426,7 @@ section > p {
 .rooms__slider .room__single p {
   font-weight: 400;
 }
+
 /****************************************************
   FOOTER COMMON STYLES
 ****************************************************/
@@ -424,12 +448,14 @@ footer {
 .footer__brand__information div p {
   margin-left: 1rem;
 }
+
 @media only screen and (max-width: 768px) {
-  .footer__brand__information > div {
+  .footer__brand__information>div {
     flex-direction: column;
     align-items: flex-start;
   }
-  .footer__brand__information > div p {
+
+  .footer__brand__information>div p {
     margin-left: 0;
   }
 }
@@ -466,6 +492,7 @@ footer {
   flex-direction: row;
   font-weight: 400;
 }
+
 @media screen and (max-width: 768px) {
   .form__group__wrapper {
     flex-direction: column;
@@ -483,6 +510,7 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
+
 @media screen and (max-width: 768px) {
   .booking__form form {
     flex-direction: column;
@@ -496,6 +524,7 @@ form.homepage__booking {
 form.homepage__booking .form__group__wrapper {
   width: 85%;
 }
+
 @media screen and (max-width: 768px) {
   form.homepage__booking .form__group__wrapper {
     width: 100%;
@@ -505,6 +534,7 @@ form.homepage__booking .form__group__wrapper {
 form.homepage__booking .form__group__wrapper button {
   width: 25%;
 }
+
 @media screen and (max-width: 768px) {
   form.homepage__booking .form__group__wrapper button {
     width: 100%;
@@ -526,6 +556,7 @@ form.homepage__booking .form__group__wrapper button {
   width: 1px;
   background: var(--text-dimmer);
 }
+
 @media screen and (max-width: 768px) {
   .input-group.caln::after {
     display: none;
@@ -544,6 +575,7 @@ form.homepage__booking .form__group__wrapper button {
 .booking__form .input-group.grp__2 {
   width: 30%;
 }
+
 @media screen and (max-width: 768px) {
   .booking__form .input-group.grp__2 {
     width: 26.6666666667%;
@@ -561,6 +593,7 @@ form.homepage__booking .form__group__wrapper button {
 .booking__form .input-group.caln {
   width: 32.5%;
 }
+
 @media screen and (max-width: 768px) {
   .booking__form .input-group.caln {
     width: 50%;
@@ -615,14 +648,17 @@ form.homepage__booking .form__group__wrapper button {
 .homepage__booking .input-group {
   /* Firefox */
 }
+
 .homepage__booking .input-group input::-webkit-outer-spin-button,
 .homepage__booking .input-group input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
 .homepage__booking .input-group input[type=number] {
   -moz-appearance: textfield;
 }
+
 .homepage__booking .input-group .value-control {
   width: 30px;
   height: 30px;
@@ -634,6 +670,7 @@ form.homepage__booking .form__group__wrapper button {
   font-size: var(--font-size);
   background: var(--text-white);
 }
+
 @media only screen and (max-width: 768px) {
   .homepage__booking .input-group .value-control {
     width: 25px;
@@ -641,17 +678,21 @@ form.homepage__booking .form__group__wrapper button {
     margin: 0 4px;
   }
 }
+
 .homepage__booking .input-group .value-control:hover {
   background: #eee;
 }
+
 .homepage__booking .input-group .value-control:active {
   background: #ddd;
 }
+
 .homepage__booking .input-group .value-control:focus,
 .homepage__booking .input-group .value-input:focus {
   outline: 2px solid #3e67fd;
   outline-offset: 1px;
 }
+
 .homepage__booking .input-group .value-input {
   margin: 0;
   width: 40px;
@@ -659,18 +700,23 @@ form.homepage__booking .form__group__wrapper button {
   padding: 2px 8px;
   text-align: center;
 }
+
 .homepage__booking .input-group .value-input::-moz-placeholder {
   color: var(--text-dim);
 }
+
 .homepage__booking .input-group .value-input::placeholder {
   color: var(--text-dim);
 }
+
 .homepage__booking .input-group input::-moz-placeholder {
   color: var(--text-dim);
 }
+
 .homepage__booking .input-group input::placeholder {
   color: var(--text-dim);
 }
+
 .homepage__booking .input-group .value-input:hover {
   border-color: #777;
 }
@@ -690,20 +736,25 @@ form.homepage__booking .form__group__wrapper button {
   font-size: 1.2rem;
   font-weight: 400;
 }
+
 .room_suits_showcase .rooms_suites_single:not(first-child) {
   margin-top: 8rem;
 }
+
 .room_suits_showcase .rooms_suites_single:nth-child(even) {
   flex-direction: row-reverse;
 }
+
 .room_suits_showcase .rooms_suites_single:nth-child(even) .suite_single_content::before {
   left: 60%;
 }
+
 .room_suits_showcase .rooms_suites_single .suite_single_content {
   background-color: #ffe4c1;
   background-size: 14px 14px;
   background-image: repeating-linear-gradient(45deg, #efc73f 0, #efc73f 1.4px, #ffe4c1 0, #ffe4c1 50%);
 }
+
 .room_suits_showcase .rooms_suites_single .suite_single_content::before {
   content: " ";
   position: absolute;
@@ -716,27 +767,32 @@ form.homepage__booking .form__group__wrapper button {
   top: 0%;
   left: -60%;
 }
+
 .room_suits_showcase .rooms_suites_single .suite_single_content .suite_description {
   margin-top: 1.5rem;
   font-size: 1.2rem;
   font-weight: 400;
 }
+
 .room_suits_showcase .rooms_suites_single .suite_single_content .suite_features {
   display: flex;
   gap: 10px;
   justify-content: space-between;
 }
+
 .room_suits_showcase .rooms_suites_single .suite_single_content .suite_features li {
   flex: 0 1 calc(30% - 10px);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
 }
+
 .room_suits_showcase .rooms_suites_single .suite_single_content .suite_features li span {
   font-size: 2.5rem;
   font-weight: 100;
   color: var(--color-from-logo);
 }
+
 .room_suits_showcase .rooms_suites_single .suite_single_content .suite_features li p {
   font-size: 0.8rem;
   color: var(--font-main);
@@ -758,6 +814,7 @@ form.homepage__booking .form__group__wrapper button {
   display: flex;
   gap: 15px;
 }
+
 .section__title_number ul li {
   display: flex;
   flex-direction: column;
@@ -768,12 +825,14 @@ form.homepage__booking .form__group__wrapper button {
   min-width: 90px;
   border-radius: 10px;
 }
+
 .section__title_number ul li .count {
   font-size: 2.5rem;
   font-weight: 600;
   line-height: 1.2;
   color: var(--text-main);
 }
+
 .section__title_number ul li .title__ {
   font-size: 0.8rem;
   color: var(--text-secondary);
@@ -782,9 +841,11 @@ form.homepage__booking .form__group__wrapper button {
 .alt__section__count .wrapper {
   background-color: var(--color-from-logo);
 }
+
 .alt__section__count ul.title_number_list {
   gap: 0;
 }
+
 .alt__section__count ul.title_number_list li.title_number_single {
   width: 200px;
   height: 200px;
@@ -793,19 +854,23 @@ form.homepage__booking .form__group__wrapper button {
   border: 1px solid var(--text-white);
   margin-right: -40px;
 }
+
 .alt__section__count ul.title_number_list li.title_number_single p.count {
   color: white;
   font-size: 4rem;
 }
+
 .alt__section__count ul.title_number_list li.title_number_single p.title__ {
   color: white;
 }
+
 .alt__section__count__2 .section__title_number .title_number_list .title_number_single {
   border: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 .alt__section__count__2 .section__title_number .title_number_list .title_number_single .count {
   background: var(--text-dimmer);
   padding: 20px 20px;
@@ -813,6 +878,7 @@ form.homepage__booking .form__group__wrapper button {
   min-width: 90px;
   text-align: center;
 }
+
 .alt__section__count__2 .section__title_number .title_number_list .title_number_single .title__ {
   background: var(--color-secondary);
   color: var(--font-main);
@@ -834,6 +900,7 @@ form.homepage__booking .form__group__wrapper button {
 .amenities__title h2 {
   line-height: 1.2;
 }
+
 .amenities__title p {
   color: var(--text-secondary);
 }
@@ -843,6 +910,7 @@ form.homepage__booking .form__group__wrapper button {
   flex-wrap: wrap;
   gap: 30px;
 }
+
 .amenities__list ul.amenities__ul__list li {
   display: flex;
   flex-direction: column;
@@ -855,16 +923,19 @@ form.homepage__booking .form__group__wrapper button {
   border-radius: 7px;
   transition: all 0.3s ease-in-out;
 }
+
 .amenities__list ul.amenities__ul__list li ion-icon {
   color: var(--text-dim);
   font-size: 2rem;
   transition: all 0.3s ease-in-out;
 }
+
 .amenities__list ul.amenities__ul__list li p {
   color: var(--text-secondary);
   font-size: 0.8rem;
   margin-top: 1.5rem;
 }
+
 .amenities__list ul.amenities__ul__list li:hover {
   transform: translateY(-5px);
   box-shadow: rgba(255, 238, 151, 0.2) 0px 8px 24px;
@@ -872,6 +943,7 @@ form.homepage__booking .form__group__wrapper button {
   cursor: pointer;
   border: 1px solid var(--color-secondary);
 }
+
 .amenities__list ul.amenities__ul__list li:hover ion-icon {
   color: var(--color-secondary);
 }
@@ -879,14 +951,17 @@ form.homepage__booking .form__group__wrapper button {
 .suites__detail__single {
   width: calc(50% - 150px);
 }
+
 .suites__detail__single h2 {
   margin-bottom: 0.5rem;
 }
+
 .suites__detail__single ul.details__list {
   list-style: disc;
   margin-left: 0.8rem;
   margin-top: 1rem;
 }
+
 .suites__detail__single ul.details__list .detail__single {
   padding-top: 0.5rem;
 }
@@ -894,26 +969,31 @@ form.homepage__booking .form__group__wrapper button {
 .photo_feature_slider .slider {
   height: 250px;
 }
+
 .photo_feature_slider .swiper-slide {
   width: 100%;
 }
+
 .photo_feature_slider .swiper-slide img {
   width: 100%;
   max-width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
+
 .photo_feature_slider .swiper-button-prev::after,
 .photo_feature_slider .swiper-button-next::after {
   content: "";
 }
+
 .photo_feature_slider .swiper-button-prev ion-icon,
 .photo_feature_slider .swiper-button-next ion-icon {
   font-size: 2.5rem;
   color: var(--text-white);
   opacity: 0.7;
 }
+
 .photo_feature_slider .swiper-button-prev ion-icon:hover,
 .photo_feature_slider .swiper-button-next ion-icon:hover {
   opacity: 1;
@@ -923,7 +1003,7 @@ form.homepage__booking .form__group__wrapper button {
   ABOUT PAGE
 ************************************************/
 .image__section__top {
-  background-image: url("/assets/img/stupda_building.png");
+  background-image: url("/assets/img/5.jpg");
   background-repeat: none;
   background-position: center center;
   background-size: cover;
@@ -932,6 +1012,7 @@ form.homepage__booking .form__group__wrapper button {
 .about__content .wrapper {
   gap: 60px;
 }
+
 .about__content ul li {
   margin-bottom: 1.5rem;
 }
@@ -945,10 +1026,12 @@ form.homepage__booking .form__group__wrapper button {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .brochure__download a {
   background: rgba(255, 179, 15, 0.5019607843);
   transition: all 0.2s ease-in-out;
 }
+
 .brochure__download a:hover {
   transition: all 0.2s ease-in-out;
   background: #ffb30f;
@@ -966,12 +1049,14 @@ form.homepage__booking .form__group__wrapper button {
   font-weight: 400;
   font-style: normal;
 }
+
 .about__2 p,
 .about__2 li {
   font-family: var(--font-main);
   font-size: 1.25rem;
   font-weight: 400;
 }
+
 .about__2 .text_content_v2 h2,
 .about__2 .text_content_v2 h3,
 .about__2 .text_content_v2 h4,
@@ -995,18 +1080,23 @@ form.homepage__booking .form__group__wrapper button {
   padding: 10px;
   margin-bottom: 30px;
 }
-.contact__page__form input:active, .contact__page__form input:focus, .contact__page__form input:focus-visible,
+
+.contact__page__form input:active,
+.contact__page__form input:focus,
+.contact__page__form input:focus-visible,
 .contact__page__form textarea:active,
 .contact__page__form textarea:focus,
 .contact__page__form textarea:focus-visible {
   border: 1px transparent rgba(0, 0, 0, 0);
   outline: 1px solid var(--color-secondary);
 }
+
 .contact__page__form label {
   text-transform: uppercase;
   font-size: 0.8rem;
   margin-bottom: 0.2rem;
 }
+
 .contact__page__form textarea {
   min-height: 100px;
 }
@@ -1023,34 +1113,42 @@ form.homepage__booking .form__group__wrapper button {
 .content__room__booking__form .room_single_booking .form__group__wrapper {
   width: 100%;
 }
+
 .content__room__booking__form .room_single_booking .input-group.grp__2 {
   width: 100%;
 }
+
 .content__room__booking__form .room_single_booking .input-group ion-icon {
   font-size: 1.6rem;
 }
+
 .content__room__booking__form .room_single_booking .input-group p {
   font-size: 1.2rem;
   line-height: 1.8;
   color: var(--font-main);
 }
+
 .content__room__booking__form .room_single_booking .input-group.grp__2 {
   align-items: center;
 }
+
 .content__room__booking__form .room_single_booking .input-group.grp__2 label {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .content__room__booking__form .room_single_booking .input-group.grp__2 label p {
   min-width: 90px;
 }
+
 .content__room__booking__form .room_single_booking .input-group.grp__2 label div {
   background: white;
   border-radius: 25px;
   padding: 3px;
 }
+
 .content__room__booking__form .room_single_booking .input-group input {
   margin-top: 0.2rem;
   width: 100%;
@@ -1060,6 +1158,7 @@ form.homepage__booking .form__group__wrapper button {
   text-align: center;
   padding: 0.2rem;
 }
+
 .content__room__booking__form .room_single_booking .btn_main {
   margin-top: 2.5rem;
   width: 100%;
@@ -1090,6 +1189,7 @@ footer {
     position: absolute;
   }
 }
+
 header.scrolled nav .nav_links.mobile__nav__links {
   background-color: var(--text-white);
 }
@@ -1104,6 +1204,7 @@ header.scrolled .nav_links.mobile__nav__links {
   width: 60%;
   max-width: 100%;
 }
+
 @media screen and (max-width: 768px) {
   .nav_links.mobile__nav__links {
     position: absolute;
@@ -1114,19 +1215,23 @@ header.scrolled .nav_links.mobile__nav__links {
     transition: all 0.3s ease;
   }
 }
+
 .nav_links.mobile__nav__links.active {
   left: 0;
   opacity: 1;
   transition: all 0.3s ease;
 }
+
 .nav_links.mobile__nav__links ul {
   flex-direction: column;
   margin-top: 3rem;
 }
+
 .nav_links.mobile__nav__links ul li {
   margin-left: 3rem;
   margin-bottom: 1rem;
 }
+
 .nav_links.mobile__nav__links ul li a:hover {
   border: none;
 }
@@ -1137,6 +1242,7 @@ header.scrolled .nav_links.mobile__nav__links {
 .room__description {
   font-weight: 400;
 }
+
 .room__description h1,
 .room__description h2,
 .room__description h3,
@@ -1145,25 +1251,30 @@ header.scrolled .nav_links.mobile__nav__links {
 .room__description h6 {
   font-weight: 400 !important;
 }
+
 .room__description p,
 .room__description li,
 .room__description small {
   color: var(--text-secondary);
 }
+
 .room__description .grp__2 {
   width: 100%;
   margin-top: 30px;
   /* Chrome, Safari, Edge, Opera */
   /* Firefox */
 }
+
 .room__description .grp__2 input::-webkit-outer-spin-button,
 .room__description .grp__2 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
 .room__description .grp__2 input[type=number] {
   -moz-appearance: textfield;
 }
+
 .room__description .grp__2 input {
   font-size: 1.4rem;
 }
@@ -1172,8 +1283,9 @@ header.scrolled .nav_links.mobile__nav__links {
   width: 100%;
   aspect-ratio: 16/9;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
+
 .photo_feature_slider__single__room .swiper-button-next ion-icon,
 .photo_feature_slider__single__room .swiper-button-prev ion-icon {
   color: var(--text-white);
@@ -1189,17 +1301,20 @@ header.scrolled .nav_links.mobile__nav__links {
   align-items: center;
   width: 100%;
 }
+
 .facilities__icons__grp ul li {
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
   width: 33%;
 }
+
 .facilities__icons__grp ul li span.material-symbols-outlined {
   color: var(--font-main);
   font-size: 30px;
   font-weight: 200;
 }
+
 .facilities__icons__grp ul li p {
   margin-left: 0.5rem;
 }
@@ -1207,32 +1322,40 @@ header.scrolled .nav_links.mobile__nav__links {
 .content__room__booking__form .input-group.caln::after {
   display: none;
 }
+
 .content__room__booking__form .input-group.caln {
   display: flex;
   align-items: flex-start;
 }
+
 .content__room__booking__form ion-icon {
   color: var(--color-secondary);
   margin-right: 5px;
   font-size: 1.2rem;
 }
+
 .content__room__booking__form .form__group__wrapper {
   display: flex;
   flex-direction: column;
 }
+
 .content__room__booking__form .input-group.grp__2 {
   display: flex;
   align-items: flex-start;
   margin-top: 2rem;
   width: 45%;
 }
+
 .content__room__booking__form .input-group.grp__2 input {
   max-width: 150px;
 }
-.content__room__booking__form .input-group.grp__2 input::-webkit-outer-spin-button, .content__room__booking__form .input-group.grp__2 input::-webkit-inner-spin-button {
+
+.content__room__booking__form .input-group.grp__2 input::-webkit-outer-spin-button,
+.content__room__booking__form .input-group.grp__2 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
 .content__room__booking__form .input-group.grp__2 .value-control {
   width: 30px;
   height: 30px;
@@ -1244,23 +1367,28 @@ header.scrolled .nav_links.mobile__nav__links {
   font-size: var(--font-size);
   background: rgba(59, 59, 59, 0.062745098);
 }
+
 @media only screen and (max-width: 768px) {
   .content__room__booking__form .input-group.grp__2 .value-control {
     width: 25px;
     height: 25px;
   }
 }
+
 .content__room__booking__form .input-group.grp__2 .value-control:hover {
   background: #eee;
 }
+
 .content__room__booking__form .input-group.grp__2 .value-control:active {
   background: #ddd;
 }
+
 .content__room__booking__form .input-group.grp__2 .value-control:focus,
 .content__room__booking__form .input-group.grp__2 .value-input:focus {
   outline: 2px solid #3e67fd;
   outline-offset: 1px;
 }
+
 .content__room__booking__form .input-group.grp__2 .value-input {
   margin: 0;
   width: 40px;
@@ -1268,6 +1396,9 @@ header.scrolled .nav_links.mobile__nav__links {
   padding: 2px 8px;
   text-align: center;
 }
+
 .content__room__booking__form .input-group.grp__2 .value-input:hover {
   border-color: #777;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
