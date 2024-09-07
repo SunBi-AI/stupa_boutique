@@ -666,11 +666,13 @@ form.homepage__booking .form__group__wrapper button {
   min-height: 30px;
   margin: 0 5px;
   background: transparent;
-  border: 1px solid var(--text-main);
+  border: 1px solid #ccc;
   color: #3b3b3b;
   cursor: pointer;
   font-size: var(--font-size);
   background: var(--text-white);
+  border-radius: 3px;
+  margin-top: 5px;
 }
 
 @media only screen and (max-width: 768px) {
