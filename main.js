@@ -49,7 +49,7 @@ const swiper2 = new Swiper(".room_types", {
   // Optional parameters
   direction: "horizontal",
   loop: true,
-  slidesPerView: 3,
+  slidesPerView: 4,
   spaceBetween: 40,
 
   // If we need pagination

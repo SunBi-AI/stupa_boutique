@@ -1,125 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=1"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Belleza&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
-    /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/assets/css/reset.css" />
-    <!-- <link rel="stylesheet" href="/assets/css/datepicker.css" /> -->
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="//code.jquery.com/ui/1.12.1/themes/Pepper-Grinder/jquery-ui.css"
-    />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/Pepper-Grinder/jquery-ui.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <title>STUPA</title>
     <style></style>
     <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
-  </head>
-  <body>
-    <!-- HEADER SECTION WITH NAVIGATION COMMON -->
-    <header
-      class="py-4 bg-black bg-opacity-10 max-w-[100vw] w-100 fixed top-0 left-0 right-0 z-[99]"
-      id="navigation__main"
-    >
-      <nav
-        class="main__navigation__bar flex justify-between items-center container mx-auto relative"
-      >
-        <div
-          class="w[60px] max-sm:block hidden p-3 hamburger cursor-pointer ml-2"
-          onclick="setLayout()"
-        >
-          <ion-icon name="menu-outline" class="text-white text-4xl"></ion-icon>
-        </div>
+</head>
 
-        <div
-          class="d-block max-[767px]:w-[100px] w-[100px] cursor-pointer relative"
-        >
-          <!-- <div class="border_for_logo absolute z-0"></div> -->
-          <div
-            class="d-block max-[767px]:w-50px] w-[60px] cursor-pointer main_navigation_logo"
-          >
-            <a href="/index.html" class="inline-block nav__logo">
-              <svg
-                version="1.1"
-                id="Layer_1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px"
-                y="0px"
-                viewBox="-122.6 237.4 203.7 224.3"
-                style="enable-background: new -122.6 237.4 203.7 224.3"
-                xml:space="preserve"
-              >
-                <style type="text/css">
-                  .st0 {
-                    fill: #a81f23;
-                  }
-                  .st1 {
-                    fill: url(#XMLID_5_);
-                  }
-                  .st2 {
-                    fill: url(#XMLID_6_);
-                  }
-                  .st3 {
-                    fill: url(#XMLID_8_);
-                  }
-                  .st4 {
-                    fill: url(#XMLID_9_);
-                  }
-                  .st5 {
-                    fill: url(#XMLID_11_);
-                  }
-                  .st6 {
-                    fill: url(#XMLID_12_);
-                  }
-                  .st7 {
-                    fill: url(#XMLID_23_);
-                  }
-                  .st8 {
-                    fill: url(#XMLID_24_);
-                  }
-                </style>
-                <g id="XMLID_2_">
-                  <path
-                    id="XMLID_113_"
-                    class="st0"
-                    d="M-28.9,243.3c2.2,5.2,4.3,10.4,6.5,15.6c0.9,2.1,1.8,4.3,2.9,6.4c1.5,2.7,3.8,4.8,6.7,6.1
+<body>
+    <!-- HEADER SECTION WITH NAVIGATION COMMON -->
+    <header class="py-4 bg-black bg-opacity-10 max-w-[100vw] w-100 fixed top-0 left-0 right-0 z-[99]"
+        id="navigation__main">
+        <nav class="main__navigation__bar flex justify-between items-center container mx-auto relative">
+            <div class="w[60px] max-sm:block hidden p-3 hamburger cursor-pointer ml-2" onclick="setLayout()">
+                <ion-icon name="menu-outline" class="text-white text-4xl"></ion-icon>
+            </div>
+
+            <div class="d-block max-[767px]:w-[100px] w-[100px] cursor-pointer relative">
+                <!-- <div class="border_for_logo absolute z-0"></div> -->
+                <div class="d-block max-[767px]:w-50px] w-[60px] cursor-pointer main_navigation_logo">
+                    <a href="/index.html" class="inline-block nav__logo">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="-122.6 237.4 203.7 224.3" style="enable-background: new -122.6 237.4 203.7 224.3"
+                            xml:space="preserve">
+                            <style type="text/css">
+                                .st0 {
+                                    fill: #a81f23;
+                                }
+
+                                .st1 {
+                                    fill: url(#XMLID_5_);
+                                }
+
+                                .st2 {
+                                    fill: url(#XMLID_6_);
+                                }
+
+                                .st3 {
+                                    fill: url(#XMLID_8_);
+                                }
+
+                                .st4 {
+                                    fill: url(#XMLID_9_);
+                                }
+
+                                .st5 {
+                                    fill: url(#XMLID_11_);
+                                }
+
+                                .st6 {
+                                    fill: url(#XMLID_12_);
+                                }
+
+                                .st7 {
+                                    fill: url(#XMLID_23_);
+                                }
+
+                                .st8 {
+                                    fill: url(#XMLID_24_);
+                                }
+                            </style>
+                            <g id="XMLID_2_">
+                                <path id="XMLID_113_" class="st0" d="M-28.9,243.3c2.2,5.2,4.3,10.4,6.5,15.6c0.9,2.1,1.8,4.3,2.9,6.4c1.5,2.7,3.8,4.8,6.7,6.1
  c3.8,1.8,7.8,3.3,11.6,5.2c1.8,0.9,3.6,1.9,4.9,3.3c1.7,1.8,3.6,3.1,5.8,4.1c2.2,1.1,4.4,2.3,6.5,3.6c2.4,1.5,4.3,3.6,5.4,6.1
  c1.3,2.9,3.5,5.2,6.1,7.1c3.9,2.8,6.7,6.3,8.2,10.7c1.3,3.9,4,6.9,7.9,8.9c1.2,0.6,2.2,1.6,3,2.6c3.8,4.6,6.8,9.6,8.9,15.1
  c0.9,2.4,2.4,4.4,4.4,6.1c5.8,4.8,8.8,10.7,9.1,18c0.1,3.4,1,6.6,2.5,9.7c1.6,3.2,2.4,6.6,2.5,10.2c0.2,5.9,0.3,11.7,0.2,17.6
@@ -130,473 +89,305 @@
  c-0.6-1.5-0.4-3.7,0.3-5.2c2.9-6,3.9-12.3,4.7-18.7c0.6-4.6,2.1-8.6,5.3-12.2c4.2-4.5,6.3-10,8.1-15.5c1.4-4.3,3.8-7.8,7-11.2
  c3.8-4,7.2-8.4,10.5-12.9c2.1-2.9,4.5-5.4,7.6-7.4c2.9-1.9,5.4-4.1,7.3-7c1.8-2.8,4.5-4.8,7.6-6.2c3.9-1.7,7.3-3.9,10.2-6.9
  c1.3-1.3,3-2.3,4.6-3.1c3.7-1.9,7.4-3.6,11.1-5.3c5.4-2.5,7.4-6.4,6.2-12c-0.9-4.2-1.8-8.5-2.7-12.7c-0.2-1.1-0.2-2.3-0.3-3.5
- C-29,243.3-29,243.3-28.9,243.3z"
-                  />
-                  <path
-                    id="XMLID_22_"
-                    class="st0"
-                    d="M-17,456.6l-2.1-1.5c0,0,2.5-4-1.3-13.8c-4.2-11-0.2-27.7,0-28.4l2.5,0.6c0,0.2-4,16.6,0,26.9
- C-13.6,451.7-16.9,456.4-17,456.6z"
-                  />
-                  <g id="XMLID_14_">
-                    <linearGradient
-                      id="XMLID_5_"
-                      gradientUnits="userSpaceOnUse"
-                      x1="-50.763"
-                      y1="453.9373"
-                      x2="7.563"
-                      y2="453.9373"
-                      gradientTransform="matrix(1 0 0 1 0 -84.3373)"
-                    >
-                      <stop offset="0" style="stop-color: #bb872c" />
-                      <stop offset="0.4944" style="stop-color: #f5bd17" />
-                      <stop offset="1" style="stop-color: #bb872c" />
-                    </linearGradient>
-                    <path
-                      id="XMLID_21_"
-                      class="st1"
-                      d="M-21.7,305.4c0.9,2.6,1.8,5.4,2.9,8.1c2.9,7,7.5,13.2,11.9,19.6c4.3,6.1,8.5,12.2,11.4,18.9
+ C-29,243.3-29,243.3-28.9,243.3z" />
+                                <path id="XMLID_22_" class="st0" d="M-17,456.6l-2.1-1.5c0,0,2.5-4-1.3-13.8c-4.2-11-0.2-27.7,0-28.4l2.5,0.6c0,0.2-4,16.6,0,26.9
+ C-13.6,451.7-16.9,456.4-17,456.6z" />
+                                <g id="XMLID_14_">
+                                    <linearGradient id="XMLID_5_" gradientUnits="userSpaceOnUse" x1="-50.763"
+                                        y1="453.9373" x2="7.563" y2="453.9373"
+                                        gradientTransform="matrix(1 0 0 1 0 -84.3373)">
+                                        <stop offset="0" style="stop-color: #bb872c" />
+                                        <stop offset="0.4944" style="stop-color: #f5bd17" />
+                                        <stop offset="1" style="stop-color: #bb872c" />
+                                    </linearGradient>
+                                    <path id="XMLID_21_" class="st1" d="M-21.7,305.4c0.9,2.6,1.8,5.4,2.9,8.1c2.9,7,7.5,13.2,11.9,19.6c4.3,6.1,8.5,12.2,11.4,18.9
    C9,362.6,8.4,373,3,383.1c-3.7,7-8.2,13.7-12.5,20.5c-4.8,7.7-9,15.5-10.3,24.2c-0.3,2-0.4,3.9-0.9,6c-0.7-1.8-1.4-3.6-2-5.4
    c-2.5-8.3-1.7-16.4,2.3-24.1c3.1-6,7-11.7,10.5-17.6c2.8-4.7,5.3-9.5,6.5-14.7c1.5-6.6,0.5-12.9-2.5-19c-3-6.3-7.1-12-11.2-17.7
    c-1.5-2.1-3-4.2-4.6-6.5c-1,1.4-1.9,2.8-2.9,4.1c-4,5.3-8.2,10.6-12,16c-4.9,6.9-8.1,14.2-7.6,22.3c0.3,5.3,2.1,10.3,4.1,15.3
    c2.1,5.2,4.2,10.5,6.3,15.8c0.1,0.2,0.1,0.5,0.3,1.1c-2.4-3.9-4.7-7.5-7-11.1c-3.1-4.9-6.1-9.9-8.1-15.2c-3.5-9.1-2.6-18,1.6-26.8
-   c3-6.4,7.2-12.3,11.3-18.2c4.2-6,8.5-12,11.2-18.7C-23.5,310.7-22.6,308-21.7,305.4z"
-                    />
+   c3-6.4,7.2-12.3,11.3-18.2c4.2-6,8.5-12,11.2-18.7C-23.5,310.7-22.6,308-21.7,305.4z" />
 
-                    <linearGradient
-                      id="XMLID_6_"
-                      gradientUnits="userSpaceOnUse"
-                      x1="-6.7158"
-                      y1="476.9373"
-                      x2="60.7759"
-                      y2="476.9373"
-                      gradientTransform="matrix(1 0 0 1 0 -84.3373)"
-                    >
-                      <stop offset="0" style="stop-color: #bb872c" />
-                      <stop offset="0.4944" style="stop-color: #f5bd17" />
-                      <stop offset="1" style="stop-color: #bb872c" />
-                    </linearGradient>
-                    <path
-                      id="XMLID_20_"
-                      class="st2"
-                      d="M57.5,361.6c2.5,5.9,3.8,11.9,3.1,18.2c-0.6,5.7-2.6,11.1-6.3,15.9
+                                    <linearGradient id="XMLID_6_" gradientUnits="userSpaceOnUse" x1="-6.7158"
+                                        y1="476.9373" x2="60.7759" y2="476.9373"
+                                        gradientTransform="matrix(1 0 0 1 0 -84.3373)">
+                                        <stop offset="0" style="stop-color: #bb872c" />
+                                        <stop offset="0.4944" style="stop-color: #f5bd17" />
+                                        <stop offset="1" style="stop-color: #bb872c" />
+                                    </linearGradient>
+                                    <path id="XMLID_20_" class="st2" d="M57.5,361.6c2.5,5.9,3.8,11.9,3.1,18.2c-0.6,5.7-2.6,11.1-6.3,15.9
    c-6.3,8.4-15.2,14-26.9,15.8c-3.5,0.5-7.2,0.1-10.8,0c17-1.1,25.8-10,31.6-22.4c-0.5,0.1-0.6,0.1-0.7,0.2
    c-5.5,5.5-12.9,9-20.3,12.5c-6.6,3.1-13.2,6.1-19.4,9.6c-5.6,3-10.1,7-13.7,11.7c-0.2,0.2-0.4,0.4-0.7,0.5c1.3-3.1,3.2-6,5.5-8.7
-   c5.9-6.9,13.5-12.3,21.5-17.4c7-4.5,14.1-8.8,20.8-13.6C49.7,377.9,54.9,371.2,57.5,361.6z"
-                    />
+   c5.9-6.9,13.5-12.3,21.5-17.4c7-4.5,14.1-8.8,20.8-13.6C49.7,377.9,54.9,371.2,57.5,361.6z" />
 
-                    <linearGradient
-                      id="XMLID_8_"
-                      gradientUnits="userSpaceOnUse"
-                      x1="-104.1292"
-                      y1="476.9873"
-                      x2="-36.8"
-                      y2="476.9873"
-                      gradientTransform="matrix(1 0 0 1 0 -84.3373)"
-                    >
-                      <stop offset="0" style="stop-color: #bb872c" />
-                      <stop offset="0.4944" style="stop-color: #f5bd17" />
-                      <stop offset="1" style="stop-color: #bb872c" />
-                    </linearGradient>
-                    <path
-                      id="XMLID_19_"
-                      class="st3"
-                      d="M-60,411.6c-6.8,1-13.5,0.3-19.7-2.3c-14.4-5.9-22.2-15.7-24.2-28.9c-0.9-5.8,1-15,3.1-18.9
+                                    <linearGradient id="XMLID_8_" gradientUnits="userSpaceOnUse" x1="-104.1292"
+                                        y1="476.9873" x2="-36.8" y2="476.9873"
+                                        gradientTransform="matrix(1 0 0 1 0 -84.3373)">
+                                        <stop offset="0" style="stop-color: #bb872c" />
+                                        <stop offset="0.4944" style="stop-color: #f5bd17" />
+                                        <stop offset="1" style="stop-color: #bb872c" />
+                                    </linearGradient>
+                                    <path id="XMLID_19_" class="st3" d="M-60,411.6c-6.8,1-13.5,0.3-19.7-2.3c-14.4-5.9-22.2-15.7-24.2-28.9c-0.9-5.8,1-15,3.1-18.9
    c0.6,1.9,1.1,3.7,1.8,5.4c2.8,6.8,7.8,12.5,14.3,17.1c6.8,4.8,14,9.2,21,13.7c7.5,4.8,14.7,9.8,20.4,16.1c2.8,3,5.1,6.3,6.5,10
    c-0.3-0.4-0.6-0.7-0.9-1.1c-0.3-0.4-0.6-0.8-0.9-1.1c-5.5-6.3-12.7-10.8-20.7-14.6c-7-3.3-14.2-6.4-21-10c-4-2.1-7.4-5-10.8-7.3
-   c0.1,2.7,6.1,11,11.3,15C-74.3,408.9-67.7,411.4-60,411.6z"
-                    />
+   c0.1,2.7,6.1,11,11.3,15C-74.3,408.9-67.7,411.4-60,411.6z" />
 
-                    <linearGradient
-                      id="XMLID_9_"
-                      gradientUnits="userSpaceOnUse"
-                      x1="-69.4504"
-                      y1="464.4373"
-                      x2="-29.9424"
-                      y2="464.4373"
-                      gradientTransform="matrix(1 0 0 1 0 -84.3373)"
-                    >
-                      <stop offset="0" style="stop-color: #bb872c" />
-                      <stop offset="0.4944" style="stop-color: #f5bd17" />
-                      <stop offset="1" style="stop-color: #bb872c" />
-                    </linearGradient>
-                    <path
-                      id="XMLID_18_"
-                      class="st4"
-                      d="M-47.7,336.7c-3.4,4.4-6.3,8.9-8.2,13.8c-2.7,6.9-3.3,13.9-2,21c1.8,9.2,7.1,17.1,12.6,25.1
+                                    <linearGradient id="XMLID_9_" gradientUnits="userSpaceOnUse" x1="-69.4504"
+                                        y1="464.4373" x2="-29.9424" y2="464.4373"
+                                        gradientTransform="matrix(1 0 0 1 0 -84.3373)">
+                                        <stop offset="0" style="stop-color: #bb872c" />
+                                        <stop offset="0.4944" style="stop-color: #f5bd17" />
+                                        <stop offset="1" style="stop-color: #bb872c" />
+                                    </linearGradient>
+                                    <path id="XMLID_18_" class="st4" d="M-47.7,336.7c-3.4,4.4-6.3,8.9-8.2,13.8c-2.7,6.9-3.3,13.9-2,21c1.8,9.2,7.1,17.1,12.6,25.1
    c4.1,5.9,8.1,11.9,11.8,18c1.6,2.7,2.4,5.8,3.6,8.8c-0.2,0-0.3,0.1-0.5,0.1c-0.9-1.6-1.7-3.2-2.7-4.7c-3.7-6-9.2-10.8-14.5-15.8
    c-4.8-4.5-9.8-9-14-13.9c-6.4-7.5-9-16.1-7.3-25.3c1.8-9.8,8-17.5,16.7-24c1.3-1,2.7-1.9,4.1-2.8
-   C-48.1,336.9-47.9,336.8-47.7,336.7z"
-                    />
+   C-48.1,336.9-47.9,336.8-47.7,336.7z" />
 
-                    <linearGradient
-                      id="XMLID_11_"
-                      gradientUnits="userSpaceOnUse"
-                      x1="-13.4404"
-                      y1="464.6373"
-                      x2="26.0609"
-                      y2="464.6373"
-                      gradientTransform="matrix(1 0 0 1 0 -84.3373)"
-                    >
-                      <stop offset="0" style="stop-color: #bb872c" />
-                      <stop offset="0.4944" style="stop-color: #f5bd17" />
-                      <stop offset="1" style="stop-color: #bb872c" />
-                    </linearGradient>
-                    <path
-                      id="XMLID_17_"
-                      class="st5"
-                      d="M4.2,336.9c11.1,6.8,19.2,15.3,21.4,26.9c1.6,8.4-0.7,16.3-5.9,23.6
+                                    <linearGradient id="XMLID_11_" gradientUnits="userSpaceOnUse" x1="-13.4404"
+                                        y1="464.6373" x2="26.0609" y2="464.6373"
+                                        gradientTransform="matrix(1 0 0 1 0 -84.3373)">
+                                        <stop offset="0" style="stop-color: #bb872c" />
+                                        <stop offset="0.4944" style="stop-color: #f5bd17" />
+                                        <stop offset="1" style="stop-color: #bb872c" />
+                                    </linearGradient>
+                                    <path id="XMLID_17_" class="st5" d="M4.2,336.9c11.1,6.8,19.2,15.3,21.4,26.9c1.6,8.4-0.7,16.3-5.9,23.6
    c-3.7,5.2-8.6,9.5-13.4,13.9c-4.5,4.1-8.9,8.2-12.9,12.6c-2.6,2.9-4.4,6.3-6.8,9.8c1-2.8,1.8-5.3,2.8-7.7
    c2.7-6,6.6-11.4,10.6-16.8c4.4-6.1,9-12.2,11.9-19c3.1-7.3,4.3-14.8,2.9-22.5c-1.4-7.5-5-14.2-10.1-20.4
-   C4.4,337.2,4.3,337.1,4.2,336.9z"
-                    />
+   C4.4,337.2,4.3,337.1,4.2,336.9z" />
 
-                    <linearGradient
-                      id="XMLID_12_"
-                      gradientUnits="userSpaceOnUse"
-                      x1="11.7"
-                      y1="506.0513"
-                      x2="54.7"
-                      y2="506.0513"
-                      gradientTransform="matrix(1 0 0 1 0 -84.3373)"
-                    >
-                      <stop offset="0" style="stop-color: #bb872c" />
-                      <stop offset="0.4944" style="stop-color: #f5bd17" />
-                      <stop offset="1" style="stop-color: #bb872c" />
-                    </linearGradient>
-                    <path
-                      id="XMLID_16_"
-                      class="st6"
-                      d="M11.7,417.4c12-4.4,34-1.1,43,10.5c-4.2-2.2-8.2-1-12.2-0.6c-4.8,0.4-8.9-0.7-12.6-3.2
-   c-2-1.4-4.1-2.7-6.3-4C20.1,417.9,16.1,417,11.7,417.4z"
-                    />
+                                    <linearGradient id="XMLID_12_" gradientUnits="userSpaceOnUse" x1="11.7"
+                                        y1="506.0513" x2="54.7" y2="506.0513"
+                                        gradientTransform="matrix(1 0 0 1 0 -84.3373)">
+                                        <stop offset="0" style="stop-color: #bb872c" />
+                                        <stop offset="0.4944" style="stop-color: #f5bd17" />
+                                        <stop offset="1" style="stop-color: #bb872c" />
+                                    </linearGradient>
+                                    <path id="XMLID_16_" class="st6" d="M11.7,417.4c12-4.4,34-1.1,43,10.5c-4.2-2.2-8.2-1-12.2-0.6c-4.8,0.4-8.9-0.7-12.6-3.2
+   c-2-1.4-4.1-2.7-6.3-4C20.1,417.9,16.1,417,11.7,417.4z" />
 
-                    <linearGradient
-                      id="XMLID_23_"
-                      gradientUnits="userSpaceOnUse"
-                      x1="-97.7"
-                      y1="505.9463"
-                      x2="-55.1"
-                      y2="505.9463"
-                      gradientTransform="matrix(1 0 0 1 0 -84.3373)"
-                    >
-                      <stop offset="0" style="stop-color: #bb872c" />
-                      <stop offset="0.4944" style="stop-color: #f5bd17" />
-                      <stop offset="1" style="stop-color: #bb872c" />
-                    </linearGradient>
-                    <path
-                      id="XMLID_15_"
-                      class="st7"
-                      d="M-55.1,417.4c-7.1-0.9-12,2.5-17,5.7c-2.2,1.4-4.6,2.6-7.1,3.6c-2.9,1.1-6.2,0.7-9.3,0.3
-   s-6.2-0.7-9.2,0.7C-91,417.6-69.2,412.5-55.1,417.4z"
-                    />
-                  </g>
-                  <g id="XMLID_3_">
-                    <linearGradient
-                      id="XMLID_24_"
-                      gradientUnits="userSpaceOnUse"
-                      x1="1108.8954"
-                      y1="-105.5314"
-                      x2="1133.1229"
-                      y2="-87.8424"
-                      gradientTransform="matrix(0 -1 1 0 79.4142 1405.6454)"
-                    >
-                      <stop offset="0" style="stop-color: #bb872c" />
-                      <stop offset="0.5394" style="stop-color: #f5bd17" />
-                    </linearGradient>
-                    <circle
-                      id="XMLID_13_"
-                      class="st8"
-                      cx="-21.7"
-                      cy="290.7"
-                      r="9.3"
-                    />
-                    <path
-                      id="XMLID_10_"
-                      class="st0"
-                      d="M-21.7,297.7c-3.8,0-7-3.1-7-7c0-3.9,3.1-7,7-7s7,3.1,7,7C-14.7,294.6-17.8,297.7-21.7,297.7z
-    M-21.7,284.5c-3.4,0-6.2,2.8-6.2,6.2c0,3.4,2.8,6.2,6.2,6.2s6.2-2.8,6.2-6.2C-15.5,287.3-18.3,284.5-21.7,284.5z"
-                    />
-                    <path
-                      id="XMLID_7_"
-                      class="st0"
-                      d="M-21.7,295.7c-2.8,0-5-2.3-5-5c0-2.8,2.3-5,5-5c2.8,0,5,2.3,5,5
+                                    <linearGradient id="XMLID_23_" gradientUnits="userSpaceOnUse" x1="-97.7"
+                                        y1="505.9463" x2="-55.1" y2="505.9463"
+                                        gradientTransform="matrix(1 0 0 1 0 -84.3373)">
+                                        <stop offset="0" style="stop-color: #bb872c" />
+                                        <stop offset="0.4944" style="stop-color: #f5bd17" />
+                                        <stop offset="1" style="stop-color: #bb872c" />
+                                    </linearGradient>
+                                    <path id="XMLID_15_" class="st7" d="M-55.1,417.4c-7.1-0.9-12,2.5-17,5.7c-2.2,1.4-4.6,2.6-7.1,3.6c-2.9,1.1-6.2,0.7-9.3,0.3
+   s-6.2-0.7-9.2,0.7C-91,417.6-69.2,412.5-55.1,417.4z" />
+                                </g>
+                                <g id="XMLID_3_">
+                                    <linearGradient id="XMLID_24_" gradientUnits="userSpaceOnUse" x1="1108.8954"
+                                        y1="-105.5314" x2="1133.1229" y2="-87.8424"
+                                        gradientTransform="matrix(0 -1 1 0 79.4142 1405.6454)">
+                                        <stop offset="0" style="stop-color: #bb872c" />
+                                        <stop offset="0.5394" style="stop-color: #f5bd17" />
+                                    </linearGradient>
+                                    <circle id="XMLID_13_" class="st8" cx="-21.7" cy="290.7" r="9.3" />
+                                    <path id="XMLID_10_" class="st0" d="M-21.7,297.7c-3.8,0-7-3.1-7-7c0-3.9,3.1-7,7-7s7,3.1,7,7C-14.7,294.6-17.8,297.7-21.7,297.7z
+    M-21.7,284.5c-3.4,0-6.2,2.8-6.2,6.2c0,3.4,2.8,6.2,6.2,6.2s6.2-2.8,6.2-6.2C-15.5,287.3-18.3,284.5-21.7,284.5z" />
+                                    <path id="XMLID_7_" class="st0" d="M-21.7,295.7c-2.8,0-5-2.3-5-5c0-2.8,2.3-5,5-5c2.8,0,5,2.3,5,5
    C-16.6,293.5-18.9,295.7-21.7,295.7z M-21.7,286.5c-2.3,0-4.2,1.9-4.2,4.2c0,2.3,1.9,4.2,4.2,4.2s4.2-1.9,4.2-4.2
-   C-17.4,288.4-19.3,286.5-21.7,286.5z"
-                    />
-                    <path
-                      id="XMLID_4_"
-                      class="st0"
-                      d="M-21.7,294c-1.8,0-3.3-1.5-3.3-3.3c0-1.8,1.5-3.3,3.3-3.3s3.3,1.5,3.3,3.3
+   C-17.4,288.4-19.3,286.5-21.7,286.5z" />
+                                    <path id="XMLID_4_" class="st0" d="M-21.7,294c-1.8,0-3.3-1.5-3.3-3.3c0-1.8,1.5-3.3,3.3-3.3s3.3,1.5,3.3,3.3
    C-18.4,292.5-19.9,294-21.7,294z M-21.7,288.2c-1.4,0-2.5,1.1-2.5,2.5c0,1.4,1.1,2.5,2.5,2.5s2.5-1.1,2.5-2.5
-   C-19.2,289.3-20.3,288.2-21.7,288.2z"
-                    />
-                  </g>
-                </g>
-              </svg>
-            </a>
-          </div>
-        </div>
+   C-19.2,289.3-20.3,288.2-21.7,288.2z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
 
-        <div class="nav_links nav__link__prime mobile__nav__links" id="">
-          <ul
-            class="flex justify-between font-normal max-w-[767px]:space-x-[2rem] space-x-12"
-          >
-            <li class="text-white max-md:space-x-12">
-              <a
-                href="/index.html"
-                class="cursor-pointer px-0 hover:border-b-2 font-medium"
-                >Home</a
-              >
-            </li>
-            <li class="text-white">
-              <a
-                href="about.html"
-                class="cursor-pointer px-0 hover:border-b-2 font-medium"
-                >About</a
-              >
-            </li>
-            <li class="text-white">
-              <a
-                href="/rooms_suites.html"
-                class="cursor-pointer px-0 hover:border-b-2 font-medium"
-                >Room & Suites</a
-              >
-            </li>
+            <div class="nav_links nav__link__prime mobile__nav__links" id="">
+                <ul class="flex justify-between font-normal max-w-[767px]:space-x-[2rem] space-x-12">
+                    <li class="text-white max-md:space-x-12">
+                        <a href="/index.html" class="cursor-pointer px-0 hover:border-b-2 font-medium">Home</a>
+                    </li>
+                    <li class="text-white">
+                        <a href="about.html" class="cursor-pointer px-0 hover:border-b-2 font-medium">About</a>
+                    </li>
+                    <li class="text-white">
+                        <a href="/rooms_suites.html" class="cursor-pointer px-0 hover:border-b-2 font-medium">Room &
+                            Suites</a>
+                    </li>
 
-            <li class="text-white">
-              <a
-                href="contact.html"
-                class="cursor-pointer px-0 hover:border-b-2 font-medium"
-                >Contact</a
-              >
-            </li>
-            <li class="text-white">
-              <a
-                href=""
-                class="cursor-pointer px-0 hover:border-b-2 font-medium"
-                >Facilities</a
-              >
-            </li>
-          </ul>
-        </div>
+                    <li class="text-white">
+                        <a href="contact.html" class="cursor-pointer px-0 hover:border-b-2 font-medium">Contact</a>
+                    </li>
+                    <li class="text-white">
+                        <a href="" class="cursor-pointer px-0 hover:border-b-2 font-medium">Facilities</a>
+                    </li>
+                </ul>
+            </div>
 
-        <div class="search_top mr-2">
-          <form action="" class="search__top__">
-            <input
-              type="text"
-              placeholder=""
-              name=""
-              class="search__btn__top hide"
-              aria-placeholder="search..."
-            />
-            <button type="submit" class="Btn__search__top">
-              <ion-icon
-                name="search-outline"
-                class="text-white cursor-pointer text-2xl p-[10px]"
-              ></ion-icon>
-            </button>
-          </form>
-        </div>
-      </nav>
+            <div class="search_top mr-2">
+                <form action="" class="search__top__">
+                    <input type="text" placeholder="" name="" class="search__btn__top hide"
+                        aria-placeholder="search..." />
+                    <button type="submit" class="Btn__search__top">
+                        <ion-icon name="search-outline" class="text-white cursor-pointer text-2xl p-[10px]"></ion-icon>
+                    </button>
+                </form>
+            </div>
+        </nav>
     </header>
     <!-- HEADER SECTION WITH NAVIGATION COMMON -->
 
 
-     <!-- HEADER SECTION WITH NAVIGATION COMMON -->
+    <!-- HEADER SECTION WITH NAVIGATION COMMON -->
 
-     <main class="">
-      <div class="image__section__top relative w-[100%] h-[600px] flex justify-center items-center">
-          <div class="overlay absolute z-0 h-[100%] w-[100%] bg-gray-900/30 top-0 left-0"></div>
-           <h1 class="text-white text-center font-bold relative">Contact Us</h1>
-      </div>
+    <main class="">
+        <div class="image__section__top relative w-[100%] h-[400px] flex justify-center items-center">
+            <div class="overlay absolute z-0 h-[100%] w-[100%] bg-gray-900/30 top-0 left-0"></div>
+            <h1 class="text-white text-center font-bold relative">Contact Us</h1>
+        </div>
     </main>
 
-    <section class="w-[80%] py-20 mx-auto">
-      <div class="wrapper flex justify-center items-center">
+    <section class="container pt-24 mx-auto">
+        <div class="wrapper flex justify-center items-center">
 
-        <div class="form__left w-[35%] form__section__left ml-auto">
-          <div class="form__wrapper">
-            <h3>Send Us a message for any kind of Inquiry</h3>
-            <p class="text-gray-600">Please fill in required fields in the inquiry form.</p>
+            <div class="form__left form__section__left ml-auto">
+                <div class="form__wrapper">
+                    <h3>Send Us a message for any kind of Inquiry</h3>
+                    <p class="text-gray-600">Please fill in required fields in the inquiry form.</p>
 
-            <div class="separator"></div>
+                    <div class="separator"></div>
 
-            <form action="" class="mt-6 flex flex-col contact__page__form">
-              <label for="name__inquire">Full Name*</label>
-              <input type="text" name="fullName" id="name__inquire" required>
-              <label for="mail__add">Email*</label>
-              <input type="text" id="mail__add" name="email" required>
-              <label for="messages__">message/inquiry</label>
-              <textarea name="" id="messages__"></textarea>
-              <div>
-                <button class="btn_main">Submit</button>
+                    <form action="" class="mt-6 flex flex-col contact__page__form">
+                        <label for="name__inquire">Full Name*</label>
+                        <input type="text" name="fullName" id="name__inquire" required>
+                        <label for="mail__add">Email*</label>
+                        <input type="text" id="mail__add" name="email" required>
+                        <label for="messages__">message/inquiry</label>
+                        <textarea name="" id="messages__"></textarea>
+                        <div>
+                            <button class="btn_main">Submit</button>
 
-              </div>
-            </form>
-          </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="contact__info__right w-[40%] ml-auto">
+                <h3 class="font-medium mb-2">Stupa Boutique Hotel</h3>
+                <p>GPO Box no. XXXX</p>
+                <p>Street: Lorem Ipsum Marga</p>
+                <p>Ward No. X</p>
+                <p>District: Kathmandu</p>
+                <p>Province: Province 3</p>
+                <p>Country: Nepal</p>
+                <small class="block mt-4">If you require immediate assistance, please contact our general line at the
+                    number below.</small>
+                <div class="flex mt-2">
+                    <b class="min-w-16">Phone</b>
+                    <div class="flex flex-col ml-4">
+                        <a href="tel:"> +977-XXXXXXXXX</a>
+                        <a href="tel:">+977-XXXXXXXX</a>
+                    </div>
+                </div>
+
+                <div class="flex mt-2">
+                    <b class="min-w-16">Fax</b>
+                    <div class="flex flex-col ml-4">
+                        <p>+977-XXXX-XXXX-XXXX</p>
+
+                    </div>
+                </div>
+
+                <div class="flex mt-2">
+                    <b class="min-w-16">Email</b>
+                    <div class="flex flex0col ml-4">
+                        <p><a href="mailto:''">mail@stupaboutique.com</a></p>
+                    </div>
+                </div>
+                <div class="separator"></div>
+
+                <div class="">
+                    <h4>GDS Property Codes</h4>
+                    <div class="gds__info mt-2">
+                        <p>Amadeus: KTMXXX</p>
+                        <p>Sabre: XXXXXX</p>
+                        <p>Worldspan: XXXXXX</p>
+                        <p>Chain Code: 'XX'</p>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="contact__info__right w-[40%] ml-auto">
-          <h3 class="font-medium mb-2">Stupa Boutique Hotel</h3>
-          <p>GPO Box no. XXXX</p>
-          <p>Street: Lorem Ipsum Marga</p>
-          <p>Ward No. X</p>
-          <p>District: Kathmandu</p>
-          <p>Province: Province 3</p>
-          <p>Country: Nepal</p>
-          <small class="block mt-4">If you require immediate assistance, please contact our general line at the number below.</small>
-          <div class="flex mt-2">
-            <b class="min-w-16">Phone</b>
-            <div class="flex flex-col ml-4">
-              <a href="tel:"> +977-XXXXXXXXX</a>
-              <a href="tel:">+977-XXXXXXXX</a>
-            </div>
-          </div>
-
-          <div class="flex mt-2">
-            <b  class="min-w-16">Fax</b>
-            <div class="flex flex-col ml-4">
-              <p>+977-XXXX-XXXX-XXXX</p>
-
-            </div>
-          </div>
-
-          <div class="flex mt-2">
-            <b class="min-w-16">Email</b>
-            <div class="flex flex0col ml-4">
-              <p><a href="mailto:''">mail@stupaboutique.com</a></p>
-            </div>
-          </div>
-          <div class="separator"></div>
-
-          <div class="">
-            <h4>GDS Property Codes</h4>
-            <div class="gds__info mt-2">
-              <p>Amadeus: KTMXXX</p>
-              <p>Sabre: XXXXXX</p>
-              <p>Worldspan: XXXXXX</p>
-              <p>Chain Code: 'XX'</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
 
-  <!-- COMMON FOOTER SECTION -->
-  <footer class="mt-24 relative">
-    <!-- <img src="/assets/img/bud_pattern.svg" class="w-[200px] absolute top-0 left-0" alt=""> -->
-    <div class="w-[80%] mx-auto py-30">
-      <div
-        class="grid grid-cols-2 max-md:grid-cols-1 gap-40 max-lg:gap-20 max-md:gap-20"
-      >
-        <div class="footer__brand__information">
-          <div class="d-block flex items-center">
-            <div class="svg__logo__container w-[150px]">
-              <img
-                src="/assets/img/logo_stupa.png"
-                alt="studpa boutique hotel"
-              />
+    <!-- COMMON FOOTER SECTION -->
+    <footer class="mt-24 relative">
+        <!-- <img src="/assets/img/bud_pattern.svg" class="w-[200px] absolute top-0 left-0" alt=""> -->
+        <div class="w-[80%] mx-auto py-30">
+            <div class="grid grid-cols-2 max-md:grid-cols-1 gap-40 max-lg:gap-20 max-md:gap-20">
+                <div class="footer__brand__information">
+                    <div class="d-block flex items-center">
+                        <div class="svg__logo__container w-[150px]">
+                            <img src="/assets/img/logo_stupa.png" alt="studpa boutique hotel" />
+                        </div>
+                        <!-- <img src="/assets/img/hotel.png" class="w-12" alt="" /> -->
+                        <p class="tracking-wide text-gray-600 mt-4 max-w-[80%] md:ml-4">
+                            Stupa Boutique Hotel offers a unique blend of luxury and
+                            tranquility, nestled in the heart of a picturesque setting. This
+                            charming hotel provides guests with elegantly designed rooms
+                            that feature modern amenities while maintaining a touch of
+                            traditional charm.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="footer__links grid grid-cols-3 max-md:grid-cols-2 gap-30 items-center">
+                    <ul class="footer__links__block">
+                        <li>
+                            <a href="" class="text-lg text-wide mb-4 inline-block text-gray-600">Home</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-lg text-wide mb-4 inline-block text-gray-600">Room & Suites</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-lg text-wide mb-4 inline-block text-gray-600">Conferencing</a>
+                        </li>
+                    </ul>
+
+                    <ul class="footer__links__block">
+                        <li>
+                            <a href="" class="text-lg text-wide mb-4 inline-block text-gray-600">Wedding</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-lg text-wide mb-4 inline-block text-gray-600">Events</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-lg text-wide mb-4 inline-block text-gray-600">Gallery</a>
+                        </li>
+                    </ul>
+
+                    <ul class="max-md:mt-10">
+                        <li>
+                            <h6 class="font-medium text-lg mb-4">Contact</h6>
+                        </li>
+                        <li>
+                            <a class="text-lg text-wide mb-4 inline-block text-gray-600"
+                                href="tel:+977-023-575203">+977-023-575203</a>
+                        </li>
+                        <li>
+                            <a class="text-lg text-wide mb-4 inline-block text-gray-600"
+                                href="tel: +977-980-2761000">+977-980-2761000</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <!-- <img src="/assets/img/hotel.png" class="w-12" alt="" /> -->
-            <p class="tracking-wide text-gray-600 mt-4 max-w-[80%] md:ml-4">
-              Stupa Boutique Hotel offers a unique blend of luxury and
-              tranquility, nestled in the heart of a picturesque setting. This
-              charming hotel provides guests with elegantly designed rooms
-              that feature modern amenities while maintaining a touch of
-              traditional charm.
-            </p>
-          </div>
         </div>
 
-        <div
-          class="footer__links grid grid-cols-3 max-md:grid-cols-2 gap-30 items-center"
-        >
-          <ul class="footer__links__block">
-            <li>
-              <a
-                href=""
-                class="text-lg text-wide mb-4 inline-block text-gray-600"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
-                href=""
-                class="text-lg text-wide mb-4 inline-block text-gray-600"
-                >Room & Suites</a
-              >
-            </li>
-            <li>
-              <a
-                href=""
-                class="text-lg text-wide mb-4 inline-block text-gray-600"
-                >Conferencing</a
-              >
-            </li>
-          </ul>
+        <!-- FOOTER COPYRIGHT SECTION -->
+        <div class="w-[80%] mx-auto py-8 flex flex-row max-md:flex-col items-center justify-between">
+            <div class="flex flex-row tracking-wide text-gray-500">
+                <span>© Stupa Boutique Hotel&nbsp;&nbsp;|&nbsp;&nbsp;All Rights
+                    Reserved</span>
+            </div>
 
-          <ul class="footer__links__block">
-            <li>
-              <a
-                href=""
-                class="text-lg text-wide mb-4 inline-block text-gray-600"
-                >Wedding</a
-              >
-            </li>
-            <li>
-              <a
-                href=""
-                class="text-lg text-wide mb-4 inline-block text-gray-600"
-                >Events</a
-              >
-            </li>
-            <li>
-              <a
-                href=""
-                class="text-lg text-wide mb-4 inline-block text-gray-600"
-                >Gallery</a
-              >
-            </li>
-          </ul>
-
-          <ul class="max-md:mt-10">
-            <li><h6 class="font-medium text-lg mb-4">Contact</h6></li>
-            <li>
-              <a
-                class="text-lg text-wide mb-4 inline-block text-gray-600"
-                href="tel:+977-023-575203"
-                >+977-023-575203</a
-              >
-            </li>
-            <li>
-              <a
-                class="text-lg text-wide mb-4 inline-block text-gray-600"
-                href="tel: +977-980-2761000"
-                >+977-980-2761000</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- FOOTER COPYRIGHT SECTION -->
-    <div
-      class="w-[80%] mx-auto py-8 flex flex-row max-md:flex-col items-center justify-between"
-    >
-      <div class="flex flex-row tracking-wide text-gray-500">
-        <span
-          >© Stupa Boutique Hotel&nbsp;&nbsp;|&nbsp;&nbsp;All Rights
-          Reserved</span
-        >
-      </div>
-
-      <div
-        class="flex flex-row items-center flex flex-row tracking-wide text-gray-500"
-      >
-        <!-- <p>connect with us</p>
+            <div class="flex flex-row items-center flex flex-row tracking-wide text-gray-500">
+                <!-- <p>connect with us</p>
         <ul class="flex flex-row ml-2">
           <li>
             <a href=""
@@ -623,34 +414,23 @@
             ></a>
           </li>
         </ul> -->
-        <div class="flex flex-row tracking-wide text-gray-500">
-          <span class="ml-10 max-md:ml-0">
-            &nbsp;Design:
-            <a
-              href="https://sunbi.com.np/index"
-              target="_blank"
-              class="text-yellow-500"
-              >SunBi</a
-            ></span
-          >
+                <div class="flex flex-row tracking-wide text-gray-500">
+                    <span class="ml-10 max-md:ml-0">
+                        &nbsp;Design:
+                        <a href="https://sunbi.com.np/index" target="_blank" class="text-yellow-500">SunBi</a></span>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <!-- FOOTER COPYRIGHT SECTION -->
-  </footer>
-  <!-- COMMON FOOTER SECTION -->
+        <!-- FOOTER COPYRIGHT SECTION -->
+    </footer>
+    <!-- COMMON FOOTER SECTION -->
 
-  <script
-    type="module"
-    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-  ></script>
-  <script
-    nomodule
-    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-  ></script>
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
 </body>
+
 </html>
