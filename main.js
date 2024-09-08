@@ -167,30 +167,19 @@ btnSearch.addEventListener('click', (e) => {
         console.log('button is hide');
         inputForButton.classList.add('show');
         inputForButton.classList.remove('hide');
+        searchForm.classList.add('open')
 
         inputForButton.click();
         searchActive = true;
-
     }
 })
-
-// btnSearch.addEventListener('click', (e) => {
-//   e.preventDefault();
-//   console.log(searchActive);
-//   if(searchActive && inputForButton.classList.contains("show")) {
-//     console.log('search is active and ');
-//     searchActive = false;
-//     inputForButton.classList.remove('show');
-//     inputForButton.classList.add('hide');
-//   }
-// })
-
 
 
 document.addEventListener('click', (e) => {
     if (searchActive && !btnSearch.contains(e.target) && !searchForm.contains(e.target)) {
         inputForButton.classList.remove('show');
         inputForButton.classList.add('hide');
+        searchForm.classList.remove('open')
         searchActive = false;
         inputForButton.value = '';
     }
