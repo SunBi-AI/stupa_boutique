@@ -25,16 +25,12 @@
 
 <body>
     <!-- HEADER SECTION WITH NAVIGATION COMMON -->
-    <header class="py-4 bg-black bg-opacity-10 max-w-[100vw] w-100 fixed top-0 left-0 right-0 z-[99]"
+    <header class="py-2 bg-black bg-opacity-10 max-w-[100vw] w-100 fixed top-0 left-0 right-0 z-[99]"
         id="navigation__main">
-        <nav class="main__navigation__bar flex justify-between items-center container mx-auto relative">
-            <div class="w[60px] max-sm:block hidden p-3 hamburger cursor-pointer ml-2" onclick="setLayout()">
-                <ion-icon name="menu-outline" class="text-white text-4xl"></ion-icon>
-            </div>
-
+        <nav class="main__navigation__bar flex justify-between items-center container px-5 md:px-0 md:mx-auto relative">
             <div class="d-block max-[767px]:w-[100px] w-[100px] cursor-pointer relative">
                 <!-- <div class="border_for_logo absolute z-0"></div> -->
-                <div class="d-block max-[767px]:w-50px] w-[60px] cursor-pointer main_navigation_logo">
+                <div class="d-block w-[50px] md:w-[60px] cursor-pointer main_navigation_logo">
                     <a href="/index.html" class="inline-block nav__logo">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -220,14 +216,20 @@
                 </ul>
             </div>
 
-            <div class="search_top mr-2">
-                <form action="" class="search__top__">
-                    <input type="text" placeholder="" name="" class="search__btn__top hide"
-                        aria-placeholder="search..." />
-                    <button type="submit" class="Btn__search__top">
-                        <ion-icon name="search-outline" class="text-white cursor-pointer text-2xl p-[10px]"></ion-icon>
-                    </button>
-                </form>
+            <div class="flex items-center">
+                <div class="search_top mr-1">
+                    <form action="" class="search__top__">
+                        <input type="text" placeholder="" name="" class="search__btn__top hide"
+                            aria-placeholder="search..." />
+                        <button type="submit" class="Btn__search__top">
+                            <ion-icon name="search-outline" class="text-white cursor-pointer text-2xl p-[10px]"></ion-icon>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="w[60px] max-sm:block hidden p-3 hamburger cursor-pointer ml-1" onclick="setLayout()">
+                    <ion-icon name="menu-outline" class="text-white text-4xl"></ion-icon>
+                </div>
             </div>
         </nav>
     </header>
@@ -356,89 +358,6 @@
     </section>
     <!-- BOOKING FOR SECTION USING A PLUGIN  -->
 
-    <!-- WELCOME SECTION HOME -->
-    <!-- <section class="section__welcome mx-auto my-20 w-[70%]">
-      <h2 class="text-center mb-1 text-gray-800 font-semibold">
-        Welcome to Stupa Boutique hotel
-      </h2>
-      <p class="text-center max-md:mb-8 mb-16 text-gray-400">
-        Stupa Boutique Hotel by Stupa Foundation
-      </p>
-
-      <div
-        class="welcome__elements grid grid-cols-2 max-md:grid-cols-1 gap-10 max-md:gap-2"
-      >
-        <!-- WELCOME STUPA HOME IMAGE SECTION -->
-    <!-- <div class="el__left__image h-[250px] w-100">
-          <img
-            class="max-w-full w-[100%] object-cover rounded-2xl max-h-full"
-            src="/assets/img/hotel_1.jpg"
-            alt=""
-          />
-        </div>
-        <!-- WELCOME STUPA HOME IMAGE SECTION -->
-
-    <!-- <div
-          class="icons__grp__welcome flex flex-col flex-wrap justify-center items-start"
-        >
-          <ul class="flex flex-wrap justify-center items-center gap-6">
-            <li class="w-">
-              <span class="material-symbols-outlined text-[40px]">
-                beach_access
-              </span>
-            </li>
-            <li class="">
-              <ion-icon
-                class="text-[40px] text-gray-400"
-                name="business-outline"
-              ></ion-icon>
-            </li>
-            <li class="">
-              <ion-icon
-                class="text-[40px] text-gray-400"
-                name="bed-outline"
-              ></ion-icon>
-            </li>
-            <li class="">
-              <ion-icon
-                class="text-[40px] text-gray-400"
-                name="car-outline"
-              ></ion-icon>
-            </li>
-            <li class="">
-              <ion-icon
-                class="text-[40px] text-gray-400"
-                name="pizza-outline"
-              ></ion-icon>
-            </li>
-            <li class="">
-              <ion-icon
-                class="text-[40px] text-gray-400"
-                name="map-outline"
-              ></ion-icon>
-            </li>
-            <li class="">
-              <ion-icon
-                class="text-[40px] text-gray-400"
-                name="bag-outline"
-              ></ion-icon>
-            </li>
-            <li class="">
-              <ion-icon
-                class="text-[40px] text-gray-400"
-                name="stats-chart-outline"
-              ></ion-icon>
-            </li>
-          </ul>
-
-          <div class="mt-8 max-md:text-center max-md:w-full">
-            <button class="btn_main">Explore More</button>
-          </div>
-        </div>
-      </div> -->
-    <!-- </section> -->
-    <!-- WELCOME SECTION HOME -->
-
     <!-- FACILITIES GRID SECTION? -->
     <section class="section__hotel__features mt-16">
         <div class="top__content">
@@ -516,12 +435,12 @@
     <!-- INQUIRY SECTION CONTENT  -->
     <section class="inquiry__section relative flex items-center">
         <div class="overlay absolute z-0 w-[100%] h-[100%] bg-black/50"></div>
-        <div class="w-[80%] h-[100%] mx-auto">
+        <div class="md:w-[80%] h-[100%] mx-auto">
             <div
                 class="relative inquiry__section__content w-[40%] max-md:w-[90%] ml-auto max-md:mx-auto flex flex-col h-[100%]">
                 <!-- <h2 class="text-white mb-4 font-semibold">Event Catering</h2> -->
 
-                <h3 class="text-white text-2xl font-bold w-[80%] max-md:text-3xl max-md:text-center max-md:mx-auto">
+                <h3 class="text-white text-2xl font-bold md:w-[80%] max-md:text-3xl max-md:text-center max-md:mx-auto">
                     Delight your guests with our tailored catering, perfect for every
                     event.
                 </h3>
@@ -535,43 +454,9 @@
     <!-- INQUIRY SECTION CONTENT  -->
 
     <!-- ROOMS SECTION HOME  -->
-    <section class="container relative mx-auto section__rooms__home my-16 w-[70%]">
+    <section class="container relative px-5 md:px-0 overflow-hidden mx-auto section__rooms__home my-16">
         <h2 class="text-center mb-1 text-gray-800 font-semibold text">Our Rooms</h2>
         <p class="text-center mb-16 text-gray-400">Feels Like Home</p>
-
-        <!-- <div class="room__cards grid grid-cols-3 gap-[30px]">
-        <div class="room__single">
-          <img
-            class="max-w-full h-[200px] rounded-2xl object-cover"
-            src="/assets/img/room1.jpg"
-            alt=""
-          />
-          <h4 class="font-semibold text-gray-800 mt-4  tracking-wider">Executive Suites</h4>
-          <p class="text-gray-600 text-sm capitalize">Budget Friendly Rooms</p>
-        </div>
-
-        <div class="room__single">
-          <img
-            class="max-w-full h-[200px] rounded-2xl object-cover"
-            src="/assets/img/room2.jpg"
-            alt=""
-          />
-          <h4 class="font-semibold text-gray-800 mt-4  tracking-wider">Premium Rooms</h4>
-          <p class="text-gray-600 text-sm capitalize">Feel the Premiumness</p>
-        </div>
-
-        <div class="room__single">
-          <img
-            class="max-w-full h-[200px] rounded-2xl object-cover"
-            src="/assets/img/room3.jpg"
-            alt=""
-          />
-          <h4 class="font-semibold text-gray-800 mt-4  tracking-wider">Villas</h4>
-          <p class="text-gray-600 text-sm capitalize">
-            For your family vacation
-          </p>
-        </div>
-      </div> -->
 
         <!-- Slider main container -->
         <div class="swiper rooms__slider">
@@ -679,7 +564,7 @@
                             <img src="/assets/img/logo_stupa.png" alt="studpa boutique hotel" />
                         </div>
                         <!-- <img src="/assets/img/hotel.png" class="w-12" alt="" /> -->
-                        <p class="tracking-wide text-gray-600 mt-4 max-w-[80%] md:ml-4">
+                        <p class="tracking-wide text-gray-600 mt-4 md:max-w-[80%] md:ml-4">
                             Stupa Boutique Hotel offers a unique blend of luxury and
                             tranquility, nestled in the heart of a picturesque setting. This
                             charming hotel provides guests with elegantly designed rooms
@@ -714,7 +599,7 @@
                         </li>
                     </ul>
 
-                    <ul class="max-md:mt-10">
+                    <ul class="max-md:mt-10 max-md:col-span-2">
                         <li>
                             <h6 class="font-medium text-lg mb-4 secondary_font">Contact</h6>
                         </li>

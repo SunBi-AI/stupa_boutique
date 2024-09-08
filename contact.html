@@ -25,16 +25,12 @@
 
 <body>
     <!-- HEADER SECTION WITH NAVIGATION COMMON -->
-    <header class="py-4 bg-black bg-opacity-10 max-w-[100vw] w-100 fixed top-0 left-0 right-0 z-[99]"
+    <header class="py-2 bg-black bg-opacity-10 max-w-[100vw] w-100 fixed top-0 left-0 right-0 z-[99]"
         id="navigation__main">
-        <nav class="main__navigation__bar flex justify-between items-center container mx-auto relative">
-            <div class="w[60px] max-sm:block hidden p-3 hamburger cursor-pointer ml-2" onclick="setLayout()">
-                <ion-icon name="menu-outline" class="text-white text-4xl"></ion-icon>
-            </div>
-
+        <nav class="main__navigation__bar flex justify-between items-center container px-5 md:px-0 md:mx-auto relative">
             <div class="d-block max-[767px]:w-[100px] w-[100px] cursor-pointer relative">
                 <!-- <div class="border_for_logo absolute z-0"></div> -->
-                <div class="d-block max-[767px]:w-50px] w-[60px] cursor-pointer main_navigation_logo">
+                <div class="d-block w-[50px] md:w-[60px] cursor-pointer main_navigation_logo">
                     <a href="/index.html" class="inline-block nav__logo">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -220,14 +216,20 @@
                 </ul>
             </div>
 
-            <div class="search_top mr-2">
-                <form action="" class="search__top__">
-                    <input type="text" placeholder="" name="" class="search__btn__top hide"
-                        aria-placeholder="search..." />
-                    <button type="submit" class="Btn__search__top">
-                        <ion-icon name="search-outline" class="text-white cursor-pointer text-2xl p-[10px]"></ion-icon>
-                    </button>
-                </form>
+            <div class="flex items-center">
+                <div class="search_top mr-1">
+                    <form action="" class="search__top__">
+                        <input type="text" placeholder="" name="" class="search__btn__top hide"
+                            aria-placeholder="search..." />
+                        <button type="submit" class="Btn__search__top">
+                            <ion-icon name="search-outline" class="text-white cursor-pointer text-2xl p-[10px]"></ion-icon>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="w[60px] max-sm:block hidden p-3 hamburger cursor-pointer ml-1" onclick="setLayout()">
+                    <ion-icon name="menu-outline" class="text-white text-4xl"></ion-icon>
+                </div>
             </div>
         </nav>
     </header>
@@ -243,8 +245,8 @@
         </div>
     </main>
 
-    <section class="container pt-24 mx-auto">
-        <div class="wrapper flex justify-center items-center">
+    <section class="container px-5 md:px-0 pt-5 md:pt-24 mx-auto">
+        <div class="wrapper md:flex justify-center items-center">
 
             <div class="form__left form__section__left ml-auto">
                 <div class="form__wrapper">
@@ -268,7 +270,7 @@
                 </div>
             </div>
 
-            <div class="contact__info__right w-[40%] ml-auto">
+            <div class="contact__info__right mt-10 md:mt-0 md:w-[40%] md:ml-auto">
                 <h3 class="font-medium mb-2">Stupa Boutique Hotel</h3>
                 <p>GPO Box no. XXXX</p>
                 <p>Street: Lorem Ipsum Marga</p>
@@ -327,7 +329,7 @@
                             <img src="/assets/img/logo_stupa.png" alt="studpa boutique hotel" />
                         </div>
                         <!-- <img src="/assets/img/hotel.png" class="w-12" alt="" /> -->
-                        <p class="tracking-wide text-gray-600 mt-4 max-w-[80%] md:ml-4">
+                        <p class="tracking-wide text-gray-600 mt-4 md:max-w-[80%] md:ml-4">
                             Stupa Boutique Hotel offers a unique blend of luxury and
                             tranquility, nestled in the heart of a picturesque setting. This
                             charming hotel provides guests with elegantly designed rooms
@@ -362,9 +364,9 @@
                         </li>
                     </ul>
 
-                    <ul class="max-md:mt-10">
+                    <ul class="max-md:mt-10 max-md:col-span-2">
                         <li>
-                            <h6 class="font-medium text-lg mb-4">Contact</h6>
+                            <h6 class="font-medium text-lg mb-4 secondary_font">Contact</h6>
                         </li>
                         <li>
                             <a class="text-lg text-wide mb-4 inline-block text-gray-600"
@@ -381,40 +383,40 @@
 
         <!-- FOOTER COPYRIGHT SECTION -->
         <div class="w-[80%] mx-auto py-8 flex flex-row max-md:flex-col items-center justify-between">
-            <div class="flex flex-row tracking-wide text-gray-500">
+            <div class="flex flex-row tracking-wide text-gray-500 max-md:text-center">
                 <span>© Stupa Boutique Hotel&nbsp;&nbsp;|&nbsp;&nbsp;All Rights
                     Reserved</span>
             </div>
 
             <div class="flex flex-row items-center flex flex-row tracking-wide text-gray-500">
                 <!-- <p>connect with us</p>
-        <ul class="flex flex-row ml-2">
-          <li>
-            <a href=""
-              ><ion-icon
-                class="text-lg text-yellow-500 hover:text-yellow-400 mr-1"
-                name="logo-facebook"
-              ></ion-icon
-            ></a>
-          </li>
-          <li>
-            <a href=""
-              ><ion-icon
-                class="text-lg text-yellow-500 hover:text-yellow-400 mr-1"
-                name="logo-instagram"
-              ></ion-icon
-            ></a>
-          </li>
-          <li>
-            <a href=""
-              ><ion-icon
-                class="text-lg text-yellow-500 hover:text-yellow-400 mr-1"
-                name="logo-twitter"
-              ></ion-icon
-            ></a>
-          </li>
-        </ul> -->
-                <div class="flex flex-row tracking-wide text-gray-500">
+          <ul class="flex flex-row ml-2">
+            <li>
+              <a href=""
+                ><ion-icon
+                  class="text-lg text-yellow-500 hover:text-yellow-400 mr-1"
+                  name="logo-facebook"
+                ></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href=""
+                ><ion-icon
+                  class="text-lg text-yellow-500 hover:text-yellow-400 mr-1"
+                  name="logo-instagram"
+                ></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href=""
+                ><ion-icon
+                  class="text-lg text-yellow-500 hover:text-yellow-400 mr-1"
+                  name="logo-twitter"
+                ></ion-icon
+              ></a>
+            </li>
+          </ul> -->
+                <div class="flex flex-row tracking-wide text-gray-500 max-md:mt-4">
                     <span class="ml-10 max-md:ml-0">
                         &nbsp;Design:
                         <a href="https://sunbi.com.np/index" target="_blank" class="text-yellow-500">SunBi</a></span>

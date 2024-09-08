@@ -25,16 +25,12 @@
 
 <body>
     <!-- HEADER SECTION WITH NAVIGATION COMMON -->
-    <header class="py-4 bg-black bg-opacity-10 max-w-[100vw] w-100 fixed top-0 left-0 right-0 z-[99]"
+    <header class="py-2 bg-black bg-opacity-10 max-w-[100vw] w-100 fixed top-0 left-0 right-0 z-[99]"
         id="navigation__main">
-        <nav class="main__navigation__bar flex justify-between items-center container mx-auto relative">
-            <div class="w[60px] max-sm:block hidden p-3 hamburger cursor-pointer ml-2" onclick="setLayout()">
-                <ion-icon name="menu-outline" class="text-white text-4xl"></ion-icon>
-            </div>
-
+        <nav class="main__navigation__bar flex justify-between items-center container px-5 md:px-0 md:mx-auto relative">
             <div class="d-block max-[767px]:w-[100px] w-[100px] cursor-pointer relative">
                 <!-- <div class="border_for_logo absolute z-0"></div> -->
-                <div class="d-block max-[767px]:w-50px] w-[60px] cursor-pointer main_navigation_logo">
+                <div class="d-block w-[50px] md:w-[60px] cursor-pointer main_navigation_logo">
                     <a href="/index.html" class="inline-block nav__logo">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -220,14 +216,20 @@
                 </ul>
             </div>
 
-            <div class="search_top mr-2">
-                <form action="" class="search__top__">
-                    <input type="text" placeholder="" name="" class="search__btn__top hide"
-                        aria-placeholder="search..." />
-                    <button type="submit" class="Btn__search__top">
-                        <ion-icon name="search-outline" class="text-white cursor-pointer text-2xl p-[10px]"></ion-icon>
-                    </button>
-                </form>
+            <div class="flex items-center">
+                <div class="search_top mr-1">
+                    <form action="" class="search__top__">
+                        <input type="text" placeholder="" name="" class="search__btn__top hide"
+                            aria-placeholder="search..." />
+                        <button type="submit" class="Btn__search__top">
+                            <ion-icon name="search-outline" class="text-white cursor-pointer text-2xl p-[10px]"></ion-icon>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="w[60px] max-sm:block hidden p-3 hamburger cursor-pointer ml-1" onclick="setLayout()">
+                    <ion-icon name="menu-outline" class="text-white text-4xl"></ion-icon>
+                </div>
             </div>
         </nav>
     </header>
@@ -245,7 +247,7 @@
 
 
     <!-- ROOMS SECTION HOME  -->
-    <section class="container rooms__suites__single relative mx-auto section__rooms__home my-16">
+    <section class="container px-5 md:px-0 rooms__suites__single relative overflow-hidden mx-auto section__rooms__home my-16">
         <!-- <h2 class="text-center mb-4 text-gray-800 font-semibold">Our Rooms</h2>
      <p class="text-center mb-16 text-gray-400">Feels Like Home</p> -->
 
@@ -351,12 +353,12 @@
     <!-- ROOMS AND SUITES SECTION SHOWCASE -->
     <section class="room_suits_showcase">
         <div class="rooms_suites_wrapper container mx-auto">
-            <div class="rooms_suites_single flex w-[100%]">
-                <div class="suite_single_photo w-[60%] relative z-1 mt-[5%]">
+            <div class="rooms_suites_single md:flex w-[100%]">
+                <div class="suite_single_photo w-[60%] max-md:w-[100%] relative z-1 mt-[5%]">
                     <img src="/assets/img/7.jpg" class="aspect-[7/5] h-full w-full w-max-full" alt="" />
                 </div>
 
-                <div class="suite_single_content relative w-[40%] -z-[1] mb-[5%] flex px-[5%] py-[5%] flex-col">
+                <div class="suite_single_content relative w-[40%] max-md:w-[100%] -z-[1] md:mb-[5%] flex px-[5%] py-[5%] flex-col">
                     <h2 class="suite_content_title">Executive Suites</h2>
                     <p class="suite_description">
                         An executive suite is a premium office space designed for
@@ -379,18 +381,18 @@
                         </li>
                     </ul>
 
-                    <div class="mt-12">
+                    <div class="mt-12 mb-6 md:mb-0">
                         <button class="btn_main inline-block">Book Now</button>
                     </div>
                 </div>
             </div>
 
-            <div class="rooms_suites_single flex w-[100%]">
-                <div class="suite_single_photo w-[60%] relative z-1 mt-[5%]">
+            <div class="rooms_suites_single md:flex w-[100%] max-md:!mt-0">
+                <div class="suite_single_photo w-[60%] max-md:w-[100%] relative z-1 md:mt-[5%]">
                     <img src="/assets/img/11.jpg" class="aspect-[7/5] h-full w-full w-max-full" alt="" />
                 </div>
 
-                <div class="suite_single_content relative w-[40%] -z-[1] mb-[5%] flex px-[5%] py-[5%] flex-col">
+                <div class="suite_single_content relative w-[40%] max-md:w-[100%] -z-[1] md:mb-[5%] flex px-[5%] py-[5%] flex-col">
                     <h2 class="suite_content_title">Villa</h2>
                     <p class="suite_description">
                         An executive suite is a premium office space designed for
@@ -419,7 +421,7 @@
                         </li>
                     </ul>
 
-                    <div class="mt-12">
+                    <div class="mt-12 mb-6 md:mb-0">
                         <button class="btn_main inline-block">Book Now</button>
                     </div>
                 </div>
@@ -429,8 +431,8 @@
     <!-- ROOMS AND SUITES SECTION SHOWCASE -->
 
     <!-- ROOMS AND SUITES PAGE CAPACITY -->
-    <section class="suites__section__count bg-yellow-500/5 mt-14">
-        <div class="wrapper w-[70%] mx-auto flex gap-30 py-10 items-center justify-center">
+    <section class="suites__section__count bg-yellow-500/5 md:mt-14">
+        <div class="wrapper px-5 md:px-0 md:w-[70%] mx-auto md:flex gap-30 py-10 items-center justify-center">
             <div class="section__title_number">
                 <ul class="title_number_list">
                     <li class="title_number_single">
@@ -455,7 +457,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="section__description ml-[60px]">
+            <div class="section__description text-center mt-5 md:ml-[60px]">
                 Accomodations are with amazing views of the<br />
                 Fountain, Mountain or City view
             </div>
@@ -468,9 +470,9 @@
 
 
     <!-- FACILITES AND AMENITIES -->
-    <section class="rooms__suites__amenities w-[70%] mx-auto py-20">
-        <div class="wrapper flex">
-            <div class="amenities__title w-[35%]">
+    <section class="rooms__suites__amenities px-5 md:px-0 md:w-[70%] mx-auto py-20">
+        <div class="wrapper md:flex">
+            <div class="amenities__title md:w-[35%]">
                 <h2 class="font-medium">
                     We strive to provide the best facilities possible
                 </h2>
@@ -478,10 +480,10 @@
                     Discover your ideal Haven: Find you perfect stay at Stupa Boutique
                     Hotel
                 </p>
-                <button class="btn_main mt-16">Contact Now</button>
+                <button class="btn_main mt-6 md:mt-16">Contact Now</button>
             </div>
 
-            <div class="amenities__list w-[60%] ml-[80px]">
+            <div class="amenities__list mt-10 md:mt-0 md:w-[60%] md:ml-[80px]">
                 <ul class="amenities__ul__list">
                     <li>
                         <ion-icon name="laptop-outline"></ion-icon>
@@ -522,9 +524,9 @@
     <!-- FACILITES AND AMENITIES -->
 
     <!-- FACILIIES SHOWCASE W SLIDER   -->
-    <section class="container mx-auto">
-        <div class="wrapper my-4 flex justify-between relative">
-            <div class="h-line absolute z-0 h-[100%] w-[1px] bg-gray-300/75 left-[50%] top-0"></div>
+    <section class="container px-5 md:px-0 mx-auto">
+        <div class="wrapper my-4 md:flex justify-between relative">
+            <div class="h-line hidden md:block absolute z-0 h-[100%] w-[1px] bg-gray-300/75 left-[50%] top-0"></div>
             <div class="suites__detail__single">
                 <h2>Bed & Bath</h2>
                 <div class="photo_feature_slider">
@@ -599,10 +601,8 @@
     <!-- FACILIIES SHOWCASE W SLIDER   -->
 
     <!-- COMMON FOOTER SECTION -->
-    <footer class="mt-24 relative overflow-hidden">
-        <!-- <img src="/assets/img/lotuss.png" class="h-full absolute top-0 left-0" alt=""> -->
-
-        <img src="/assets/img/lotus_art.png" class="h-full absolute -z-1 top-0 -right-[5%]" alt="">
+    <footer class="mt-24 relative">
+        <!-- <img src="/assets/img/bud_pattern.svg" class="w-[200px] absolute top-0 left-0" alt=""> -->
         <div class="w-[80%] mx-auto py-30">
             <div class="grid grid-cols-2 max-md:grid-cols-1 gap-40 max-lg:gap-20 max-md:gap-20">
                 <div class="footer__brand__information">
@@ -611,7 +611,7 @@
                             <img src="/assets/img/logo_stupa.png" alt="studpa boutique hotel" />
                         </div>
                         <!-- <img src="/assets/img/hotel.png" class="w-12" alt="" /> -->
-                        <p class="tracking-wide text-gray-600 mt-4 max-w-[80%] md:ml-4">
+                        <p class="tracking-wide text-gray-600 mt-4 md:max-w-[80%] md:ml-4">
                             Stupa Boutique Hotel offers a unique blend of luxury and
                             tranquility, nestled in the heart of a picturesque setting. This
                             charming hotel provides guests with elegantly designed rooms
@@ -621,7 +621,7 @@
                     </div>
                 </div>
 
-                <div class="footer__links relative grid grid-cols-3 max-md:grid-cols-2 gap-30 items-center">
+                <div class="footer__links grid grid-cols-3 max-md:grid-cols-2 gap-30 items-center">
                     <ul class="footer__links__block">
                         <li>
                             <a href="" class="text-lg text-wide mb-4 inline-block text-gray-600">Home</a>
@@ -646,9 +646,9 @@
                         </li>
                     </ul>
 
-                    <ul class="max-md:mt-10">
+                    <ul class="max-md:mt-10 max-md:col-span-2">
                         <li>
-                            <h6 class="font-medium text-lg mb-4">Contact</h6>
+                            <h6 class="font-medium text-lg mb-4 secondary_font">Contact</h6>
                         </li>
                         <li>
                             <a class="text-lg text-wide mb-4 inline-block text-gray-600"
@@ -665,7 +665,7 @@
 
         <!-- FOOTER COPYRIGHT SECTION -->
         <div class="w-[80%] mx-auto py-8 flex flex-row max-md:flex-col items-center justify-between">
-            <div class="flex flex-row tracking-wide text-gray-500">
+            <div class="flex flex-row tracking-wide text-gray-500 max-md:text-center">
                 <span>© Stupa Boutique Hotel&nbsp;&nbsp;|&nbsp;&nbsp;All Rights
                     Reserved</span>
             </div>
@@ -698,7 +698,7 @@
               ></a>
             </li>
           </ul> -->
-                <div class="flex flex-row tracking-wide text-gray-500">
+                <div class="flex flex-row tracking-wide text-gray-500 max-md:mt-4">
                     <span class="ml-10 max-md:ml-0">
                         &nbsp;Design:
                         <a href="https://sunbi.com.np/index" target="_blank" class="text-yellow-500">SunBi</a></span>
