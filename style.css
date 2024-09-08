@@ -38,7 +38,7 @@ html {
   font-weight: 300;
   color: var(--text-main);
   letter-spacing: 0.025rem;
-  line-height: 1.4;
+  line-height: 1.1;
   --s: 150px;
   /* control the size*/
   --c1: #ff0000;
@@ -959,6 +959,7 @@ form.homepage__booking .form__group__wrapper button {
 
 .suites__detail__single h2 {
   margin-bottom: 1.5rem;
+  line-height: 1.1;
 }
 
 .suites__detail__single ul.details__list {
@@ -1453,6 +1454,10 @@ header.scrolled .nav_links.mobile__nav__links {
   .room_suits_showcase .rooms_suites_single:nth-child(even) .suite_single_content::before{
     left: 0;
   }
+}
+
+.hero__section__suites h1{
+  line-height: 1.1;
 }
 
 /*# sourceMappingURL=style.css.map */
