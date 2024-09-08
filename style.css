@@ -349,6 +349,7 @@ section>p {
     margin-top: 2rem;
     font-size: 1.2rem;
     font-weight: 400;
+    line-height: 1.3;
 }
 
 .section__hotel__features .feautures__details .feature__details__wrapper button {
@@ -366,7 +367,7 @@ section>p {
 **************************************/
 .swiper {
     width: 100%;
-    height: 300px;
+    /* height: 300px; */
 }
 
 .swiper-container {
@@ -623,7 +624,7 @@ form.homepage__booking .form__group__wrapper button {
 }
 
 .booking__form .input-group.caln {
-    width: 36.5%;
+    width: 38%;
 }
 
 @media screen and (max-width: 768px) {
@@ -856,6 +857,7 @@ form.homepage__booking .form__group__wrapper button {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .section__title_number ul li {
@@ -967,7 +969,8 @@ form.homepage__booking .form__group__wrapper button {
     transition: all 0.3s ease-in-out;
 }
 
-.amenities__list ul.amenities__ul__list li ion-icon {
+.amenities__list ul.amenities__ul__list li ion-icon,
+.amenities__list ul.amenities__ul__list li span {
     color: var(--text-dim);
     font-size: 2rem;
     transition: all 0.3s ease-in-out;
@@ -987,7 +990,8 @@ form.homepage__booking .form__group__wrapper button {
     border: 1px solid var(--color-secondary);
 }
 
-.amenities__list ul.amenities__ul__list li:hover ion-icon {
+.amenities__list ul.amenities__ul__list li:hover ion-icon,
+.amenities__list ul.amenities__ul__list li:hover span {
     color: var(--color-secondary);
 }
 
@@ -1461,6 +1465,13 @@ header.scrolled .nav_links.mobile__nav__links {
     margin-bottom: 1rem;
 }
 
+.social_icons{
+    display: flex;
+    align-items: center;
+    gap:25px;
+    color: #fff;
+}
+
 @media (max-width:500px) {
     .section__title_number ul li {
         min-width: 90px;
@@ -1512,10 +1523,43 @@ header.scrolled .nav_links.mobile__nav__links {
     .inquiry__section{
         padding:100px 0;
     }
+
+    .social_icons{
+        display: none;
+    }
 }
 
 .hero__section__suites h1 {
     line-height: 1.1;
+}
+
+.nav_links ul li a.book_now_btn{
+    border: 1px solid var(--c1);
+    padding: 7px 10px;
+    border-radius: 5px;
+    color: var(--c1);
+    transition: 0.3s all;
+}
+
+.nav_links ul li a.book_now_btn:hover{
+    background-color: var(--c1);
+    color:#fff;
+}
+
+header.scrolled .nav_links ul li a.book_now_btn{
+    color: var(--c1);
+}
+
+header.scrolled .nav_links ul li a.book_now_btn:hover{
+    color: #fff;
+}
+
+header.scrolled .social_icons{
+    color: #000;
+}
+
+.features__title{
+    line-height: 1.2;
 }
 
 /*# sourceMappingURL=style.css.map */

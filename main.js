@@ -50,7 +50,7 @@ const swiper2 = new Swiper(".room_types", {
     direction: "horizontal",
     loop: true,
     slidesPerView: 1,
-    spaceBetween: 40,
+    spaceBetween: 20,
 
     // If we need pagination
     pagination: {
@@ -67,20 +67,17 @@ const swiper2 = new Swiper(".room_types", {
     scrollbar: {
         el: ".swiper-scrollbar",
     },
-
+    autoplay:true,
     breakpoints: {
         600: {
-            slidesPerView: 3,
-            spaceBetween: 20,
+            slidesPerView: 3
         },
 
         800: {
-            slidesPerView: 4,
-            spaceBetween: 40,
+            slidesPerView: 4
         },
         1000: {
-            slidesPerView: 4,
-            spaceBetween: 40,
+            slidesPerView: 4
         }
     },
 });
@@ -156,34 +153,34 @@ window.addEventListener("scroll", function () {
 
 
 /************** search tbutton ************** */
-const btnSearch = document.querySelector('.Btn__search__top');
-const inputForButton = document.querySelector('input.search__btn__top');
-const searchForm = document.querySelector('.search__top__')
-let searchActive = false;
+// const btnSearch = document.querySelector('.Btn__search__top');
+// const inputForButton = document.querySelector('input.search__btn__top');
+// const searchForm = document.querySelector('.search__top__')
+// let searchActive = false;
 
-btnSearch.addEventListener('click', (e) => {
-    e.preventDefault();
-    if (inputForButton.classList.contains("hide")) {
-        console.log('button is hide');
-        inputForButton.classList.add('show');
-        inputForButton.classList.remove('hide');
-        searchForm.classList.add('open')
+// btnSearch.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     if (inputForButton.classList.contains("hide")) {
+//         console.log('button is hide');
+//         inputForButton.classList.add('show');
+//         inputForButton.classList.remove('hide');
+//         searchForm.classList.add('open')
 
-        inputForButton.click();
-        searchActive = true;
-    }
-})
+//         inputForButton.click();
+//         searchActive = true;
+//     }
+// })
 
 
-document.addEventListener('click', (e) => {
-    if (searchActive && !btnSearch.contains(e.target) && !searchForm.contains(e.target)) {
-        inputForButton.classList.remove('show');
-        inputForButton.classList.add('hide');
-        searchForm.classList.remove('open')
-        searchActive = false;
-        inputForButton.value = '';
-    }
-})
+// document.addEventListener('click', (e) => {
+//     if (searchActive && !btnSearch.contains(e.target) && !searchForm.contains(e.target)) {
+//         inputForButton.classList.remove('show');
+//         inputForButton.classList.add('hide');
+//         searchForm.classList.remove('open')
+//         searchActive = false;
+//         inputForButton.value = '';
+//     }
+// })
 
 
 /******  datepicker  ******/
