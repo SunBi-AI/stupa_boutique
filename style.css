@@ -1282,8 +1282,8 @@ header.scrolled .nav_links.mobile__nav__links {
 }
 
 .nav_links.mobile__nav__links ul li {
-    margin-left: 3rem;
-    margin-bottom: 1rem;
+    margin-left: 2rem !important;
+    margin-bottom: 1.5rem;
 }
 
 .nav_links.mobile__nav__links ul li a:hover {
