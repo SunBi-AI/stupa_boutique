@@ -975,6 +975,20 @@ form.homepage__booking .form__group__wrapper button {
     transition: all 0.3s ease-in-out;
 }
 
+.amenities__list.amenities__list_about ul.amenities__ul__list li{
+    margin: 0;
+    width: 115px;
+    height: 115px;
+}
+
+.amenities__list.amenities__list_about ul.amenities__ul__list li p{
+    text-align: center;
+}
+
+.amenities__list.amenities__list_about ul.amenities__ul__list{
+    gap:20px;
+}
+
 .amenities__list ul.amenities__ul__list li ion-icon,
 .amenities__list ul.amenities__ul__list li span {
     color: var(--text-dim);
