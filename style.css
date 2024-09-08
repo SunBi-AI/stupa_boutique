@@ -1486,6 +1486,16 @@ header.scrolled .nav_links.mobile__nav__links {
     .room_suits_showcase .rooms_suites_single:nth-child(even) .suite_single_content::before {
         left: 0;
     }
+    
+    .section__hotel__features .feautures__details .feature__details__wrapper{
+        max-width: 100%;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .section__hotel__features .feautures__details .feature__details__wrapper p{
+        line-height: 1.3;
+    }
 }
 
 .hero__section__suites h1 {
