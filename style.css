@@ -170,11 +170,13 @@ b {
 
 .search__top__ {
     position: relative;
-    transition: 0.3s all;
+    transition: 0.6s all;
 }
 
 .search__top__.open{
-    min-width: 180px;
+    --width:calc(100vw / 2);
+    min-width: var(--width);
+    max-width: var(--width);
     background: #eaebee;
     border-radius: 120px;
     display: flex;
@@ -182,7 +184,13 @@ b {
     padding: 0 5px;
 }
 
-@media (max-width:400px) {
+@media (min-width:768px) {
+    .search__top__.open{
+        --width:180px;
+    }
+}
+
+/* @media (max-width:400px) {
     .search__top__.open{
         min-width: 150px;
     }
@@ -192,7 +200,7 @@ b {
     .search__top__.open{
         min-width: 100px;
     }
-}
+} */
 
 .search__top__.open input {
     background: transparent;
