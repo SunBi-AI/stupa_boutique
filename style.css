@@ -423,7 +423,7 @@ section>p {
 }
 
 .section__rooms__home .swiper-button-prev {
-    left: 0px;
+    left: -14px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -447,7 +447,7 @@ section>p {
 }
 
 .section__rooms__home .swiper-button-next {
-    right: 0px;
+    right: -14px;
 }
 
 @media only screen and (max-width: 768px) {
