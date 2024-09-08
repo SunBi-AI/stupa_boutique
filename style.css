@@ -811,6 +811,12 @@ form.homepage__booking .form__group__wrapper button {
     left: -60%;
 }
 
+@media (max-width: 768px) {
+    .room_suits_showcase .rooms_suites_single .suite_single_content::before{
+        left:0;
+    }
+}
+
 .room_suits_showcase .rooms_suites_single .suite_single_content .suite_description {
     margin-top: 1.5rem;
     font-size: 1.2rem;
