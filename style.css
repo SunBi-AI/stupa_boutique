@@ -173,8 +173,8 @@ b {
     transition: 0.6s all;
 }
 
-.search__top__.open{
-    --width:calc(100vw / 2);
+.search__top__.open {
+    --width: calc(100vw / 2);
     min-width: var(--width);
     max-width: var(--width);
     background: #eaebee;
@@ -185,8 +185,8 @@ b {
 }
 
 @media (min-width:768px) {
-    .search__top__.open{
-        --width:180px;
+    .search__top__.open {
+        --width: 180px;
     }
 }
 
@@ -219,7 +219,7 @@ b {
     color: #000;
 }
 
-.search__top__:not(.open) input{
+.search__top__:not(.open) input {
     display: none;
 }
 
@@ -766,7 +766,7 @@ form.homepage__booking .form__group__wrapper button {
     font-size: 1rem;
 }
 
-.content__room__booking__form .room_single_booking .input-group label{
+.content__room__booking__form .room_single_booking .input-group label {
     min-width: 85%;
 }
 
@@ -1063,7 +1063,7 @@ form.homepage__booking .form__group__wrapper button {
 
 .about__content h2 {
     line-height: 1.1;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .about__content ul li {
@@ -1173,7 +1173,7 @@ form.homepage__booking .form__group__wrapper button {
 
 .content__room__booking__form .room_single_booking .input-group ion-icon {
     font-size: 1.6rem;
-    margin-top:5px;
+    margin-top: 5px;
 }
 
 .content__room__booking__form .room_single_booking .input-group p {
@@ -1380,7 +1380,7 @@ header.scrolled .nav_links.mobile__nav__links {
 .content__room__booking__form .input-group.caln {
     display: flex;
     align-items: flex-start;
-    gap:5px;
+    gap: 5px;
 }
 
 .content__room__booking__form ion-icon {
@@ -1465,10 +1465,10 @@ header.scrolled .nav_links.mobile__nav__links {
     margin-bottom: 1rem;
 }
 
-.social_icons{
+.social_icons {
     display: flex;
     align-items: center;
-    gap:25px;
+    gap: 25px;
     color: #fff;
     font-size: 20px;
 }
@@ -1492,7 +1492,7 @@ header.scrolled .nav_links.mobile__nav__links {
         height: var(--width);
     }
 
-    .facilities__icons__grp ul li{
+    .facilities__icons__grp ul li {
         width: 49%;
     }
 }
@@ -1510,22 +1510,22 @@ header.scrolled .nav_links.mobile__nav__links {
     .room_suits_showcase .rooms_suites_single:nth-child(even) .suite_single_content::before {
         left: 0;
     }
-    
-    .section__hotel__features .feautures__details .feature__details__wrapper{
+
+    .section__hotel__features .feautures__details .feature__details__wrapper {
         max-width: 100%;
         padding-left: 1.25rem;
         padding-right: 1.25rem;
     }
 
-    .section__hotel__features .feautures__details .feature__details__wrapper p{
+    .section__hotel__features .feautures__details .feature__details__wrapper p {
         line-height: 1.3;
     }
 
-    .inquiry__section{
-        padding:100px 0;
+    .inquiry__section {
+        padding: 100px 0;
     }
 
-    .social_icons{
+    .social_icons {
         display: none;
     }
 }
@@ -1534,7 +1534,7 @@ header.scrolled .nav_links.mobile__nav__links {
     line-height: 1.1;
 }
 
-.nav_links ul li a.book_now_btn{
+.nav_links ul li a.book_now_btn {
     border: 1px solid var(--c1);
     padding: 7px 10px;
     border-radius: 5px;
@@ -1542,25 +1542,71 @@ header.scrolled .nav_links.mobile__nav__links {
     transition: 0.3s all;
 }
 
-.nav_links ul li a.book_now_btn:hover{
+.nav_links ul li a.book_now_btn:hover {
     background-color: var(--c1);
-    color:#fff;
-}
-
-header.scrolled .nav_links ul li a.book_now_btn{
-    color: var(--c1);
-}
-
-header.scrolled .nav_links ul li a.book_now_btn:hover{
     color: #fff;
 }
 
-header.scrolled .social_icons{
+header.scrolled .nav_links ul li a.book_now_btn {
+    color: var(--c1);
+}
+
+header.scrolled .nav_links ul li a.book_now_btn:hover {
+    color: #fff;
+}
+
+header.scrolled .social_icons {
     color: #000;
 }
 
-.features__title{
+.features__title {
     line-height: 1.2;
+}
+
+body .container {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    body .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    body .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    body .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    body .container {
+        max-width: 1320px;
+    }
+}
+
+@media (min-width: 1500px) {
+    body .container {
+        max-width: 1420px;
+    }
 }
 
 /*# sourceMappingURL=style.css.map */
