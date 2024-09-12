@@ -1,3 +1,5 @@
+// const { TRUE } = require("sass");
+
 /******************************
   SWIPER HOMEPAGE 
 * ***************************/
@@ -88,9 +90,22 @@ const swiper3 = new Swiper(".feature__slider", {
     // Optional parameters
     direction: "horizontal",
     loop: true,
-    slidesPerView: 1,
-    spaceBetween: 40,
 
+    breakpoints: {
+        600: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+
+        800: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+        },
+        1000: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+        }
+    },
 
     // Navigation arrows
     navigation: {
@@ -125,6 +140,51 @@ const swiper4 = new Swiper(".room_single_slider", {
         el: ".swiper-scrollbar",
     },
 });
+
+const swiper5 = new Swiper(".testimonial__cards__wrapper", {
+     // Optional parameters
+     direction: "horizontal",
+     loop: true,
+
+     autoplay: {
+        delay: 2500,
+        disableOnInteraction: true,
+      },
+ 
+     breakpoints: {
+        600: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+
+        800: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+        },
+        1000: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+        }
+    },
+
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+ 
+    // Navigation arrows
+    navigation: {
+         nextEl: ".swiper-button-next",
+         prevEl: ".swiper-button-prev",
+     },
+ 
+     // And if we need scrollbar
+     scrollbar: {
+         el: ".swiper-scrollbar",
+     },
+});
+
+//swiper about page testimonials
 
 /**********************************
  *  FLATPICKER

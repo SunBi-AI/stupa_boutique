@@ -10,6 +10,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -23,7 +24,7 @@
     <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
 </head>
 
-<body>
+<body class="about__page">
     <!-- HEADER SECTION WITH NAVIGATION COMMON -->
     <header class="py-2 bg-black bg-opacity-10 max-w-[100vw] w-100 fixed top-0 left-0 right-0 z-[99]"
         id="navigation__main">
@@ -81,7 +82,7 @@
         </div>
     </main>
 
-    <section class="about__content pt-16">
+    <!-- <section class="about__content pt-16">
         <div class="wrapper container px-5 md:px-0 mx-auto md:flex">
             <div class="text__content md:w-[50%]">
                 <h2 class="mb-5 block font-medium">About Stupa Boutique Hotel</h2>
@@ -127,10 +128,62 @@
                     </ul>
                 </div>
             </div>
+
+            
             <div class="grp_div w-full md:w-[50%]">
                 <div class="video_container ml-auto w-full mt-2">
                     <img src="/assets/img/gallery/9.jpeg" class="h-full object-center object-cover w-full" alt="Bulding" />
                 </div>
+            </div>
+        </div>
+    </section> -->
+    
+    
+    <section class="about__content pt-16">
+        <div class="wrapper container px-5 md:px-0 mx-auto md:flex">
+            <div class="text__content md:w-[100%]">
+                <h2 class="mb-5 block font-medium">About Stupa Boutique Hotel</h2>
+                <p class="leading-[1.8]">Welcome to the newly opened Stupa Boutique Hotel, perfectly situated in the vibrant center of Kathmandu. This charming retreat offers a seamless blend of traditional Nepalese elegance and modern luxury. The hotel's design pays homage to classic Nepalese architecture, with intricate details and warm, inviting spaces that create a truly unique ambiance. Guests are treated to breathtaking views of nearby stupas and the awe-inspiring Himalayan peaks, adding a touch of natural beauty to their stay.
+                </p>
+                <p class="leading-[1.8] mt-5">Our spacious rooms are thoughtfully designed to provide comfort and relaxation, featuring contemporary amenities alongside traditional decor. Indulge in exquisite local cuisine at our fine dining restaurant, where each dish is crafted from the freshest ingredients to offer an authentic taste of Nepalese culinary traditions. With personalized service and a commitment to excellence, Stupa Boutique Hotel is an ideal haven for travelers seeking both a luxurious retreat and a genuine cultural experience in the heart of Nepal.</p>
+
+
+                <!-- <div class="amenities__list amenities__list_about mt-10">
+                    <ul class="amenities__ul__list">
+                        <li>
+                            <ion-icon name="laptop-outline"></ion-icon>
+                            <p>Private Workspace</p>
+                        </li>
+                        <li>
+                            <ion-icon name="car-sport-outline"></ion-icon>
+                            <p>Parking area</p>
+                        </li>
+                        <li>
+                            <ion-icon name="fast-food-outline"></ion-icon>
+                            <p>Breakfast</p>
+                        </li>
+                        <li>
+                            <ion-icon name="wifi-outline"></ion-icon>
+                            <p>Free Wifi</p>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">sauna</span>
+                            <p>Spa & Massage</p>
+                        </li>
+                        <li>
+                            <ion-icon name="power"></ion-icon>
+                            <p>Free Electricity</p>
+                        </li>
+                        <li>
+                            <ion-icon name="barbell-outline"></ion-icon>
+                            <p>Gym</p>
+                        </li>
+                        <li>
+                            <ion-icon name="apps-outline"></ion-icon>
+                            <p>Other Services</p>
+                        </li>
+                    </ul>
+                </div> -->
             </div>
         </div>
     </section>
@@ -138,10 +191,10 @@
     <hr class="mt-8 md:mt-16" />
 
     <section class="about__content mt-8 md:mt-16">
-        <div class="wrapper container px-5 md:px-0 mx-auto md:flex">
+        <div class="wrapper container px-5 md:px-0 mx-auto md:flex items-center">
             <div class="grp_div w-full md:w-[50%]">
                 <div class="video_container ml-auto w-full mt-2">
-                    <img src="/assets/img/chairman.jpeg" class="h-auto md:h-[400px] object-center object-cover w-full" alt="Bulding" />
+                    <img src="/assets/img/chairman.jpeg" class="h-auto md:h-[450px] object-center object-cover w-full" alt="Bulding" />
                 </div>
             </div>
             <div class="text__content md:w-[50%] mt-6 md:mt-0">
@@ -161,8 +214,203 @@
         </div>
     </section>
 
+    <!-- about testimonials -->
+    <section class="testimonials mt-16 md:mt-16">
+        <div class="wrapper container px-5 md:px-0 mx-auto md:flex flex-col">
+            <h2 class="text-center w-full">What Our Guests Say?</h2>
+
+            <div class="swiper testimonial__cards__wrapper mt-8">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide tesimonial__card__wrapper">
+                        <h3 class="testimonial__writer">John Doe</h3>
+                        <p class="origin__country">Thailand</p>
+                        <figure>
+
+                            <img src="/assets/img/tourist/tourist1.jpg" alt="">
+                        </figure>
+                        <p class="testimonial__content">Wonderful stay! Welcoming staff, spotless rooms, and a perfect location. Highly recommend for a relaxing visit!</p>
+                    </div>
+
+                    <div class="swiper-slide tesimonial__card__wrapper">
+                        <h3 class="testimonial__writer">John Doe</h3>
+                        <p class="origin__country">New Zealand</p>
+                        <figure>
+                            <img src="/assets/img/tourist/tourist2.jpg" alt="">
+
+                        </figure>
+                        <p class="testimonial__content">Fantastic experience! Clean rooms, friendly staff, and a great location. Will definitely return!</p>
+                    </div>
+
+                    <div class="swiper-slide tesimonial__card__wrapper">
+                        <h3 class="testimonial__writer">John Doe</h3>
+                        <p class="origin__country">Thailand</p>
+
+                        <figure>
+                            <img src="/assets/img/tourist/tourist3.jpg" alt="">
+                        </figure>
+                        <p class="testimonial__content">Impeccable service, cozy rooms, and a prime location. Loved every minute of our stay!</p>
+                    </div>
+
+                    <div class="swiper-slide tesimonial__card__wrapper">
+                        <h3 class="testimonial__writer">John Doe</h3>
+                        <p class="origin__country">Thailand</p>
+                        <figure>
+                            <img src="/assets/img/tourist/tourist4.jpg" alt="">
+
+                        </figure>
+                        <p class="testimonial__content">Amazing hotel! Comfortable, clean, and in the heart of the city. Highly recommend!</p>
+                    </div>
+
+                    <div class="swiper-slide tesimonial__card__wrapper">
+                        <h3 class="testimonial__writer">John Doe</h3>
+                        <p class="origin__country">Thailand</p>
+                        <figure>
+
+                            <img src="/assets/img/tourist/tourist1.jpg" alt="">
+                        </figure>
+                        <p class="testimonial__content">Wonderful stay! Welcoming staff, spotless rooms, and a perfect location. Highly recommend for a relaxing visit!</p>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            
+
+        </div>
+    </section>
+    <!-- about testimonials -->
+  
+    <!-- news section about page -->
+    <section class="news__section mt-16 md:mt-16">
+        <div class="wrapper container px-5 md:px-0 mx-auto md:flex flex-col items-center">
+            <h2 class="w-full text-center">News Feeds</h2>
+
+            <div class="news__wrapper grid grid-cols-4 gap-8 mt-8">
+                <a href="" class="news__single flex flex-col">
+                    <figure>
+                        <img src="/assets/img/1.jpg" alt="news about this section" class="max-w-full object-cover">
+                    </figure>
+
+                    <div class="news__content flex flex-col gap-3 p-4 bg-gray-100 mt-0">
+                        <div class="publish__info flex justify-between w-full">
+                            <span class="publish__date"><ion-icon  class="" name="calendar-outline"></ion-icon>23rd Sep, 2024</span>
+                            <span class="published__by"><ion-icon name="person-outline"></ion-icon>John Doe</span>
+                        </div>
+
+                        <h4 class="news__title">Escape to Tranquility: Discover Your Perfect Hotel Getaway</h4>
+                        <p class="news__link flex items-center"
+                        >
+                        <span> Read More</span> <ion-icon class="ml-2" name="arrow-forward-outline"></ion-icon></p>
+                    </div>
+
+                </a>
+
+                <a href="" class="news__single flex flex-col">
+                    <figure>
+                        <img src="/assets/img/2.jpg" alt="news about this section" class="max-w-full object-cover">
+                    </figure>
+
+                    <div class="news__content flex flex-col gap-3 p-4 bg-gray-100 mt-0">
+                        <div class="publish__info flex justify-between w-full">
+                            <span class="publish__date"><ion-icon  class="" name="calendar-outline"></ion-icon>23rd Sep, 2024</span>
+                            <span class="published__by"><ion-icon name="person-outline"></ion-icon>John Doe</span>
+                        </div>
+
+                        <h4 class="news__title"> Unwind in Style: Hotel Stays Designed for Comfort</h4>
+                        <p class="news__link flex items-center"
+                        >
+                        <span> Read More</span> <ion-icon class="ml-2" name="arrow-forward-outline"></ion-icon></p>
+                    </div>
+                </a>
+
+                <a href="" class="news__single flex flex-col">
+                    <figure>
+                        <img src="/assets/img/3.jpg" alt="news about this section" class="max-w-full object-cover">
+                    </figure>
+
+                    <div class="news__content flex flex-col gap-3 p-4 bg-gray-100 mt-0">
+                        <div class="publish__info flex justify-between w-full">
+                            <span class="publish__date"><ion-icon  class="" name="calendar-outline"></ion-icon>23rd Sep, 2024</span>
+                            <span class="published__by"><ion-icon name="person-outline"></ion-icon>John Doe</span>
+                        </div>
+
+                        <h4 class="news__title">Your Dream Vacation Awaits: Top Hotel Picks</h4>
+                        <p class="news__link flex items-center"
+                        >
+                        <span> Read More</span> <ion-icon class="ml-2" name="arrow-forward-outline"></ion-icon></p>
+                    </div>
+                </a>
+
+                <a href="" class="news__single flex flex-col">
+                    <figure>
+                        <img src="/assets/img/4.jpg" alt="news about this section" class="max-w-full object-cover">
+                    </figure>
+
+                    <div class="news__content flex flex-col gap-3 p-4 bg-gray-100 mt-0">
+                        <div class="publish__info flex justify-between w-full">
+                            <span class="publish__date"><ion-icon  class="" name="calendar-outline"></ion-icon>23rd Sep, 2024</span>
+                            <span class="published__by"><ion-icon name="person-outline"></ion-icon>John Doe</span>
+                        </div>
+
+                        <h4 class="news__title">Indulge in Luxury: A Hotel Experience Like No Other</h4>
+                        <p class="news__link flex items-center"
+                        >
+                        <span> Read More</span> <ion-icon class="ml-2" name="arrow-forward-outline"></ion-icon></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- news section about page -->
+
+    <!-- capacity showcase about page -->
+    <section class="mt-16 md:mt-16 about__show__capacity relative">
+        <div class="overlay"></div>
+        <div class="wrapper container px-5 h-full w-full md:px-0 mx-auto md:flex items-center flex-col relative justify-center">
+            <ul class="title_number_list flex flex-row flex-wrap items-center gap-8 justify-between w-full">
+                <li class="title_number_single">
+                    <p class="count">12</p>
+                    <p class="title__">Executive Rooms</p>
+                </li>
+                <li class="title_number_single">
+                    <p class="count">6</p>
+                    <p class="title__">Premium Rooms</p>
+                </li>
+                <li class="title_number_single">
+                    <p class="count">3</p>
+                    <p class="title__">Twin Deluxe Rooms</p>
+                </li>
+                <li class="title_number_single">
+                    <p class="count">1</p>
+                    <p class="title__">Resturant</p>
+                </li>
+                <li class="title_number_single">
+                    <p class="count">1</p>
+                    <p class="title__">Coffee Shop &amp; Bar</p>
+                </li>
+                <li class="title_number_single">
+                    <p class="count">1</p>
+                    <p class="title__">Spa, Moroccan Bath</p>
+                </li>
+                <li class="title_number_single">
+                    <p class="count">1</p>
+                    <p class="title__">Sauna &amp; Steam</p>
+                </li>
+                <li class="title_number_single">
+                    <p class="count">1</p>
+                    <p class="title__">Gym</p>
+                </li>
+            </ul>
+
+            <!-- <div class="mt-8">
+                <a href="" class="btn_main">contact us</a>
+            </div> -->
+        </div>
+    </section>
+    <!-- capacity showcase about page -->
+    <!-- <div class="space__allot"></div> -->
     <!-- COMMON FOOTER SECTION -->
-    <footer class="mt-16 md:mt-24 relative">
+    <footer class="relative">
         <div class="container px-5 md:px-0 mx-auto py-30">
             <div class="grid grid-cols-2 max-md:grid-cols-1 gap-8 md:gap-40">
                 <div class="footer__brand__information">
@@ -242,12 +490,15 @@
     </footer>
     <!-- COMMON FOOTER SECTION -->
 
+    
+
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="main.js?ver=2.2"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
