@@ -78,6 +78,8 @@ button {
   cursor: pointer;
 }
 
+
+
 /****************************************
   TYPESCALE FROM https://varnabas.com/
 ****************************************/
@@ -151,6 +153,31 @@ body {
   background: var(--text-dimmer);
   margin: 30px 0;
 }
+
+/******************************************
+  breakpoints sass
+******************************************/
+$breakpoint-xs: 320px;  // Extra Small Devices (phones)
+$breakpoint-sm: 576px;  // Small Devices (landscape phones)
+$breakpoint-md: 768px;  // Medium Devices (tablets)
+$breakpoint-lg: 992px;  // Large Devices (desktops)
+$breakpoint-xl: 1200px; // Extra Large Devices (large desktops)
+
+// _mixins.scss
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == xs {
+    @media (max-width: #{$breakpoint-xs}) { @content; }
+  } @else if $breakpoint == sm {
+    @media (max-width: #{$breakpoint-sm}) { @content; }
+  } @else if $breakpoint == md {
+    @media (max-width: #{$breakpoint-md}) { @content; }
+  } @else if $breakpoint == lg {
+    @media (max-width: #{$breakpoint-lg}) { @content; }
+  } @else if $breakpoint == xl {
+    @media (max-width: #{$breakpoint-xl}) { @content; }
+  }
+}
+
 
 /****************************************** 
     NAVIBATION BAR
@@ -341,7 +368,9 @@ section>p {
 
     @media only screen and (max-width: 768px) {
       flex-direction: column;
-
+      &:not(first-child) {
+        margin-top: 3rem;
+      }
     }
 
     &:nth-child(even) {
@@ -374,11 +403,8 @@ section>p {
     background-color: #ffe4c1;
     // opacity: 0.6;
     background-size: 14px 14px;
-    background-image: repeating-linear-gradient(45deg,
-        #efc73f 0,
-        #efc73f 1.4000000000000001px,
-        #ffe4c1 0,
-        #ffe4c1 50%);
+    background-image: 
+    repeating-linear-gradient(45deg, #f8dfa1 0, #f8dfa1 1.4px, #fff6e8 0, #fff6e8 50%);
 
     @media only screen and (max-width: 768px) {
       padding: 30px 0 60px 0;
@@ -817,9 +843,13 @@ form.homepage__booking .form__group__wrapper button {
 
   .rooms_suites_single {
 
+    @include respond-to(md) {
+      margin-top: 5rem;
+    }
+
     &:not(first-child) {
       margin-top: 5rem;
-      ;
+      
     }
 
     &:nth-child(even) {
@@ -837,7 +867,10 @@ form.homepage__booking .form__group__wrapper button {
     .suite_single_content {
       background-color: #ffe4c1;
       background-size: 14px 14px;
-      background-image: repeating-linear-gradient(45deg, #efc73f 0, #efc73f 1.4px, #ffe4c1 0, #ffe4c1 50%);
+      background-image: repeating-linear-gradient(45deg, #f8dfa1 0, #f8dfa1 1.4px, #fff6e8 0, #fff6e8 50%);
+      // border-top-right-radius: 7px;;
+      // border-bottom-right-radius: 7px;;
+      border-radius: 7px;;
 
       &::before {
         content: " ";
@@ -847,9 +880,10 @@ form.homepage__booking .form__group__wrapper button {
         width: 100%;
         background-color: #ffe4c1ba;
         background-size: 14px 14px;
-        background-image: repeating-linear-gradient(45deg, #efc63fb1 0, #efc63fbb 1.4px, #ffe4c1 0, #ffe4c1 50%);
+        background-image: repeating-linear-gradient(45deg, #f8dfa1 0, #f8dfa1 1.4px, #fff6e8 0, #fff6e8 50%);
         top: 0%;
         left: -60%;
+        border-radius: 7px;;
       }
 
       .suite_description {
@@ -890,10 +924,36 @@ form.homepage__booking .form__group__wrapper button {
   }
 }
 
+.suite_single_photo {
+  img {
+    border-radius: 7px;
+
+    @include respond-to(md) {
+      border-top-right-radius: 7px;
+      border-top-left-radius: 7px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}
+
+@include respond-to(md) {
+    .room_suits_showcase .rooms_suites_single .suite_single_content::before {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+  }
+}
+
 
 @media (max-width: 768px) {
   .room_suits_showcase .rooms_suites_single .suite_single_content::before{
       left:0;
+  }
+}
+
+.swiper.room_types {
+  img {
+    cursor: pointer;
   }
 }
 
@@ -1020,6 +1080,18 @@ form.homepage__booking .form__group__wrapper button {
   }
 }
 
+
+.about__page {
+  .title_number_list  {
+    padding: 70px 0;
+  }
+
+  .title_number_single {
+    @include respond-to(lg) {
+      width: calc(30% - 60px);
+    }
+  }
+}
 
 /***************************************
   rooms__suites__amenities
@@ -1177,6 +1249,10 @@ form.homepage__booking .form__group__wrapper button {
 .about__content {
   .wrapper {
     gap: 60px;
+
+    img {
+      border-radius: 7px;
+    }
   }
 
   ul {
@@ -1254,6 +1330,13 @@ form.homepage__booking .form__group__wrapper button {
 // about testimonials
 .testimonials {
   .testimonial__cards__wrapper {
+
+    @include respond-to(md) {
+      width: 100%;
+    }
+    @include respond-to(sm) {
+      width: 80%;
+    }
     padding-bottom: 30px;
     .swiper-pagination-bullet-active {
       background: var(--color-from-logo);
@@ -1270,10 +1353,10 @@ form.homepage__booking .form__group__wrapper button {
       align-items: center;
       gap: 10px;
       padding: 20px;
-      background: var(--c2);
+      // background: var(--c2);
       min-height: 465px;
+      border-radius: 7px;
      
-    
       figure {
         width: 180px;
         height: 180px;;
@@ -1286,6 +1369,7 @@ form.homepage__booking .form__group__wrapper button {
           width: 100%;
           height: 100%;
           object-fit: cover;
+          
         }
       }
       .testimonial__content {
@@ -1319,6 +1403,7 @@ form.homepage__booking .form__group__wrapper button {
   }
 }
 
+
 .about__show__capacity.pt__2 {
  
 }
@@ -1351,6 +1436,7 @@ form.homepage__booking .form__group__wrapper button {
     figure {
       height: 200px;;
       overflow: hidden;
+      width: 30%;
 
       img {
         width: 100%;
@@ -1378,7 +1464,14 @@ form.homepage__booking .form__group__wrapper button {
   }
 
   .news__content {
+    min-height: auto;
+    width: 70%;
+
+    @include respond-to(lg){
+      min-height: 155px;;
+    }
     .news__link {
+      margin-top:  auto;
       font-size: 0.9rem;
       color: var(--text-secondary);
       ion-icon {
@@ -1395,12 +1488,35 @@ form.homepage__booking .form__group__wrapper button {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 500px;;
+  
 
   .title_number_single {
     display: flex;
     align-items: flex-end;
     width: calc(25% - 60px);
+
+    
+    @include respond-to(lg) {
+      width: calc(33% - 20px);
+      .count {
+        font-size: 4rem;
+      }
+    }
+    @include respond-to(md) {
+      width: calc(50% - 20px);
+      .count {
+        font-size: 3rem;
+      }
+    }
+    
+    @include respond-to(sm) {
+      width: calc(50% - 20px);
+      .count {
+        font-size: 3rem;
+      }
+    }
+
+
     .count {
       line-height: 0.8;
       font-size: 7rem;;
@@ -1410,6 +1526,10 @@ form.homepage__booking .form__group__wrapper button {
       font-size: 1.1rem;
       font-weight: 400;
       margin-left: 0.2rem;
+
+      @include respond-to(md) {
+        max-width: 120px;
+      }
     }
   }
 }
@@ -1433,7 +1553,8 @@ form.homepage__booking .form__group__wrapper button {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: #000000c4;
+  // background: #000000c4;
+  background:rgba(79, 16, 16, 0.65);
   top:0;
   left:0;
   right:0;
@@ -1447,6 +1568,7 @@ form.homepage__booking .form__group__wrapper button {
   // border: 1px solid var(--text-dimmer);
   background: #ffb30f20;
   border: 1px solid #ffb20f54;
+  border-radius: 7px;
 }
 
 .contact__page__form {
@@ -1593,7 +1715,7 @@ footer {
   position: relative;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .nav_links.mobile__nav__links {
     position: absolute;
   }
@@ -1612,10 +1734,10 @@ header.scrolled .nav_links.mobile__nav__links {
 }
 
 .nav_links.mobile__nav__links {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 992px) {
     position: absolute;
     z-index: 0;
-    top: 80px;
+    top: 74px;
     left: -100%;
     opacity: 0.5;
     transition: all 0.3s ease;
@@ -1726,7 +1848,7 @@ header.scrolled .nav_links.mobile__nav__links {
       width: 33%;
 
       span.material-symbols-outlined {
-        color: var(--font-main);
+        color: var(--color-from-logo);
         font-size: 30px;
         font-weight: 200;
       }
@@ -1899,7 +2021,8 @@ header.scrolled .nav_links.mobile__nav__links {
   }
 
   .social_icons {
-      display: none;
+      display: block;
+      display: flex;
   }
 }
 
@@ -2117,3 +2240,17 @@ body .container {
   
 }
 
+.news__single {
+  .news__single  {
+    figure {
+      width: 100%;
+      border-top-right-radius: 7px;
+      border-top-left-radius: 7px;
+    }
+    .news__content  {
+      width: 100%;;
+      border-bottom-right-radius: 7px;
+      border-bottom-left-radius: 7px;
+    }
+  }
+}

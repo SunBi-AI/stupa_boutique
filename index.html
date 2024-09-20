@@ -30,50 +30,55 @@
     <!-- HEADER SECTION WITH NAVIGATION COMMON -->
     <header class="py-2 bg-black bg-opacity-10 max-w-[100vw] w-100 fixed top-0 left-0 right-0 z-[99]"
         id="navigation__main">
-        <nav class="main__navigation__bar flex justify-between items-center container px-5 md:px-0 md:mx-auto relative">
-            <div class="d-block max-[767px]:w-[100px] w-[100px] cursor-pointer relative">
-                <div class="d-block md:w-[110px] cursor-pointer main_navigation_logo">
-                    <a href="/index.html" class="inline-block nav__logo">
-                        <img src="/assets/img/logo.png" alt="
-                        Stupa Boutique Hotel" />
-                    </a>
-                </div>
-            </div>
 
-            <div class="nav_links nav__link__prime mobile__nav__links" id="">
-                <ul class="flex justify-between font-normal max-w-[767px]:space-x-[2rem] space-x-12">
-                    <li class="text-white max-md:space-x-12">
-                        <a href="/index.html" class="cursor-pointer px-0 hover:border-b-2 font-medium">Home</a>
-                    </li>
-                    <li class="text-white">
-                        <a href="about.html" class="cursor-pointer px-0 hover:border-b-2 font-medium">About</a>
-                    </li>
-                    <li class="text-white">
-                        <a href="/rooms_suites.html" class="cursor-pointer px-0 hover:border-b-2 font-medium">Room &
-                            Suites</a>
-                    </li>
+        <div class="relative">
 
-                    <li class="text-white">
-                        <a href="contact.html" class="cursor-pointer px-0 hover:border-b-2 font-medium">Contact</a>
-                    </li>
-                    <li class="text-white">
-                        <a href="" class="cursor-pointer book_now_btn px-0 hover:border-b-2 font-medium">Online Booking</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="flex items-center">
-                <ul class="social_icons flex flex-row gap-2">
-                    <li><a href="https://www.facebook.com/stupaboutiquehotel/" target="_blank" rel="nofollow noindex"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                    <li><a href="" target="_blank" rel="nofollow noindex"><ion-icon name="logo-instagram"></ion-icon></a></li>
-                    <li><a href="https://www.tiktok.com/@stupaboutiquehotel" target="_blank" rel="nofollow noindex"><ion-icon name="logo-tiktok"></ion-icon></a></li>
+            <nav class="main__navigation__bar flex justify-between items-center container px-5 md:px-0 md:mx-auto ">
+                <div class="d-block max-[767px]:w-[100px] w-[100px] cursor-pointer relative">
+                    <div class="d-block md:w-[110px] cursor-pointer main_navigation_logo">
+                        <a href="/index.html" class="inline-block nav__logo">
+                            <img src="/assets/img/logo.png" alt="
+                            Stupa Boutique Hotel" />
+                        </a>
+                    </div>
                 </div>
 
-                <div class="w[60px] max-sm:block hidden p-3 hamburger cursor-pointer ml-1" onclick="setLayout()">
-                    <ion-icon name="menu-outline" class="text-white text-4xl"></ion-icon>
+                <div class="nav_links nav__link__prime mobile__nav__links" id="">
+                    <ul class="flex justify-between font-normal max-w-[767px]:space-x-[2rem] space-x-12">
+                        <li class="text-white max-md:space-x-12">
+                            <a href="/index.html" class="cursor-pointer px-0 hover:border-b-2 font-medium">Home</a>
+                        </li>
+                        <li class="text-white">
+                            <a href="about.html" class="cursor-pointer px-0 hover:border-b-2 font-medium">About</a>
+                        </li>
+                        <li class="text-white">
+                            <a href="/rooms_suites.html" class="cursor-pointer px-0 hover:border-b-2 font-medium">Room &
+                                Suites</a>
+                        </li>
+
+                        <li class="text-white">
+                            <a href="contact.html" class="cursor-pointer px-0 hover:border-b-2 font-medium">Contact</a>
+                        </li>
+                        <li class="text-white">
+                            <a href="" class="cursor-pointer book_now_btn px-0 hover:border-b-2 font-medium">Online Booking</a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-        </nav>
+
+                <div class="flex items-center">
+                    <ul class="social_icons flex flex-row gap-2">
+                        <li><a href="https://www.facebook.com/stupaboutiquehotel/" target="_blank" rel="nofollow noindex"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                        <li><a href="" target="_blank" rel="nofollow noindex"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                        <li><a href="https://www.tiktok.com/@stupaboutiquehotel" target="_blank" rel="nofollow noindex"><ion-icon name="logo-tiktok"></ion-icon></a></li>
+                    </div>
+
+                    <div class="w[60px] max-sm:block max-[992px]:block hidden p-3 hamburger cursor-pointer ml-1" onclick="setLayout()" id="hamburger">
+                        <ion-icon name="menu-outline" class="text-white text-4xl"></ion-icon>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
     </header>
     <!-- HEADER SECTION WITH NAVIGATION COMMON -->
 
@@ -87,9 +92,11 @@
         <div class="overlay absolute h-[100%] w-[100%] -z-1 bg-black opacity-40 inset-x-0 top-0"></div>
         <div
             class="hero__content__wrapper flex flex-col justify-center align-middle absolute  w-4/5 mx-auto py-12 text-white absolute z-1 h-100 w-100 top-[50%] left-[5%] -translate-y-[50%]">
-            Feel the
+            <p class="text-2xl">
+                Feel the
+            </p>
             <br />
-            <h1 class="text-yellow-500 font-semibold text-3xl">Premiumness</h1>
+            <h1 class="text-yellow-500 font-semibold text-6xl">Premiumness</h1>
         </div>
     </main>
     <!-- HERO SECTION HOME -->
@@ -350,7 +357,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
             <div class="room__single">
                 <a href="" class="block">
-                    <img class="max-w-full w-[100%] h-[230px] rounded-2xl object-cover" src="/assets/img/rooms/deluxe-1.jpeg"
+                    <img class="max-w-full w-[100%] h-[230px] rounded-[7px] object-cover" src="/assets/img/rooms/deluxe-1.jpeg"
                         alt="" />
                     <h4 class="font-semibold text-gray-800 mt-4 tracking-wide">
                         Executive Rooms
@@ -362,7 +369,7 @@
             </div>
             <div class="room__single">
                 <a href="" class="block">
-                    <img class="max-w-full w-[100%] h-[230px] rounded-2xl object-cover"
+                    <img class="max-w-full w-[100%] h-[230px] rounded-[7px] object-cover"
                         src="/assets/img/rooms/premium-1.jpeg" alt="" />
                     <h4 class="font-semibold text-gray-800 mt-4 tracking-wide">
                         Premium Rooms
@@ -374,7 +381,7 @@
             </div>
             <div class="room__single">
                 <a href="" class="block">
-                    <img class="max-w-full w-[100%] h-[230px] rounded-2xl object-cover"
+                    <img class="max-w-full w-[100%] h-[230px] rounded-[7px] object-cover"
                         src="/assets/img/rooms/twin-bed.jpeg" alt="" />
                     <h4 class="font-semibold text-gray-800 mt-4 tracking-wide">
                         Twin Deluxe Rooms
@@ -387,6 +394,96 @@
         </div>
     </section>
     <!-- ROOMS SECTION HOME  -->
+
+    <!-- news section about page -->
+     <section class="news__welcome__message pt-16 md:pt-16 flex flex-row">
+        <div class="news__section w-[50%]">
+            <div class="wrapper container px-5 md:px-0 mx-auto md:flex flex-col items-center">
+                <h2 class="w-full text-left">News & Updates</h2>
+
+                <div class="news__wrapper flex flex-col gap-3 mt-8">
+                    <a href="" class="news__single flex flex-row">
+                        <figure>
+                            <img src="/assets/img/1.jpg" alt="news about this section" class="max-w-full object-cover">
+                        </figure>
+
+                        <div class="news__content flex flex-col gap-3 p-4 bg-gray-100 mt-0">
+                            <div class="publish__info flex justify-between w-full">
+                                <span class="publish__date"><ion-icon  class="" name="calendar-outline"></ion-icon>23rd Sep, 2024</span>
+                                <span class="published__by"><ion-icon name="person-outline"></ion-icon>John Doe</span>
+                            </div>
+
+                            <h4 class="news__title">Escape to Tranquility: Discover Your Perfect Hotel Getaway</h4>
+                            <p class="news__link flex items-center"
+                            >
+                            <span> Read More</span> <ion-icon class="ml-2" name="arrow-forward-outline"></ion-icon></p>
+                        </div>
+
+                    </a>
+
+                    <a href="" class="news__single flex flex-row">
+                        <figure>
+                            <img src="/assets/img/2.jpg" alt="news about this section" class="max-w-full object-cover">
+                        </figure>
+
+                        <div class="news__content flex flex-col gap-3 p-4 bg-gray-100 mt-0">
+                            <div class="publish__info flex justify-between w-full">
+                                <span class="publish__date"><ion-icon  class="" name="calendar-outline"></ion-icon>23rd Sep, 2024</span>
+                                <span class="published__by"><ion-icon name="person-outline"></ion-icon>John Doe</span>
+                            </div>
+
+                            <h4 class="news__title"> Unwind in Style: Hotel Stays Designed for Comfort</h4>
+                            <p class="news__link flex items-center"
+                            >
+                            <span> Read More</span> <ion-icon class="ml-2" name="arrow-forward-outline"></ion-icon></p>
+                        </div>
+                    </a>
+
+                    <a href="" class="news__single flex flex-row">
+                        <figure>
+                            <img src="/assets/img/3.jpg" alt="news about this section" class="max-w-full object-cover">
+                        </figure>
+
+                        <div class="news__content flex flex-col gap-3 p-4 bg-gray-100 mt-0">
+                            <div class="publish__info flex justify-between w-full">
+                                <span class="publish__date"><ion-icon  class="" name="calendar-outline"></ion-icon>23rd Sep, 2024</span>
+                                <span class="published__by"><ion-icon name="person-outline"></ion-icon>John Doe</span>
+                            </div>
+
+                            <h4 class="news__title">Your Dream Vacation Awaits: Top Hotel Picks</h4>
+                            <p class="news__link flex items-center"
+                            >
+                            <span> Read More</span> <ion-icon class="ml-2" name="arrow-forward-outline"></ion-icon></p>
+                        </div>
+                    </a>
+
+                    <a href="" class="news__single flex flex-row">
+                        <figure>
+                            <img src="/assets/img/4.jpg" alt="news about this section" class="max-w-full object-cover">
+                        </figure>
+
+                        <div class="news__content flex flex-col gap-3 p-4 bg-gray-100 mt-0">
+                            <div class="publish__info flex justify-between w-full">
+                                <span class="publish__date"><ion-icon  class="" name="calendar-outline"></ion-icon>23rd Sep, 2024</span>
+                                <span class="published__by"><ion-icon name="person-outline"></ion-icon>John Doe</span>
+                            </div>
+
+                            <h4 class="news__title">Indulge in Luxury: A Hotel Experience Like No Other</h4>
+                            <p class="news__link flex items-center"
+                            >
+                            <span> Read More</span> <ion-icon class="ml-2" name="arrow-forward-outline"></ion-icon></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="welcome__message__news w-[50%]">
+            <h2>Welcome to Stupa Boutique Hotel</h2>
+            <p></p>
+        </div>
+    </section>
+    <!-- news section about page -->
 
     <!-- COMMON FOOTER SECTION -->
     <footer class="mt-16 md:mt-24 relative">

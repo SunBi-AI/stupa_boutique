@@ -1,4 +1,3 @@
-// const { TRUE } = require("sass");
 
 /******************************
   SWIPER HOMEPAGE 
@@ -158,13 +157,17 @@ const swiper5 = new Swiper(".testimonial__cards__wrapper", {
         },
 
         800: {
-            slidesPerView: 4,
+            slidesPerView: 3,
             spaceBetween: 40,
         },
         1000: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+        },
+        1366: {
             slidesPerView: 4,
             spaceBetween: 40,
-        }
+        },
     },
 
     pagination: {
@@ -264,18 +267,18 @@ const hamButton = document.querySelector('.hamburger');
 //get nav links class
 const navigationLinks = document.querySelector('.nav__link__prime');
 
-hamButton.addEventListener('click', () => {
-    // e.preventDefault();
+// hamButton.addEventListener('touchstart', () => {
+//     // e.preventDefault();
 
-    if (navigationLinks.classList.contains('mobile__nav__links')) {
-        navigationLinks.classList.add('mobile__nav__links');
-    }
+//     if (navigationLinks.classList.contains('mobile__nav__links')) {
+//         navigationLinks.classList.add('active');
+//     }
 
-    else {
-        navigationLinks.classList.remove('mobile__nav__links');
-        console.log('navigation button was clicked');
-    }
-})
+//     else {
+//         navigationLinks.classList.remove('active');
+//         console.log('navigation button was clicked');
+//     }
+// })
 
 
 
@@ -289,14 +292,14 @@ const year = today.getFullYear();
 
 const formattedDate = `${month}/${day}/${year}`;
 
-console.log(formattedDate);
+// console.log(formattedDate);
 
 if (document.querySelector('.date__input__')) {
     document.querySelector('.date__input__').placeholder = formattedDate;
 }
 
 
-console.log(today);
+// console.log(today);
 
 
 
@@ -304,40 +307,50 @@ console.log(today);
 
 
 
+let clicker = false;
+
+hamButton.addEventListener('touchend', setLayout);
+
 function setLayout() {
+    console.log("hamburger button was clicked");
+    // const navigationLinks = document.querySelector('.nav__link__prime');
     // const screenSize = window.innerWidth; 
-    const navigationLinks = document.querySelector('.nav__link__prime');
-    let clicker = false;
-    // if(navigationLinks) {
-
-    function handleInteraction(event) {
-        if (clicker && !navigationLinks.contains(event.target)) {
-            // console.log('click or tought detected');
-            navigationLinks.classList.remove('active');
-            // console.log('active class removed');
-            clicker = false;
-        }
-    }
-
-    if (navigationLinks.classList.contains('active')) {
+    if(clicker) { 
+        console.log("hamburder was clicked again");
         navigationLinks.classList.remove('active');
         clicker = false;
-
-        window.removeEventListener('click', handleInteraction);
-        window.removeEventListener('touchstart', handleInteraction);
     }
+       
     else {
+        console.log('ham menu was clicked opening the menu');
         navigationLinks.classList.add('active');
-        clicker = true;
-        // console.log('active class is added');
-
-        setTimeout(() => {
-            window.addEventListener('click', handleInteraction);
-            window.addEventListener('touchstart', handleInteraction);
-        }, 0);
-
+        clicker=true;
     }
+
 }
+
+//event listener to close the menu if clicked outside
+document.addEventListener('touchend', function(event) {
+    const navigationLinks = document.querySelector('.nav__link__prime');
+    const targetElement = event.target;
+    
+    if(navigationLinks.classList.contains('active')) {
+
+        if((navigationLinks.contains(targetElement)) || (targetElement == hamButton)) {
+            console.log("document click was found");
+            return;
+        }
+        
+        else {
+            navigationLinks.classList.remove('active');
+            console.log('remove class active triggered') ;
+            clicker=false;
+        }
+    }
+    
+
+})
+
 
 
 
@@ -346,7 +359,7 @@ function toggleClassOnWidth() {
     const element = document.querySelector('.nav_links.nav__link__prime');
     const mobileClass = 'mobile__nav__links';
 
-    const mobileWidth = 768;
+    const mobileWidth = 991;
 
     if (window.innerWidth <= mobileWidth) {
         //if device width is smallers tha 768px;
@@ -375,3 +388,36 @@ buttonsAll.forEach(button => {
         e.preventDefault();
     })
 });
+
+
+
+
+/*---------------------  ZOOM IMAGES rooms and suites  ------------------- */
+$('img[data-enlargeable]').addClass('img-enlargeable').click(function() {
+    var src = $(this).attr('src');
+    var modal;
+  
+    function removeModal() {
+      modal.remove();
+      $('body').off('keyup.modal-close');
+    }
+    modal = $('<div>').css({
+      background: 'RGBA(0,0,0,.5) url(' + src + ') no-repeat center',
+      backgroundSize: 'contain',
+      width: '100%',
+      height: '100%',
+      position: 'fixed',
+      zIndex: '10000',
+      top: '0',
+      left: '0',
+      cursor: 'zoom-out'
+    }).click(function() {
+      removeModal();
+    }).appendTo('body');
+    //handling ESC
+    $('body').on('keyup.modal-close', function(e) {
+      if (e.key === 'Escape') {
+        removeModal();
+      }
+    });
+  });

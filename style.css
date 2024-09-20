@@ -129,6 +129,9 @@ body b {
   margin: 30px 0;
 }
 
+/******************************************
+  breakpoints sass
+******************************************/
 /****************************************** 
     NAVIBATION BAR
 *******************************************/
@@ -294,6 +297,9 @@ section > p {
   .section__hotel__features .feature__single__layout {
     flex-direction: column;
   }
+  .section__hotel__features .feature__single__layout:not(first-child) {
+    margin-top: 3rem;
+  }
 }
 .section__hotel__features .feature__single__layout:nth-child(even) {
   flex-direction: row-reverse;
@@ -317,7 +323,7 @@ section > p {
   justify-content: center;
   background-color: #ffe4c1;
   background-size: 14px 14px;
-  background-image: repeating-linear-gradient(45deg, #efc73f 0, #efc73f 1.4px, #ffe4c1 0, #ffe4c1 50%);
+  background-image: repeating-linear-gradient(45deg, #f8dfa1 0, #f8dfa1 1.4px, #fff6e8 0, #fff6e8 50%);
 }
 @media only screen and (max-width: 768px) {
   .section__hotel__features .feautures__details {
@@ -724,6 +730,11 @@ form.homepage__booking .form__group__wrapper button {
   font-size: 1.2rem;
   font-weight: 400;
 }
+@media (max-width: 768px) {
+  .room_suits_showcase .rooms_suites_single {
+    margin-top: 5rem;
+  }
+}
 .room_suits_showcase .rooms_suites_single:not(first-child) {
   margin-top: 5rem;
 }
@@ -736,7 +747,8 @@ form.homepage__booking .form__group__wrapper button {
 .room_suits_showcase .rooms_suites_single .suite_single_content {
   background-color: #ffe4c1;
   background-size: 14px 14px;
-  background-image: repeating-linear-gradient(45deg, #efc73f 0, #efc73f 1.4px, #ffe4c1 0, #ffe4c1 50%);
+  background-image: repeating-linear-gradient(45deg, #f8dfa1 0, #f8dfa1 1.4px, #fff6e8 0, #fff6e8 50%);
+  border-radius: 7px;
 }
 .room_suits_showcase .rooms_suites_single .suite_single_content::before {
   content: " ";
@@ -746,9 +758,10 @@ form.homepage__booking .form__group__wrapper button {
   width: 100%;
   background-color: rgba(255, 228, 193, 0.7294117647);
   background-size: 14px 14px;
-  background-image: repeating-linear-gradient(45deg, rgba(239, 198, 63, 0.6941176471) 0, rgba(239, 198, 63, 0.7333333333) 1.4px, #ffe4c1 0, #ffe4c1 50%);
+  background-image: repeating-linear-gradient(45deg, #f8dfa1 0, #f8dfa1 1.4px, #fff6e8 0, #fff6e8 50%);
   top: 0%;
   left: -60%;
+  border-radius: 7px;
 }
 .room_suits_showcase .rooms_suites_single .suite_single_content .suite_description {
   margin-top: 1.5rem;
@@ -776,11 +789,33 @@ form.homepage__booking .form__group__wrapper button {
   color: var(--font-main);
 }
 
+.suite_single_photo img {
+  border-radius: 7px;
+}
+@media (max-width: 768px) {
+  .suite_single_photo img {
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .room_suits_showcase .rooms_suites_single .suite_single_content::before {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+}
 @media (max-width: 768px) {
   .room_suits_showcase .rooms_suites_single .suite_single_content::before {
     left: 0;
   }
 }
+.swiper.room_types img {
+  cursor: pointer;
+}
+
 /***********************************
   HEADER SECTION
 ************************************/
@@ -868,6 +903,15 @@ form.homepage__booking .form__group__wrapper button {
   margin-top: -30px;
   position: relative;
   z-index: -1;
+}
+
+.about__page .title_number_list {
+  padding: 70px 0;
+}
+@media (max-width: 992px) {
+  .about__page .title_number_single {
+    width: calc(30% - 60px);
+  }
 }
 
 /***************************************
@@ -1003,6 +1047,9 @@ form.homepage__booking .form__group__wrapper button {
 .about__content .wrapper {
   gap: 60px;
 }
+.about__content .wrapper img {
+  border-radius: 7px;
+}
 .about__content ul li {
   margin-bottom: 1.5rem;
 }
@@ -1058,6 +1105,16 @@ form.homepage__booking .form__group__wrapper button {
 .testimonials .testimonial__cards__wrapper {
   padding-bottom: 30px;
 }
+@media (max-width: 768px) {
+  .testimonials .testimonial__cards__wrapper {
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .testimonials .testimonial__cards__wrapper {
+    width: 80%;
+  }
+}
 .testimonials .testimonial__cards__wrapper .swiper-pagination-bullet-active {
   background: var(--color-from-logo);
 }
@@ -1071,8 +1128,8 @@ form.homepage__booking .form__group__wrapper button {
   align-items: center;
   gap: 10px;
   padding: 20px;
-  background: var(--c2);
   min-height: 465px;
+  border-radius: 7px;
 }
 .testimonials .testimonial__cards__wrapper .tesimonial__card__wrapper figure {
   width: 180px;
@@ -1124,6 +1181,7 @@ form.homepage__booking .form__group__wrapper button {
 .news__section .news__single figure {
   height: 200px;
   overflow: hidden;
+  width: 30%;
 }
 .news__section .news__single figure img {
   width: 100%;
@@ -1141,7 +1199,17 @@ form.homepage__booking .form__group__wrapper button {
   margin-right: 3px;
   color: var(--color-secondary);
 }
+.news__section .news__content {
+  min-height: auto;
+  width: 70%;
+}
+@media (max-width: 992px) {
+  .news__section .news__content {
+    min-height: 155px;
+  }
+}
 .news__section .news__content .news__link {
+  margin-top: auto;
   font-size: 0.9rem;
   color: var(--text-secondary);
 }
@@ -1155,12 +1223,35 @@ form.homepage__booking .form__group__wrapper button {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 500px;
 }
 .about__page .about__show__capacity .title_number_single {
   display: flex;
   align-items: flex-end;
   width: calc(25% - 60px);
+}
+@media (max-width: 992px) {
+  .about__page .about__show__capacity .title_number_single {
+    width: calc(33% - 20px);
+  }
+  .about__page .about__show__capacity .title_number_single .count {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 768px) {
+  .about__page .about__show__capacity .title_number_single {
+    width: calc(50% - 20px);
+  }
+  .about__page .about__show__capacity .title_number_single .count {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 576px) {
+  .about__page .about__show__capacity .title_number_single {
+    width: calc(50% - 20px);
+  }
+  .about__page .about__show__capacity .title_number_single .count {
+    font-size: 3rem;
+  }
 }
 .about__page .about__show__capacity .title_number_single .count {
   line-height: 0.8;
@@ -1171,6 +1262,11 @@ form.homepage__booking .form__group__wrapper button {
   font-size: 1.1rem;
   font-weight: 400;
   margin-left: 0.2rem;
+}
+@media (max-width: 768px) {
+  .about__page .about__show__capacity .title_number_single .title__ {
+    max-width: 120px;
+  }
 }
 
 .pt__2 {
@@ -1189,7 +1285,7 @@ form.homepage__booking .form__group__wrapper button {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.768627451);
+  background: rgba(79, 16, 16, 0.65);
   top: 0;
   left: 0;
   right: 0;
@@ -1203,6 +1299,7 @@ form.homepage__booking .form__group__wrapper button {
   padding: 45px;
   background: rgba(255, 179, 15, 0.1254901961);
   border: 1px solid rgba(255, 178, 15, 0.3294117647);
+  border-radius: 7px;
 }
 
 .contact__page__form input,
@@ -1306,7 +1403,7 @@ footer {
   position: relative;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .nav_links.mobile__nav__links {
     position: absolute;
   }
@@ -1325,11 +1422,11 @@ header.scrolled .nav_links.mobile__nav__links {
   width: 60%;
   max-width: 100%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .nav_links.mobile__nav__links {
     position: absolute;
     z-index: 0;
-    top: 80px;
+    top: 74px;
     left: -100%;
     opacity: 0.5;
     transition: all 0.3s ease;
@@ -1417,7 +1514,7 @@ header.scrolled .nav_links.mobile__nav__links {
   width: 33%;
 }
 .facilities__icons__grp ul li span.material-symbols-outlined {
-  color: var(--font-main);
+  color: var(--color-from-logo);
   font-size: 30px;
   font-weight: 200;
 }
@@ -1556,7 +1653,8 @@ header.scrolled .nav_links.mobile__nav__links {
     padding: 100px 0;
   }
   .social_icons {
-    display: none;
+    display: block;
+    display: flex;
   }
 }
 .hero__section__suites h1 {
@@ -1743,4 +1841,15 @@ body .container {
   -o-object-fit: cover;
      object-fit: cover;
   margin-top: 2rem;
+}
+
+.news__single .news__single figure {
+  width: 100%;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+}
+.news__single .news__single .news__content {
+  width: 100%;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
 }/*# sourceMappingURL=style.css.map */
