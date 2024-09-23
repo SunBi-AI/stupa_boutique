@@ -1182,6 +1182,7 @@ form.homepage__booking .form__group__wrapper button {
 ------------------------------------------*/
 .news__section .news__single {
   transition: all 0.2s ease-in-out;
+  width: 100%;
 }
 .news__section .news__single:hover {
   transition: all 0.2s ease-in-out;
@@ -1200,11 +1201,14 @@ form.homepage__booking .form__group__wrapper button {
   height: 150px;
   overflow: hidden;
   width: 30%;
+  overflow: hidden;
 }
 .news__section .news__single figure img {
-  width: 100%;
+  width: 150px;
   height: 100%;
   border-radius: 7px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .news__section .news__single .publish__info span {
   font-size: 0.8rem;
@@ -1220,7 +1224,6 @@ form.homepage__booking .form__group__wrapper button {
 }
 .news__section .news__content {
   min-height: auto;
-  width: 70%;
 }
 @media (max-width: 992px) {
   .news__section .news__content {
@@ -1346,6 +1349,33 @@ form.homepage__booking .form__group__wrapper button {
   font-weight: 700;
 }
 
+@media screen and (min-width: 1280px) and (max-width: 1716px) {
+  .news__section .wrapper {
+    width: 100%;
+  }
+  .welcome__message__news .wrapper {
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 1279px) {
+  .news__welcome__message {
+    flex-direction: column;
+  }
+  .news__welcome__message .news__section, .news__welcome__message .welcome__message__news {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .welcome__message__news .wrapper {
+    max-width: 90%;
+  }
+  .news__section .wrapper {
+    width: 90%;
+  }
+  .news__section .news__single figure {
+    width: 40%;
+  }
+}
 /************************************
   CONTACT PAGE
 ************************************/
@@ -1897,12 +1927,12 @@ body .container {
   margin-top: 2rem;
 }
 
-.news__single .news__single figure {
+.news__single figure {
   width: 100%;
   border-top-right-radius: 7px;
   border-top-left-radius: 7px;
 }
-.news__single .news__single .news__content {
+.news__single .news__content {
   width: 100%;
   border-bottom-right-radius: 7px;
   border-bottom-left-radius: 7px;

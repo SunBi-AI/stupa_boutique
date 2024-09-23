@@ -265,7 +265,7 @@ $(document).ready(function () {
 const hamButton = document.querySelector('.hamburger');
 
 //get nav links class
-const navigationLinks = document.querySelector('.nav__link__prime');
+// const navigationLinks = document.querySelector('.nav__link__prime');
 
 // hamButton.addEventListener('touchstart', () => {
 //     // e.preventDefault();
@@ -309,49 +309,37 @@ if (document.querySelector('.date__input__')) {
 
 let clicker = false;
 
-hamButton.addEventListener('touchend', setLayout);
+const navigationLinks = document.querySelector('.nav__link__prime');
+hamButton.addEventListener('touchend', (e) => {
 
-function setLayout() {
-    console.log("hamburger button was clicked");
-    // const navigationLinks = document.querySelector('.nav__link__prime');
-    // const screenSize = window.innerWidth; 
-    if(clicker) { 
-        console.log("hamburder was clicked again");
+    e.stopPropagation();
+
+    if(!clicker) {
+        // console.log("Opening the Menu ***");
+        navigationLinks.classList.add('active');
+        clicker = true;
+
+    }else {
+        // console.log("closing the menu ******");
         navigationLinks.classList.remove('active');
         clicker = false;
     }
-       
-    else {
-        console.log('ham menu was clicked opening the menu');
-        navigationLinks.classList.add('active');
-        clicker=true;
-    }
 
-}
+    // console.log('clicker status is: ' + clicker):
+});
+
 
 //event listener to close the menu if clicked outside
+
 document.addEventListener('touchend', function(event) {
-    const navigationLinks = document.querySelector('.nav__link__prime');
     const targetElement = event.target;
-    
-    if(navigationLinks.classList.contains('active')) {
-
-        if((navigationLinks.contains(targetElement)) || (targetElement == hamButton)) {
-            console.log("document click was found");
-            return;
-        }
-        
-        else {
-            navigationLinks.classList.remove('active');
-            console.log('remove class active triggered') ;
-            clicker=false;
-        }
+    if(clicker && (!navigationLinks.contains(targetElement)) || (targetElement !== hamButton)) {
+        // console.log("document click was found =======");
+        navigationLinks.classList.remove('active');
+        // console.log('active class was removed');
+        clicker  = false;
     }
-    
-
 })
-
-
 
 
 /************* ADD OR REMOVE CLASS DEPENDING ON DEVICE WIDTH *********** */

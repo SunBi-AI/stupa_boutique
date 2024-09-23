@@ -1431,6 +1431,7 @@ form.homepage__booking .form__group__wrapper button {
 .news__section {
   .news__single {
     transition: all 0.2s ease-in-out;
+    width: 100%;
 
     &:hover {
       // box-shadow: 0 6px 20px  rgba(0, 0, 0, 0.2);
@@ -1452,15 +1453,21 @@ form.homepage__booking .form__group__wrapper button {
         }
       }
     }
+
+
     figure {
       height: 150px;;
+      // width: 150px;
       overflow: hidden;
       width: 30%;
+      overflow: hidden;
+
 
       img {
-        width: 100%;
+        width: 150px;
         height: 100%;
         border-radius: 7px;
+        object-fit: cover;
         // transition: all 0.2s ease-in-out;
 
       }
@@ -1487,7 +1494,7 @@ form.homepage__booking .form__group__wrapper button {
 
   .news__content {
     min-height: auto;
-    width: 70%;
+    // width: 80%;
 
     @include respond-to(lg){
       min-height: 155px;;
@@ -1557,6 +1564,7 @@ form.homepage__booking .form__group__wrapper button {
 }
 
 
+
 .pt__2 {
   background-color: #ffe4c1;
   background-size: 14px 14px;
@@ -1622,6 +1630,52 @@ form.homepage__booking .form__group__wrapper button {
       margin-left: 0.7rem;
       font-weight: 700;
     }
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1716px) {
+  .news__section {
+      .wrapper  {
+        width: 100%;
+      }
+ }
+
+ .welcome__message__news {
+    .wrapper {
+      max-width: 100%;;
+    }
+ }
+}
+
+@media only screen and (max-width: 1279px) {
+  .news__welcome__message {
+    flex-direction: column;
+
+    .news__section, .welcome__message__news {
+      width: 100%;
+    }
+
+  }
+ 
+
+  
+}
+
+@media only screen and (max-width: 800px) {
+  .welcome__message__news {
+    .wrapper {
+      max-width: 90%;
+    }
+  }
+
+  .news__section  {
+    .wrapper {
+      width: 90%;
+    }
+  }
+
+  .news__section .news__single figure {
+    width: 40%;
   }
 }
 
@@ -2305,7 +2359,6 @@ body .container {
   
 }
 
-.news__single {
   .news__single  {
     figure {
       width: 100%;
@@ -2318,4 +2371,3 @@ body .container {
       border-bottom-left-radius: 7px;
     }
   }
-}
