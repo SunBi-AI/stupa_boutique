@@ -1380,6 +1380,22 @@ form.homepage__booking .form__group__wrapper button {
   }
 }
 
+.brochure__download__link {
+  display: flex;
+  ion-icon {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  &:hover {
+    ion-icon, p {
+      color: var(--color-from-logo);
+    }
+  }
+}
 
 //capacity showcase about page
 .about__show__capacity {
@@ -1408,13 +1424,16 @@ form.homepage__booking .form__group__wrapper button {
  
 }
 
+/*------------------------------------------
+  NEWS SECTION HOME
+------------------------------------------*/
 
 .news__section {
   .news__single {
     transition: all 0.2s ease-in-out;
 
     &:hover {
-      box-shadow: 0 6px 20px  rgba(0, 0, 0, 0.2);
+      // box-shadow: 0 6px 20px  rgba(0, 0, 0, 0.2);
       transition: all 0.2s ease-in-out;
       
       img {
@@ -1424,7 +1443,7 @@ form.homepage__booking .form__group__wrapper button {
       }
 
       .news__link {
-        // color: var(--color-secondary);
+        color: var(--color-from-logo);
 
         ion-icon {
           margin-left: 20px;
@@ -1434,13 +1453,14 @@ form.homepage__booking .form__group__wrapper button {
       }
     }
     figure {
-      height: 200px;;
+      height: 150px;;
       overflow: hidden;
       width: 30%;
 
       img {
         width: 100%;
         height: 100%;
+        border-radius: 7px;
         // transition: all 0.2s ease-in-out;
 
       }
@@ -1457,7 +1477,9 @@ form.homepage__booking .form__group__wrapper button {
         ion-icon {
           font-size: 1rem;
           margin-right: 3px;
-          color: var(--color-secondary);
+          // color: var(--color-secondary);
+          color: var(--text-secondary);
+          
         }
       }
     }
@@ -1560,6 +1582,49 @@ form.homepage__booking .form__group__wrapper button {
   right:0;
   z-index: 0;;
 }
+
+.news__welcome__message {
+  .welcome__message__news {
+    background-color: #ffe4c1;
+    background-size: 14px 14px;
+    background-image: repeating-linear-gradient(45deg, #f8dfa1 0, #f8dfa1 1.4px, #fff6e8 0, #fff6e8 50%);
+
+    p {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      font-weight: 400;
+      line-height: 1.3;
+    }
+
+    .facility__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+      list-style-type: circle;
+      margin-left: 0.8rem;
+      width: 100%;
+      li {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        font-style: italic;
+        margin-right: 2rem;
+        font-weight: 400;;
+        // width: calc(50% - 30px);
+      }
+
+    }
+
+    h4 {
+      font-family: var(--font-main);
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.1rem;
+      margin-left: 0.7rem;
+      font-weight: 700;
+    }
+  }
+}
+
 /************************************
   CONTACT PAGE
 ************************************/

@@ -1150,6 +1150,19 @@ form.homepage__booking .form__group__wrapper button {
   text-align: center;
 }
 
+.brochure__download__link {
+  display: flex;
+}
+.brochure__download__link ion-icon {
+  font-size: 1.3rem;
+}
+.brochure__download__link p {
+  font-size: 1.1rem;
+}
+.brochure__download__link:hover ion-icon, .brochure__download__link:hover p {
+  color: var(--color-from-logo);
+}
+
 .about__show__capacity .title_number_list li {
   padding: 15px;
   border-radius: 5px;
@@ -1164,28 +1177,34 @@ form.homepage__booking .form__group__wrapper button {
   color: var(--text-white);
 }
 
+/*------------------------------------------
+  NEWS SECTION HOME
+------------------------------------------*/
 .news__section .news__single {
   transition: all 0.2s ease-in-out;
 }
 .news__section .news__single:hover {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
 }
 .news__section .news__single:hover img {
   transform-origin: center;
+}
+.news__section .news__single:hover .news__link {
+  color: var(--color-from-logo);
 }
 .news__section .news__single:hover .news__link ion-icon {
   margin-left: 20px;
   transition: all 0.4s ease-in-out;
 }
 .news__section .news__single figure {
-  height: 200px;
+  height: 150px;
   overflow: hidden;
   width: 30%;
 }
 .news__section .news__single figure img {
   width: 100%;
   height: 100%;
+  border-radius: 7px;
 }
 .news__section .news__single .publish__info span {
   font-size: 0.8rem;
@@ -1197,7 +1216,7 @@ form.homepage__booking .form__group__wrapper button {
 .news__section .news__single .publish__info span ion-icon {
   font-size: 1rem;
   margin-right: 3px;
-  color: var(--color-secondary);
+  color: var(--text-secondary);
 }
 .news__section .news__content {
   min-height: auto;
@@ -1290,6 +1309,41 @@ form.homepage__booking .form__group__wrapper button {
   left: 0;
   right: 0;
   z-index: 0;
+}
+
+.news__welcome__message .welcome__message__news {
+  background-color: #ffe4c1;
+  background-size: 14px 14px;
+  background-image: repeating-linear-gradient(45deg, #f8dfa1 0, #f8dfa1 1.4px, #fff6e8 0, #fff6e8 50%);
+}
+.news__welcome__message .welcome__message__news p {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.3;
+}
+.news__welcome__message .welcome__message__news .facility__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  list-style-type: circle;
+  margin-left: 0.8rem;
+  width: 100%;
+}
+.news__welcome__message .welcome__message__news .facility__list li {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-style: italic;
+  margin-right: 2rem;
+  font-weight: 400;
+}
+.news__welcome__message .welcome__message__news h4 {
+  font-family: var(--font-main);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  margin-left: 0.7rem;
+  font-weight: 700;
 }
 
 /************************************
